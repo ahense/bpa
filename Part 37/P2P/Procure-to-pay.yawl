@@ -1,0 +1,2775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="Procure-to-pay">
+    <name>Procure-to-pay</name>
+    <documentation>Procure-to-pay process from Dumas et al, Fundamentals of BPM</documentation>
+    <metaData>
+      <title>Procure-to-pay</title>
+      <creator>ahense</creator>
+      <creator>rmalz2s</creator>
+      <description>Procure-to-pay process from Dumas et al, Fundamentals of BPM</description>
+      <coverage>4.2.750</coverage>
+      <version>0.122</version>
+      <persistent>false</persistent>
+      <identifier>UID_1e319553-b971-4e13-aaae-270bb1c756f2</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="catalogType">
+        <xs:sequence>
+          <xs:element name="Item" type="catalogItemType" maxOccurs="unbounded" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="catalogItemType">
+        <xs:sequence>
+          <xs:element name="OrderNo" type="orderNoType" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element name="Price" type="xs:integer" />
+          <xs:element name="Supplier" type="supplierType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="supplierType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="supplier1" />
+          <xs:enumeration value="supplier2" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="orderNoType">
+        <xs:restriction base="xs:integer">
+          <xs:totalDigits value="4" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="decisionType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Approve" />
+          <xs:enumeration value="Cancel Request" />
+          <xs:enumeration value="Select new Equipment" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="OrderType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="2035" />
+          <xs:enumeration value="2433" />
+          <xs:enumeration value="3545" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <decomposition id="Rent_equipment" isRootNet="true" xsi:type="NetFactsType">
+      <localVariable>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>&lt;Item&gt; &lt;OrderNo&gt;2035&lt;/OrderNo&gt; &lt;Name&gt;Truck&lt;/Name&gt; &lt;Description&gt;Heavy truck.&lt;/Description&gt; &lt;Price&gt;1350&lt;/Price&gt; &lt;Supplier&gt;supplier1&lt;/Supplier&gt; &lt;/Item&gt; &lt;Item&gt; &lt;OrderNo&gt;2433&lt;/OrderNo&gt; &lt;Name&gt;Excavator&lt;/Name&gt; &lt;Description&gt;Small excavator&lt;/Description&gt; &lt;Price&gt;450&lt;/Price&gt; &lt;Supplier&gt;supplier1&lt;/Supplier&gt; &lt;/Item&gt; &lt;Item&gt; &lt;OrderNo&gt;3545&lt;/OrderNo&gt; &lt;Name&gt;Bulldozer&lt;/Name&gt; &lt;Description&gt;Yellow bulldozer&lt;/Description&gt; &lt;Price&gt;1230&lt;/Price&gt; &lt;Supplier&gt;supplier2&lt;/Supplier&gt; &lt;/Item&gt;</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>5</index>
+        <name>OrderNoEntered</name>
+        <type>OrderType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>6</index>
+        <name>Available</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>7</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>no comment</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>8</index>
+        <name>Details_rental_request</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>9</index>
+        <name>Approve</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>10</index>
+        <name>Supplier_selected</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>supplier1</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>11</index>
+        <name>Request_decision</name>
+        <type>decisionType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>12</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>&lt;trigger&gt;OnExecuting&lt;/trigger&gt; &lt;expiry&gt;2017-12-22T10:40:39&lt;/expiry&gt; &lt;workdays&gt;false&lt;/workdays&gt;</initialValue>
+      </localVariable>
+      <processControlElements>
+        <inputCondition id="InputCondition_2">
+          <flowsInto>
+            <nextElementRef id="Fill_in_equipment_rental_request" />
+          </flowsInto>
+        </inputCondition>
+        <task id="Fill_in_equipment_rental_request">
+          <name>Fill in equipment rental request</name>
+          <flowsInto>
+            <nextElementRef id="Cancel_request" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Select_equipment" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Rent_equipment/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Fill_in_equipment_rental_request/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Fill_in_equipment_rental_request/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Fill_in_equipment_rental_request/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Fill_in_equipment_rental_request/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Fill_in_equipment_rental_request/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c12931da-6ee4-45c0-981f-1e176d87ad1a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Fill_in_equipment_rental_request" />
+        </task>
+        <task id="Cancel_request">
+          <name>Cancel request</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_2" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="Add_details_to_request" />
+          <removesTokens id="Approve_rental_request" />
+          <removesTokens id="Confirm_availability" />
+          <removesTokens id="Inform_of_cancellation" />
+          <removesTokens id="Prepare_purchase_order" />
+          <removesTokens id="Select_equipment" />
+          <removesTokensFromFlow>
+            <flowSource id="Add_details_to_request" />
+            <flowDestination id="Approve_rental_request" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Approve_rental_request" />
+            <flowDestination id="Inform_of_cancellation" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Approve_rental_request" />
+            <flowDestination id="Prepare_purchase_order" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Approve_rental_request" />
+            <flowDestination id="Select_equipment" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Confirm_availability" />
+            <flowDestination id="Add_details_to_request" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Confirm_availability" />
+            <flowDestination id="Select_equipment" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Fill_in_equipment_rental_request" />
+            <flowDestination id="Select_equipment" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="Select_equipment" />
+            <flowDestination id="Confirm_availability" />
+          </removesTokensFromFlow>
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Fill_in_equipment_rental_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Cancel_request" />
+        </task>
+        <task id="Select_equipment">
+          <name>Select equipment</name>
+          <flowsInto>
+            <nextElementRef id="Confirm_availability" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Rent_equipment/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Supplier_selected&gt;{/Select_equipment/Catalog/Item[OrderNo/text()=/Select_equipment/OrderNoEntered/text()]/Supplier/text()}&lt;/Supplier_selected&gt;" />
+              <mapsTo>Supplier_selected</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Select_equipment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Select_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Select_equipment/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c7711d06-177f-4e50-9627-5a1e1e725c75</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Select_equipment" />
+        </task>
+        <task id="Confirm_availability">
+          <name>Confirm availability</name>
+          <flowsInto>
+            <nextElementRef id="Select_equipment" />
+            <predicate ordering="0">/Rent_equipment/Available/text() = false()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Add_details_to_request" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Rent_equipment/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Rent_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Supplier_selected&gt;{/Rent_equipment/Supplier_selected/text()}&lt;/Supplier_selected&gt;" />
+              <mapsTo>Supplier_selected</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Available&gt;{/Confirm_availability/Available/text()}&lt;/Available&gt;" />
+              <mapsTo>Available</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Confirm_availability/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <param>
+                    <name>Supplier_selected</name>
+                    <refers>role</refers>
+                  </param>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Confirm_availability" />
+        </task>
+        <task id="Add_details_to_request">
+          <name>Add details to request</name>
+          <flowsInto>
+            <nextElementRef id="Approve_rental_request" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Rent_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Details_rental_request&gt;{/Add_details_to_request/Details_rental_request/text()}&lt;/Details_rental_request&gt;" />
+              <mapsTo>Details_rental_request</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Select_equipment" />
+            </offer>
+            <allocate initiator="system" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Add_details_to_request" />
+        </task>
+        <task id="Approve_rental_request">
+          <name>Approve rental request</name>
+          <flowsInto>
+            <nextElementRef id="Prepare_purchase_order" />
+            <predicate ordering="1">/Rent_equipment/Request_decision/text()='Approve'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Inform_of_cancellation" />
+            <predicate ordering="0">/Rent_equipment/Request_decision/text()='Cancel Request'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Select_equipment" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Details_rental_request&gt;{/Rent_equipment/Details_rental_request/text()}&lt;/Details_rental_request&gt;" />
+              <mapsTo>Details_rental_request</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Rent_equipment/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Approve_rental_request/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Request_decision&gt;{/Approve_rental_request/Request_decision/text()}&lt;/Request_decision&gt;" />
+              <mapsTo>Request_decision</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-9ce91d4a-2e75-4ede-8f35-ff0c03c1c49c</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Approve_rental_request" />
+        </task>
+        <task id="Inform_of_cancellation">
+          <name>Inform of cancellation</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_2" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="Cancel_request" />
+          <removesTokensFromFlow>
+            <flowSource id="Fill_in_equipment_rental_request" />
+            <flowDestination id="Cancel_request" />
+          </removesTokensFromFlow>
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Rent_equipment/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Rent_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Inform_of_cancellation/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Inform_of_cancellation/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Inform_of_cancellation/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Inform_of_cancellation/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Comment&gt;{/Inform_of_cancellation/Comment/text()}&lt;/Comment&gt;" />
+              <mapsTo>Comment</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Inform_of_cancellation/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Inform_of_cancellation/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Fill_in_equipment_rental_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Inform_of_cancellation" />
+        </task>
+        <task id="Prepare_purchase_order">
+          <name>Prepare purchase order</name>
+          <flowsInto>
+            <nextElementRef id="Receive_purchase_order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="Cancel_request" />
+          <removesTokensFromFlow>
+            <flowSource id="Fill_in_equipment_rental_request" />
+            <flowDestination id="Cancel_request" />
+          </removesTokensFromFlow>
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Rental_request_description&gt;{/Rent_equipment/Rental_request_description/text()}&lt;/Rental_request_description&gt;" />
+              <mapsTo>Rental_request_description</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c7711d06-177f-4e50-9627-5a1e1e725c75</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Prepare_purchase_order" />
+        </task>
+        <task id="Receive_purchase_order">
+          <name>Receive purchase order</name>
+          <flowsInto>
+            <nextElementRef id="Inspect_equipment" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Confirm_availability" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_purchase_order" />
+        </task>
+        <task id="Inspect_equipment">
+          <name>Inspect equipment</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_2" />
+            <predicate ordering="0">/Rent_equipment/Approve/text()= false()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Use_equipment" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/Item[OrderNo=/Rent_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Approve&gt;{/Inspect_equipment/Approve/text()}&lt;/Approve&gt;" />
+              <mapsTo>Approve</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Fill_in_equipment_rental_request" />
+            </offer>
+            <allocate initiator="system" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Inspect_equipment" />
+        </task>
+        <task id="Use_equipment">
+          <name>Use equipment</name>
+          <flowsInto>
+            <nextElementRef id="Payment" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Rent_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Rent_equipment/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Rent_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Use_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Use_equipment/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+          </completedMappings>
+          <decomposesTo id="Use_equipment" />
+        </task>
+        <task id="Payment">
+          <name>Payment</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_2" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Rent_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Rent_equipment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Rent_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Rent_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/*}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Payment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </completedMappings>
+          <decomposesTo id="Payment" />
+        </task>
+        <outputCondition id="OutputCondition_2" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="Payment" xsi:type="NetFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <localVariable>
+        <index>4</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>0.0</initialValue>
+      </localVariable>
+      <processControlElements>
+        <inputCondition id="InputCondition">
+          <flowsInto>
+            <nextElementRef id="Send_invoice" />
+          </flowsInto>
+        </inputCondition>
+        <task id="Send_invoice">
+          <name>Send invoice</name>
+          <flowsInto>
+            <nextElementRef id="Confirm_rental" />
+          </flowsInto>
+          <join code="and" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/Item[OrderNo=/Payment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Payment/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Send_invoice/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Receive_purchase_order" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_invoice" />
+        </task>
+        <task id="Confirm_rental">
+          <name>Confirm rental</name>
+          <flowsInto>
+            <nextElementRef id="Check_rental_prices" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/Item[OrderNo=/Payment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Payment/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Confirm_rental/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Confirm_rental/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Fill_in_equipment_rental_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Confirm_rental" />
+        </task>
+        <task id="Check_rental_prices">
+          <name>Check rental prices</name>
+          <flowsInto>
+            <nextElementRef id="Inform_Supplier" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/Item[OrderNo=/Payment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Payment/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Check_rental_prices/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c7711d06-177f-4e50-9627-5a1e1e725c75</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Check_rental_prices" />
+        </task>
+        <task id="Inform_Supplier">
+          <name>Inform Supplier</name>
+          <flowsInto>
+            <nextElementRef id="Pay_invoice" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/Item[OrderNo=/Payment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Payment/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Send_invoice" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Inform_Supplier" />
+        </task>
+        <task id="Pay_invoice">
+          <name>Pay invoice</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Payment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Payment/Catalog/Item[OrderNo=/Payment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Payment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;TotalPrice&gt;{/Payment/TotalPrice/text()}&lt;/TotalPrice&gt;" />
+              <mapsTo>TotalPrice</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-9ff47cdc-9cb4-4e68-b3cd-6c9d0ca32f56</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Pay_invoice" />
+        </task>
+        <outputCondition id="OutputCondition" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="Use_equipment" xsi:type="NetFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam>
+        <index>5</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <localVariable>
+        <index>6</index>
+        <name>ExtensionNeeded</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>false</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>7</index>
+        <name>NewEndDate</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>2014-01-01</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>8</index>
+        <name>Approved</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>false</initialValue>
+      </localVariable>
+      <processControlElements>
+        <inputCondition id="InputCondition_1">
+          <flowsInto>
+            <nextElementRef id="Ask_for_extension" />
+          </flowsInto>
+        </inputCondition>
+        <task id="Ask_for_extension">
+          <name>Ask for extension</name>
+          <flowsInto>
+            <nextElementRef id="Pick_up_equipment" />
+            <isDefaultFlow />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Decide_on_extension" />
+            <predicate ordering="0">/Use_equipment/ExtensionNeeded/text()=true()</predicate>
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Use_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Use_equipment/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Use_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;NewEndDate&gt;{/Use_equipment/NewEndDate/text()}&lt;/NewEndDate&gt;" />
+              <mapsTo>NewEndDate</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Use_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Use_equipment/Catalog/Item[OrderNo=/Use_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Use_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;ExtensionNeeded&gt;{/Ask_for_extension/ExtensionNeeded/text()}&lt;/ExtensionNeeded&gt;" />
+              <mapsTo>ExtensionNeeded</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Ask_for_extension/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;NewEndDate&gt;{/Ask_for_extension/NewEndDate/text()}&lt;/NewEndDate&gt;" />
+              <mapsTo>NewEndDate</mapsTo>
+            </mapping>
+          </completedMappings>
+          <timer>
+            <netparam>Using_Time</netparam>
+          </timer>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Fill_in_equipment_rental_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Ask_for_extension" />
+        </task>
+        <task id="Decide_on_extension">
+          <name>Decide on extension</name>
+          <flowsInto>
+            <nextElementRef id="Ask_for_extension" />
+            <predicate ordering="0">/Use_equipment/Approved/text()=true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Pick_up_equipment" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Use_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Using_Time&gt;{/Use_equipment/Using_Time/*}&lt;/Using_Time&gt;" />
+              <mapsTo>Using_Time</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Use_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;NewEndDate&gt;{/Use_equipment/NewEndDate/text()}&lt;/NewEndDate&gt;" />
+              <mapsTo>NewEndDate</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Use_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Use_equipment/Catalog/Item[OrderNo=/Use_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Use_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;End_date&gt;{if (/Decide_on_extension/Approved/text()='true')  &#xA;then /Decide_on_extension/NewEndDate/text()  &#xA;else /Decide_on_extension/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;NewEndDate&gt;{/Decide_on_extension/NewEndDate/text()}&lt;/NewEndDate&gt;" />
+              <mapsTo>NewEndDate</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Approved&gt;{/Decide_on_extension/Approved/text()}&lt;/Approved&gt;" />
+              <mapsTo>Approved</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Receive_purchase_order" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Decide_on_extension" />
+        </task>
+        <task id="Pick_up_equipment">
+          <name>Pick up equipment</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Requester&gt;{/Use_equipment/Requester/text()}&lt;/Requester&gt;" />
+              <mapsTo>Requester</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Start_date&gt;{/Use_equipment/Start_date/text()}&lt;/Start_date&gt;" />
+              <mapsTo>Start_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;Catalog&gt;{/Use_equipment/Catalog/Item[OrderNo=/Use_equipment/OrderNoEntered]}&lt;/Catalog&gt;" />
+              <mapsTo>Catalog</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;End_date&gt;{/Use_equipment/End_date/text()}&lt;/End_date&gt;" />
+              <mapsTo>End_date</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;OrderNoEntered&gt;{/Use_equipment/OrderNoEntered/text()}&lt;/OrderNoEntered&gt;" />
+              <mapsTo>OrderNoEntered</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="Receive_purchase_order" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Pick_up_equipment" />
+        </task>
+        <outputCondition id="OutputCondition_1" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="Add_details_to_request" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam text-area="true">
+        <index>0</index>
+        <name>Details_rental_request</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Approve_rental_request" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>Details_rental_request</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>5</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam>
+        <index>7</index>
+        <name>Request_decision</name>
+        <type>decisionType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Ask_for_extension" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>NewEndDate</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>5</index>
+        <name>ExtensionNeeded</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>6</index>
+        <name>NewEndDate</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue>2014-01-01</defaultValue>
+      </outputParam>
+      <outputParam>
+        <index>7</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Cancel_request" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Check_rental_prices" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Confirm_availability" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>Supplier_selected</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Available</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>1</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Confirm_rental" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Decide_on_extension" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam readOnly="true">
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam readOnly="true">
+        <index>5</index>
+        <name>NewEndDate</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam readOnly="true">
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam readOnly="true">
+        <index>5</index>
+        <name>NewEndDate</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam>
+        <index>6</index>
+        <name>Approved</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Fill_in_equipment_rental_request" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>4</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam text-area="true">
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>4</index>
+        <name>Using_Time</name>
+        <type>YTimerType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Inform_Supplier" xsi:type="WebServiceGatewayFactsType">
+      <name>Inform Supplier</name>
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Inform_of_cancellation" xsi:type="WebServiceGatewayFactsType">
+      <name>Inform of cancellation</name>
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Inspect_equipment" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Approve</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Pay_invoice" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Pick_up_equipment" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>OrderNoEntered</name>
+        <type>orderNoType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Prepare_purchase_order" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_purchase_order" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Select_equipment" xsi:type="WebServiceGatewayFactsType">
+      <inputParam readOnly="true">
+        <index>0</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>Requester</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>Rental_request_description</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam readOnly="true">
+        <index>5</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>OrderNoEntered</name>
+        <type>OrderType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>1</index>
+        <name>Comment</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <outputParam hide="true">
+        <index>2</index>
+        <name>Supplier_selected</name>
+        <type>supplierType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam readOnly="true">
+        <index>3</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_invoice" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Start_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>End_date</name>
+        <type>date</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>Catalog</name>
+        <type>catalogType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>3</index>
+        <name>TotalPrice</name>
+        <type>double</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+  </specification>
+  <layout>
+    <locale language="en" country="US"/>
+    <specification id="Procure-to-pay" defaultBgColor="-526351">
+      <size w="139" h="26"/>
+      <net id="Payment">
+        <bounds x="0" y="0" w="1617" h="866"/>
+        <frame x="0" y="0" w="1620" h="869"/>
+        <viewport x="0" y="0" w="1620" h="869"/>
+        <vertex id="OutputCondition">
+          <attributes>
+            <bounds x="636" y="192" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <vertex id="InputCondition">
+          <attributes>
+            <bounds x="56" y="192" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="Inform_Supplier">
+          <vertex>
+            <attributes>
+              <bounds x="448" y="192" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="416" y="224" w="96" h="36"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Check_rental_prices">
+          <vertex>
+            <attributes>
+              <bounds x="344" y="192" w="32" h="32"/>
+              <backgroundColor>-3355648</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="312" y="224" w="96" h="54"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_invoice">
+          <vertex>
+            <attributes>
+              <bounds x="144" y="192" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="112" y="224" w="96" h="36"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Confirm_rental">
+          <vertex>
+            <attributes>
+              <bounds x="244" y="192" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="212" y="224" w="96" h="36"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Pay_invoice">
+          <vertex>
+            <attributes>
+              <bounds x="564" y="192" w="32" h="32"/>
+              <backgroundColor>-6684775</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="532" y="224" w="96" h="20"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="InputCondition" target="Send_invoice">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="67" y="203.5"/>
+              <value x="134" y="203.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Pay_invoice" target="OutputCondition">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="523" y="203.5"/>
+              <value x="612" y="203.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inform_Supplier" target="Pay_invoice">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Check_rental_prices" target="Inform_Supplier">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Confirm_rental" target="Check_rental_prices">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="303" y="203.5"/>
+              <value x="380" y="203.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Send_invoice" target="Confirm_rental">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="175" y="203.5"/>
+              <value x="272" y="203.5"/>
+            </points>
+          </attributes>
+        </flow>
+      </net>
+      <net id="Rent_equipment">
+        <bounds x="0" y="0" w="1617" h="866"/>
+        <frame x="0" y="0" w="1620" h="869"/>
+        <viewport x="0" y="0" w="1620" h="869"/>
+        <vertex id="InputCondition_2">
+          <attributes>
+            <bounds x="16" y="256" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <vertex id="OutputCondition_2">
+          <attributes>
+            <bounds x="936" y="256" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="Select_equipment">
+          <vertex>
+            <attributes>
+              <bounds x="152" y="256" w="32" h="32"/>
+              <backgroundColor>-3355648</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="116" y="288" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="142" y="256" w="11" h="32"/>
+              <backgroundColor>-3355648</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Inform_of_cancellation">
+          <vertex>
+            <attributes>
+              <bounds x="508" y="152" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="476" y="184" w="98" h="40"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Receive_purchase_order">
+          <vertex>
+            <attributes>
+              <bounds x="604" y="256" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="572" y="288" w="96" h="54"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Payment">
+          <vertex>
+            <attributes>
+              <bounds x="868" y="256" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="836" y="288" w="96" h="20"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Cancel_request">
+          <vertex>
+            <attributes>
+              <bounds x="504" y="364" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="472" y="396" w="96" h="36"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Approve_rental_request">
+          <vertex>
+            <attributes>
+              <bounds x="400" y="256" w="32" h="32"/>
+              <backgroundColor>-13312</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="372" y="288" w="96" h="54"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="431" y="256" w="11" h="32"/>
+              <backgroundColor>-13312</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Use_equipment">
+          <vertex>
+            <attributes>
+              <bounds x="784" y="256" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="752" y="288" w="96" h="36"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Inspect_equipment">
+          <vertex>
+            <attributes>
+              <bounds x="684" y="256" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="656" y="288" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="715" y="256" w="11" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Fill_in_equipment_rental_request">
+          <vertex>
+            <attributes>
+              <bounds x="68" y="256" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="40" y="288" w="96" h="72"/>
+            </attributes>
+          </label>
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="99" y="256" w="11" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Add_details_to_request">
+          <vertex>
+            <attributes>
+              <bounds x="308" y="256" w="32" h="32"/>
+              <backgroundColor>-3355648</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="276" y="288" w="96" h="40"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Confirm_availability">
+          <vertex>
+            <attributes>
+              <bounds x="220" y="256" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="192" y="288" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="251" y="256" w="11" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Prepare_purchase_order">
+          <vertex>
+            <attributes>
+              <bounds x="504" y="256" w="32" h="32"/>
+              <backgroundColor>-3355648</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="472" y="288" w="96" h="54"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="Use_equipment" target="Payment">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="867" y="271.5"/>
+              <value x="932" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Approve_rental_request" target="Inform_of_cancellation">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="441" y="271.5"/>
+              <value x="476" y="196"/>
+              <value x="512" y="167.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Payment" target="OutputCondition_2">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="963" y="271.5"/>
+              <value x="1,044" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inspect_equipment" target="OutputCondition_2">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="725" y="271.5"/>
+              <value x="792" y="248"/>
+              <value x="888" y="240"/>
+              <value x="936" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Fill_in_equipment_rental_request" target="Cancel_request">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="109" y="271.5"/>
+              <value x="132" y="332"/>
+              <value x="364" y="380"/>
+              <value x="556" y="379.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Fill_in_equipment_rental_request" target="Select_equipment">
+          <ports in="2" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="117" y="271.5"/>
+              <value x="158" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Add_details_to_request" target="Approve_rental_request">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="395" y="271.5"/>
+              <value x="456" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Approve_rental_request" target="Select_equipment">
+          <ports in="2" out="2"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="441" y="271.5"/>
+              <value x="444" y="196"/>
+              <value x="144" y="184"/>
+              <value x="142" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Prepare_purchase_order" target="Receive_purchase_order">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="583" y="271.5"/>
+              <value x="640" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Cancel_request" target="OutputCondition_2">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="587" y="379.5"/>
+              <value x="836" y="376"/>
+              <value x="912" y="364"/>
+              <value x="1,048" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Select_equipment" target="Confirm_availability">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="199" y="271.5"/>
+              <value x="260" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inspect_equipment" target="Use_equipment">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="769" y="271.5"/>
+              <value x="836" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="InputCondition_2" target="Fill_in_equipment_rental_request">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="43" y="271.5"/>
+              <value x="76" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Approve_rental_request" target="Prepare_purchase_order">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="497" y="271.5"/>
+              <value x="552" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Receive_purchase_order" target="Inspect_equipment">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="671" y="271.5"/>
+              <value x="728" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Confirm_availability" target="Add_details_to_request">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="301" y="271.5"/>
+              <value x="364" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inform_of_cancellation" target="OutputCondition_2">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="543" y="167.5"/>
+              <value x="896" y="232"/>
+              <value x="936" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Confirm_availability" target="Select_equipment">
+          <ports in="2" out="2"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="261" y="271.5"/>
+              <value x="272" y="200"/>
+              <value x="144" y="208"/>
+              <value x="142" y="271.5"/>
+            </points>
+          </attributes>
+        </flow>
+      </net>
+      <net id="Use_equipment">
+        <bounds x="0" y="0" w="1617" h="866"/>
+        <frame x="0" y="0" w="1620" h="869"/>
+        <viewport x="0" y="0" w="1620" h="869"/>
+        <vertex id="InputCondition_1">
+          <attributes>
+            <bounds x="84" y="164" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <vertex id="OutputCondition_1">
+          <attributes>
+            <bounds x="472" y="164" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="Decide_on_extension">
+          <vertex>
+            <attributes>
+              <bounds x="268" y="164" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="240" y="196" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="299" y="164" w="11" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Pick_up_equipment">
+          <vertex>
+            <attributes>
+              <bounds x="396" y="164" w="32" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="360" y="196" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="386" y="164" w="11" h="32"/>
+              <backgroundColor>-3342337</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Ask_for_extension">
+          <vertex>
+            <attributes>
+              <bounds x="160" y="164" w="32" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="128" y="196" w="96" h="40"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="191" y="164" w="11" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </decorator>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="150" y="164" w="11" h="32"/>
+              <backgroundColor>-52</backgroundColor>
+            </attributes>
+          </decorator>
+        </container>
+        <flow source="Decide_on_extension" target="Pick_up_equipment">
+          <ports in="2" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="309" y="175.5"/>
+              <value x="386" y="179.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="InputCondition_1" target="Ask_for_extension">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="67" y="175.5"/>
+              <value x="150" y="179.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Ask_for_extension" target="Decide_on_extension">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="201" y="175.5"/>
+              <value x="268" y="175.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Ask_for_extension" target="Pick_up_equipment">
+          <ports in="2" out="3"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="201" y="179.5"/>
+              <value x="292" y="260"/>
+              <value x="386" y="187.25"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Pick_up_equipment" target="OutputCondition_1">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="427" y="175.5"/>
+              <value x="508" y="175.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Decide_on_extension" target="Ask_for_extension">
+          <ports in="2" out="2"/>
+          <attributes>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="309" y="179.5"/>
+              <value x="320" y="164"/>
+              <value x="136" y="160"/>
+              <value x="150" y="179.5"/>
+            </points>
+          </attributes>
+        </flow>
+      </net>
+    </specification>
+  </layout>
+</specificationSet>

@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file has been generated with the OpenXES library. It conforms -->
+<!-- to the XML serialization of the XES standard for log storage and -->
+<!-- management. -->
+<!-- XES standard version: 1.0 -->
+<!-- OpenXES library version: 1.0RC7 -->
+<!-- OpenXES is available from http://www.openxes.org/ -->
+<log xes.version="1.0" xes.features="nested-attributes" openxes.version="1.0RC7">
+	<global scope="trace">
+		<string key="concept:name" value="UNKNOWN"/>
+	</global>
+	<global scope="event">
+		<date key="time:timestamp" value="1970-01-01T00:00:00.000+01:00"/>
+		<string key="concept:name" value="UNKNOWN"/>
+		<string key="lifecycle:transition" value="UNKNOWN"/>
+		<string key="concept:instance" value="UNKNOWN"/>
+	</global>
+	<classifier name="Activity classifier" keys="concept:name concept:instance lifecycle:transition"/>
+	<string key="concept:name" value="Procure-to-pay - version 0.122 (filtered on simple heuristics) (filtered on event attributes)"/>
+	<trace>
+		<string key="concept:name" value="1"/>
+		<event>
+			<string key="concept:instance" value="1.1"/>
+			<string key="Requester" value="Aaron"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<string key="Rental_request_description" value="A"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:30:04.498+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2035"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:32:20.708+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:39:32.563+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:42:28.894+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:43:24.895+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.6"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:47:31.296+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.7"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:52:00.125+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.8"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:58:55.337+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.9.1"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<boolean key="ExtensionNeeded" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:03:40.528+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.9.2"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:12:22.110+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.10.1"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:12:45.938+02:00"/>
+			<float key="TotalPrice" value="1350.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.10.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:16:01.053+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.10.3"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:16:58.472+02:00"/>
+			<float key="TotalPrice" value="1350.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.10.4"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:19:51.372+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="1.10.5"/>
+			<string key="org:resource" value="Donato Bramante"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:21:53.457+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="2"/>
+		<event>
+			<string key="concept:instance" value="2.1"/>
+			<string key="Requester" value="Bruno"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<string key="Rental_request_description" value="B"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnEnabled"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:30:32.700+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:35:49.213+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:39:50.047+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:42:46.336+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:43:42.502+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.6"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:49:18.512+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.7"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:12:33.165+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.8"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:16:29.274+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.9.2"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:20:02.322+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.10.1"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:22:31.322+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.10.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:23:00.699+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.10.3"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:24:01.975+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.10.4"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:29:12.045+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="2.10.5"/>
+			<string key="org:resource" value="Donato Bramante"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:29:32.762+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="3"/>
+		<event>
+			<string key="concept:instance" value="3.1"/>
+			<string key="Requester" value="Caroline"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="C"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:36:58.183+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:55:03.998+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:02:47.933+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:10:49.979+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:14:20.290+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.6"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:18:25.177+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.7"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:19:10.916+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.8"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:20:30.873+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.9.1"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:20:55.354+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.9.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:25:23.254+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.9.3"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:25:42.788+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.10.1"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:26:04.312+02:00"/>
+			<float key="TotalPrice" value="435.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.10.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:26:24.654+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.10.3"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:27:21.610+02:00"/>
+			<float key="TotalPrice" value="435.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.10.4"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:27:43.716+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="3.10.5"/>
+			<string key="org:resource" value="Andrea Mantegna"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:28:06.972+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="4"/>
+		<event>
+			<string key="concept:instance" value="4.1"/>
+			<string key="Requester" value="Dennis"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<string key="Rental_request_description" value="D"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:37:15.559+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="4.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="3545"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:49:39.342+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="4.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:02:58.603+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="4.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:04:10.080+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="4.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Cancel Request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:15:10.258+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="4.6"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inform_of_cancellation"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:17:32.531+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="5"/>
+		<event>
+			<string key="concept:instance" value="5.1"/>
+			<string key="Requester" value="Erik"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<string key="Rental_request_description" value="E"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnEnabled"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:34:28.022+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="5.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:38:33.348+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="5.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Fillipo Brunelleschi"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:39:59.585+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="5.4"/>
+			<string key="Details_rental_request" value="fail"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:50:47.137+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="5.5"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:53:05.708+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="6"/>
+		<event>
+			<string key="concept:instance" value="6.1"/>
+			<string key="Requester" value="Frank"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="F"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:34:53.340+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="6.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="3545"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:38:51.016+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="6.3"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T14:52:31.148+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="7"/>
+		<event>
+			<string key="concept:instance" value="7.1"/>
+			<string key="Requester" value="Gustav"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="G"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:45:15.530+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.2"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:07:51.866+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="8"/>
+		<event>
+			<string key="concept:instance" value="8.1"/>
+			<string key="Requester" value="Hans"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="H"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:41:20.241+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:06:45.249+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.3"/>
+			<string key="Comment" value="sorry"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="false"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:09:24.621+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.4"/>
+			<string key="Comment" value="sorry"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:28:49.807+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.5"/>
+			<string key="Comment" value="sorry"/>
+			<string key="org:resource" value="Jean Fouquet"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:33:11.491+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.6"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:33:42.914+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.7"/>
+			<string key="Comment" value="sorry"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:34:18.174+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.8"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:34:41.993+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.9"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:35:10.529+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.10"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:35:29.909+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.1"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:36:16.977+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.2"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:37:29.728+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.3"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:38:27.363+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.4"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:39:17.060+02:00"/>
+			<date key="End_date" value="2014-01-01T00:00:00.000+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.5"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:39:38.174+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.11.6"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:40:15.622+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.12.1"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:41:08.211+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.12.2"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:41:22.768+02:00"/>
+			<date key="End_date" value="2014-01-01T00:00:00.000+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.12.3"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:42:56.138+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.12.4"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:43:30.790+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.12.5"/>
+			<string key="org:resource" value="Donato Bramante"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:44:22.150+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="9"/>
+		<event>
+			<string key="concept:instance" value="9.1"/>
+			<string key="Requester" value="Irma"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="I"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:54:11.141+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:56:25.736+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:07:22.440+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:11:01.770+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.5"/>
+			<string key="Comment" value="no available"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Select new Equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:14:54.803+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.6"/>
+			<string key="Comment" value="no available"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="3545"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:23:46.968+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.7"/>
+			<string key="Comment" value="no available"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:24:25.984+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.8"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:28:43.339+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.9"/>
+			<string key="Comment" value="no available"/>
+			<string key="org:resource" value="Frau Angelico"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Select new Equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:30:20.205+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.10"/>
+			<string key="Comment" value="no available"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:31:57.646+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.11"/>
+			<string key="Comment" value="no available"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:34:01.261+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.12"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:37:53.622+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.13"/>
+			<string key="Comment" value="no available"/>
+			<string key="org:resource" value="Frau Angelico"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:38:47.796+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.14"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:39:57.775+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.15"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:40:32.879+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.16"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:40:50.220+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.17.1"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:41:32.107+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.17.2"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:41:48.190+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.17.3"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:42:02.205+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.18.1"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:42:22.527+02:00"/>
+			<float key="TotalPrice" value="430.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.18.2"/>
+			<string key="org:resource" value="Simone Martini"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:42:36.258+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.18.3"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:43:07.127+02:00"/>
+			<float key="TotalPrice" value="410.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.18.4"/>
+			<string key="org:resource" value="Lorenzo Monaco"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:43:23.444+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.18.5"/>
+			<string key="org:resource" value="Donato Bramante"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:44:19.808+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="10"/>
+		<event>
+			<string key="concept:instance" value="10.1"/>
+			<string key="Requester" value="John"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="J"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:33:27.866+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="3545"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:11:22.759+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:18:16.763+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:27:14.546+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:37:04.382+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.6"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:38:06.107+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.7"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:45:13.051+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.8"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:45:42.190+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.9.1"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:12.423+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.9.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:38.093+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.10.1"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:47:07.811+02:00"/>
+			<float key="TotalPrice" value="0.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.10.2"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:48:28.826+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.10.3"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:48:55.406+02:00"/>
+			<float key="TotalPrice" value="1200.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.10.4"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:08.684+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.10.5"/>
+			<string key="org:resource" value="Andrea Mantegna"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:39.787+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="11"/>
+		<event>
+			<string key="concept:instance" value="11.1"/>
+			<string key="Requester" value="Karl"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="K"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:33:50.140+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:47:12.795+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:09:44.890+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:23:37.991+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:36:58.755+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.6"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:38:03.391+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.7"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:39:10.814+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.8"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:45:34.624+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.9.1"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="true"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnEnabled"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:02.623+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.9.2"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="false"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:47:50.468+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.9.3"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:48:07.166+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.10.1"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:49:25.365+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.10.2"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:49:42.289+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.10.3"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:49:59.059+02:00"/>
+			<float key="TotalPrice" value="450.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.10.4"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:25.017+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.10.5"/>
+			<string key="org:resource" value="Andrea Mantegna"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:45.150+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="12"/>
+		<event>
+			<string key="concept:instance" value="12.1"/>
+			<string key="Requester" value="Luis"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="L"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:40:37.815+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T14:58:45.680+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="false"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:04:33.169+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.4"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:05:08.822+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:05:32.308+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.6"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:21:20.074+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.7"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Frau Angelico"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:30:37.723+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.8"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:32:09.689+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.9"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:45:10.683+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.10"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:45:38.616+02:00"/>
+			<boolean key="Approve" value="true"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.11.1"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Ask_for_extension"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<boolean key="ExtensionNeeded" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnEnabled"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:09.166+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.11.2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Decide_on_extension"/>
+			<boolean key="Approved" value="true"/>
+			<date key="NewEndDate" value="2014-01-01T00:00:00.000+01:00"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:35.434+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.11.4"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Pick_up_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:46:53.879+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.12.1"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Send_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:47:31.596+02:00"/>
+			<float key="TotalPrice" value="0.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.12.2"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Confirm_rental"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:48:31.214+02:00"/>
+			<date key="End_date" value="2014-01-01T00:00:00.000+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.12.3"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Check_rental_prices"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:49:04.259+02:00"/>
+			<float key="TotalPrice" value="410.0"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.12.4"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inform_Supplier"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:11.153+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.12.5"/>
+			<string key="org:resource" value="Andrea Mantegna"/>
+			<string key="concept:name" value="Pay_invoice"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:50:42.520+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="13"/>
+		<event>
+			<string key="concept:instance" value="13.1"/>
+			<string key="Requester" value="Max"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="M"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:58:05.704+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2035"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:11:42.556+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Jean Fouquet"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:15:40.842+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Ambrogio Lorenzetti"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:27:06.763+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:31:04.492+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.6"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:32:19.065+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.7"/>
+			<string key="org:resource" value="Jean Fouquet"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:33:19.131+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.8"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:36:43.505+02:00"/>
+			<boolean key="Approve" value="false"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="14"/>
+		<event>
+			<string key="concept:instance" value="14.1"/>
+			<string key="Requester" value="Norbert"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="N"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T14:58:32.349+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2035"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:06:22.327+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:10:04.356+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:36:40.511+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.5"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Frau Angelico"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Cancel Request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:43:54.443+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.6"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Inform_of_cancellation"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:44:53.781+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="15"/>
+		<event>
+			<string key="concept:instance" value="15.1"/>
+			<string key="Requester" value="Olaf"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="O"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T15:01:32.079+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2433"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T15:03:56.249+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.3"/>
+			<string key="Comment" value="Last"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:08:49.035+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:21:27.476+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.5"/>
+			<string key="Comment" value="Last"/>
+			<string key="org:resource" value="Paolo Uccello"/>
+			<string key="concept:name" value="Approve_rental_request"/>
+			<string key="Request_decision" value="Approve"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:30:57.208+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.6"/>
+			<string key="org:resource" value="Pietro Lorenzetti"/>
+			<string key="concept:name" value="Prepare_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:32:12.323+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.7"/>
+			<string key="org:resource" value="Lorenzo Ghilberti"/>
+			<string key="concept:name" value="Receive_purchase_order"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:35:08.145+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.8"/>
+			<string key="org:resource" value="Jean Pucelle"/>
+			<string key="concept:name" value="Inspect_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T15:35:54.832+02:00"/>
+			<boolean key="Approve" value="false"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="16"/>
+		<event>
+			<string key="concept:instance" value="16.1"/>
+			<string key="Requester" value="Paul"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="P"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T16:05:58.388+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="16.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2035"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T16:06:36.051+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="16.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T16:07:28.467+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="16.4"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T16:09:09.791+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="17"/>
+		<event>
+			<string key="concept:instance" value="17.1"/>
+			<string key="Requester" value="Robert"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Fill_in_equipment_rental_request"/>
+			<string key="Using_Time/expiry" value="2017-12-22T10:40:39"/>
+			<boolean key="Using_Time/workdays" value="false"/>
+			<string key="Rental_request_description" value="R"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="Using_Time/trigger" value="OnExecuting"/>
+			<date key="Start_date" value="2021-06-09T00:00:00.000+02:00"/>
+			<date key="time:timestamp" value="2021-06-09T16:06:16.378+02:00"/>
+			<date key="End_date" value="2021-06-09T00:00:00.000+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.2"/>
+			<string key="Comment" value="no comment"/>
+			<string key="Catalog/Item/Description" value="Yellow bulldozer"/>
+			<string key="Catalog/Item/Price" value="1230"/>
+			<string key="OrderNoEntered" value="2035"/>
+			<string key="Catalog/Item/Name" value="Bulldozer"/>
+			<date key="time:timestamp" value="2021-06-09T16:06:40.906+02:00"/>
+			<string key="Supplier_selected" value="supplier1"/>
+			<string key="Catalog/Item/OrderNo" value="3545"/>
+			<string key="Catalog/Item/Supplier" value="supplier2"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Select_equipment"/>
+			<string key="lifecycle:transition" value="complete"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.3"/>
+			<string key="Comment" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Confirm_availability"/>
+			<boolean key="Available" value="true"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T16:07:35.686+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.4"/>
+			<string key="Details_rental_request" value="no comment"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Add_details_to_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T16:08:09.111+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.5"/>
+			<string key="org:resource" value="Tommaso Masaccio"/>
+			<string key="concept:name" value="Cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2021-06-09T16:09:12.423+02:00"/>
+		</event>
+	</trace>
+</log>

@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="travel_booking">
+    <documentation>No description provided</documentation>
+    <metaData>
+      <creator>Studium</creator>
+      <description>No description provided</description>
+      <coverage>4.3.1.771</coverage>
+      <version>0.1</version>
+      <persistent>false</persistent>
+      <identifier>UID_52696685-c7ca-47d9-afc8-088577766ea6</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" elementFormDefault="qualified">
+      <xs:simpleType name="TransportType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Train" />
+          <xs:enumeration value="Bus" />
+          <xs:enumeration value="Plane" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="HotelType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Apartment" />
+          <xs:enumeration value="Hotel" />
+          <xs:enumeration value="Camping" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AccomodationType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="3 Star" />
+          <xs:enumeration value="4 Star" />
+          <xs:enumeration value="5 Star" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="DestinationType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Spanien" />
+          <xs:enumeration value="Italien" />
+          <xs:enumeration value="Griechenland" />
+          <xs:enumeration value="Kroatien" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <decomposition id="Net" isRootNet="true" xsi:type="NetFactsType">
+      <localVariable>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>0</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>0</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>0</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue />
+      </localVariable>
+      <localVariable>
+        <index>9</index>
+        <name>approved</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>false</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>10</index>
+        <name>paid</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>false</initialValue>
+      </localVariable>
+      <localVariable>
+        <index>11</index>
+        <name>booked</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>false</initialValue>
+      </localVariable>
+      <processControlElements>
+        <inputCondition id="Start">
+          <name>Start</name>
+          <flowsInto>
+            <nextElementRef id="travel_request" />
+          </flowsInto>
+        </inputCondition>
+        <task id="travel_request">
+          <name>travel request</name>
+          <flowsInto>
+            <nextElementRef id="C" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="cancel_request" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/travel_request/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/travel_request/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;duration&gt;{/travel_request/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/travel_request/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/travel_request/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/travel_request/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="travel_request" />
+        </task>
+        <condition id="C">
+          <flowsInto>
+            <nextElementRef id="refining_the_request" />
+          </flowsInto>
+        </condition>
+        <task id="cancel_request">
+          <name>cancel_request</name>
+          <flowsInto>
+            <nextElementRef id="End" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="C" />
+          <removesTokens id="approve_offer" />
+          <removesTokens id="decline_offer" />
+          <removesTokens id="offer_with_bus" />
+          <removesTokens id="offer_with_plane" />
+          <removesTokens id="offer_with_train" />
+          <removesTokens id="pay_the_trip" />
+          <removesTokens id="refining_the_request" />
+          <removesTokensFromFlow>
+            <flowSource id="approve_offer" />
+            <flowDestination id="decline_offer" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="approve_offer" />
+            <flowDestination id="pay_the_trip" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="offer_with_bus" />
+            <flowDestination id="approve_offer" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="offer_with_plane" />
+            <flowDestination id="approve_offer" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="offer_with_train" />
+            <flowDestination id="approve_offer" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="refining_the_request" />
+            <flowDestination id="offer_with_bus" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="refining_the_request" />
+            <flowDestination id="offer_with_plane" />
+          </removesTokensFromFlow>
+          <removesTokensFromFlow>
+            <flowSource id="refining_the_request" />
+            <flowDestination id="offer_with_train" />
+          </removesTokensFromFlow>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet />
+              </distributionSet>
+              <familiarParticipant taskID="travel_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="cancel_request" />
+        </task>
+        <task id="refining_the_request">
+          <name>refining the request</name>
+          <flowsInto>
+            <nextElementRef id="offer_with_bus" />
+            <predicate ordering="0">/Net/transport/text() = 'Bus'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="offer_with_train" />
+            <predicate ordering="2">/Net/transport/text() = 'Train'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="offer_with_plane" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/refining_the_request/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/refining_the_request/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="travel_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="refining_the_request" />
+        </task>
+        <task id="offer_with_bus">
+          <name>offer with bus</name>
+          <flowsInto>
+            <nextElementRef id="approve_offer" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/offer_with_bus/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+          </completedMappings>
+          <timer>
+            <trigger>OnExecuting</trigger>
+            <duration>PT1M30S</duration>
+            <workdays>true</workdays>
+          </timer>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="offer_with_bus" />
+        </task>
+        <task id="offer_with_plane">
+          <name>offer with plane</name>
+          <flowsInto>
+            <nextElementRef id="approve_offer" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/offer_with_plane/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+          </completedMappings>
+          <timer>
+            <trigger>OnEnabled</trigger>
+            <duration>PT1M30S</duration>
+            <workdays>true</workdays>
+          </timer>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="offer_with_plane" />
+        </task>
+        <task id="offer_with_train">
+          <name>offer with train</name>
+          <flowsInto>
+            <nextElementRef id="approve_offer" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/offer_with_train/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+          </completedMappings>
+          <timer>
+            <trigger>OnExecuting</trigger>
+            <duration>PT1M30S</duration>
+            <workdays>true</workdays>
+          </timer>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="offer_with_train" />
+        </task>
+        <task id="approve_offer">
+          <name>approve_offer</name>
+          <flowsInto>
+            <nextElementRef id="decline_offer" />
+            <isDefaultFlow />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="pay_the_trip" />
+            <predicate ordering="0">/Net/approved = 'true'</predicate>
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/Net/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;approved&gt;{/approve_offer/approved/text()}&lt;/approved&gt;" />
+              <mapsTo>approved</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="travel_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="approve_offer" />
+        </task>
+        <task id="decline_offer">
+          <name>decline_offer</name>
+          <flowsInto>
+            <nextElementRef id="End" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="cancel_request" />
+          <removesTokensFromFlow>
+            <flowSource id="travel_request" />
+            <flowDestination id="cancel_request" />
+          </removesTokensFromFlow>
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;approved&gt;{/Net/approved/text()}&lt;/approved&gt;" />
+              <mapsTo>approved</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/Net/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="travel_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="decline_offer" />
+        </task>
+        <task id="pay_the_trip">
+          <name>pay the trip</name>
+          <flowsInto>
+            <nextElementRef id="book_trip" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <removesTokens id="cancel_request" />
+          <removesTokensFromFlow>
+            <flowSource id="travel_request" />
+            <flowDestination id="cancel_request" />
+          </removesTokensFromFlow>
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/Net/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;paid&gt;{/pay_the_trip/paid/text()}&lt;/paid&gt;" />
+              <mapsTo>paid</mapsTo>
+            </mapping>
+          </completedMappings>
+          <timer>
+            <trigger>OnExecuting</trigger>
+            <duration>PT3M</duration>
+            <workdays>true</workdays>
+          </timer>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="travel_request" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="pay_the_trip" />
+        </task>
+        <task id="book_trip">
+          <name>book_trip</name>
+          <flowsInto>
+            <nextElementRef id="End" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;duration&gt;{/Net/duration/text()}&lt;/duration&gt;" />
+              <mapsTo>duration</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;accomodation&gt;{/Net/accomodation/text()}&lt;/accomodation&gt;" />
+              <mapsTo>accomodation</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;number_persons&gt;{/Net/number_persons/text()}&lt;/number_persons&gt;" />
+              <mapsTo>number_persons</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;paid&gt;{/Net/paid/text()}&lt;/paid&gt;" />
+              <mapsTo>paid</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;hotel&gt;{/Net/hotel/text()}&lt;/hotel&gt;" />
+              <mapsTo>hotel</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;last_name&gt;{/Net/last_name/text()}&lt;/last_name&gt;" />
+              <mapsTo>last_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;transport&gt;{/Net/transport/text()}&lt;/transport&gt;" />
+              <mapsTo>transport</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;first_name&gt;{/Net/first_name/text()}&lt;/first_name&gt;" />
+              <mapsTo>first_name</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;budget&gt;{/Net/budget/text()}&lt;/budget&gt;" />
+              <mapsTo>budget</mapsTo>
+            </mapping>
+            <mapping>
+              <expression query="&lt;desired_destination&gt;{/Net/desired_destination/text()}&lt;/desired_destination&gt;" />
+              <mapsTo>desired_destination</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;booked&gt;{/book_trip/booked/text()}&lt;/booked&gt;" />
+              <mapsTo>booked</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="book_trip" />
+        </task>
+        <outputCondition id="End">
+          <name>End</name>
+        </outputCondition>
+      </processControlElements>
+    </decomposition>
+    <decomposition id="approve_offer" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>9</index>
+        <name>approved</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="book_trip" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>9</index>
+        <name>paid</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>10</index>
+        <name>booked</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="cancel_request" xsi:type="WebServiceGatewayFactsType">
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="decline_offer" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>9</index>
+        <name>approved</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>automated</externalInteraction>
+    </decomposition>
+    <decomposition id="offer_with_bus" xsi:type="WebServiceGatewayFactsType">
+      <name>offer with bus</name>
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="offer_with_plane" xsi:type="WebServiceGatewayFactsType">
+      <name>offer with plane</name>
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="offer_with_train" xsi:type="WebServiceGatewayFactsType">
+      <name>offer with train</name>
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="pay_the_trip" xsi:type="WebServiceGatewayFactsType">
+      <name>pay the trip</name>
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>8</index>
+        <name>accomodation</name>
+        <type>AccomodationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>9</index>
+        <name>paid</name>
+        <type>boolean</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="refining_the_request" xsi:type="WebServiceGatewayFactsType">
+      <name>refining the request</name>
+      <inputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <inputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>6</index>
+        <name>transport</name>
+        <type>TransportType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>7</index>
+        <name>hotel</name>
+        <type>HotelType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="travel_request" xsi:type="WebServiceGatewayFactsType">
+      <name>travel request</name>
+      <outputParam>
+        <index>0</index>
+        <name>first_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>1</index>
+        <name>last_name</name>
+        <type>string</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>2</index>
+        <name>desired_destination</name>
+        <type>DestinationType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>3</index>
+        <name>number_persons</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>4</index>
+        <name>budget</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <outputParam>
+        <index>5</index>
+        <name>duration</name>
+        <type>int</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <defaultValue />
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+  </specification>
+  <layout>
+    <locale language="de" country="DE"/>
+    <specification id="travel_booking" defaultBgColor="-526351">
+      <size w="58" h="28"/>
+      <net id="Net">
+        <bounds x="0" y="0" w="1176" h="649"/>
+        <frame x="0" y="0" w="1179" h="652"/>
+        <viewport x="0" y="0" w="1179" h="652"/>
+        <vertex id="C">
+          <attributes>
+            <bounds x="236" y="280" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="Start">
+          <vertex>
+            <attributes>
+              <bounds x="32" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="0" y="312" w="96" h="16"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="End">
+          <vertex>
+            <attributes>
+              <bounds x="1.048" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1.016" y="312" w="96" h="16"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="decline_offer">
+          <vertex>
+            <attributes>
+              <bounds x="776" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="744" y="312" w="97" h="17"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="offer_with_plane">
+          <vertex>
+            <attributes>
+              <bounds x="484" y="392" w="33" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="454" y="426" w="99" h="34"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="travel_request">
+          <vertex>
+            <attributes>
+              <bounds x="148" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="120" y="312" w="96" h="16"/>
+            </attributes>
+          </label>
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="179" y="280" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="refining_the_request">
+          <vertex>
+            <attributes>
+              <bounds x="296" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="267" y="314" w="99" h="34"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="327" y="280" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="offer_with_bus">
+          <vertex>
+            <attributes>
+              <bounds x="480" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="448" y="313" w="96" h="16"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="book_trip">
+          <vertex>
+            <attributes>
+              <bounds x="908" y="384" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="876" y="416" w="97" h="17"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="pay_the_trip">
+          <vertex>
+            <attributes>
+              <bounds x="776" y="384" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="744" y="416" w="97" h="17"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="cancel_request">
+          <vertex>
+            <attributes>
+              <bounds x="480" y="80" w="32" h="32"/>
+              <backgroundColor>-4144960</backgroundColor>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="448" y="112" w="96" h="16"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="offer_with_train">
+          <vertex>
+            <attributes>
+              <bounds x="480" y="168" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="448" y="201" w="96" h="16"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="approve_offer">
+          <vertex>
+            <attributes>
+              <bounds x="648" y="280" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="613" y="314" w="99" h="16"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="679" y="280" w="11" h="32"/>
+            </attributes>
+          </decorator>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="638" y="280" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <flow source="refining_the_request" target="offer_with_plane">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="refining_the_request" target="offer_with_bus">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="offer_with_bus" target="approve_offer">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="cancel_request" target="End">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="pay_the_trip" target="book_trip">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="refining_the_request" target="offer_with_train">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="337" y="295,5"/>
+              <value x="408" y="239"/>
+              <value x="480" y="183,5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="offer_with_train" target="approve_offer">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="approve_offer" target="pay_the_trip">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="book_trip" target="End">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="C" target="refining_the_request">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="approve_offer" target="decline_offer">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="travel_request" target="cancel_request">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Start" target="travel_request">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="decline_offer" target="End">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="travel_request" target="C">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="offer_with_plane" target="approve_offer">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+      </net>
+    </specification>
+  </layout>
+</specificationSet>

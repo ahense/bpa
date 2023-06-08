@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file has been generated with the OpenXES library. It conforms -->
+<!-- to the XML serialization of the XES standard for log storage and -->
+<!-- management. -->
+<!-- XES standard version: 1.0 -->
+<!-- OpenXES library version: 1.0RC7 -->
+<!-- OpenXES is available from http://www.openxes.org/ -->
+<log xes.version="1.0" xes.features="nested-attributes" openxes.version="1.0RC7">
+	<extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext"/>
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+	<extension name="Semantic" prefix="semantic" uri="http://www.xes-standard.org/semantic.xesext"/>
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+	<global scope="trace">
+		<string key="concept:name" value="UNKNOWN"/>
+	</global>
+	<global scope="event">
+		<date key="time:timestamp" value="1970-01-01T00:00:00.000+01:00"/>
+		<string key="concept:name" value="UNKNOWN"/>
+		<string key="lifecycle:transition" value="UNKNOWN"/>
+		<string key="concept:instance" value="UNKNOWN"/>
+		<string key="org:resource" value="UNKNOWN"/>
+	</global>
+	<classifier name="Event Name" keys="concept:name"/>
+	<classifier name="Lifecycle transition" keys="lifecycle:transition"/>
+	<classifier name="Resource" keys="org:resource"/>
+	<string key="concept:name" value="travel_50_filt"/>
+	<string key="lifecycle:model" value="standard"/>
+	<trace>
+		<string key="concept:name" value="7"/>
+		<event>
+			<string key="concept:instance" value="7.1"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Mueller"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Nick"/>
+			<date key="time:timestamp" value="2022-02-23T01:10:04.446+01:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="2000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:10:25.891+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:13:50.829+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:14:08.754+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:14:23.245+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="7.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:17:27.580+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="8"/>
+		<event>
+			<string key="concept:instance" value="8.1"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="1"/>
+			<string key="last_name" value="Damm"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Dieter"/>
+			<date key="time:timestamp" value="2022-02-23T01:21:38.670+01:00"/>
+			<int key="budget" value="1000"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:22:05.759+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:22:33.184+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:22:43.010+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:22:52.223+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="8.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:23:10.619+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="9"/>
+		<event>
+			<string key="concept:instance" value="9.1"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="5"/>
+			<string key="last_name" value="Dorf"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Achim"/>
+			<date key="time:timestamp" value="2022-02-23T01:30:56.392+01:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="2500"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:31:13.757+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:31:58.051+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:32:08.861+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:32:18.831+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="9.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:32:33.405+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="10"/>
+		<event>
+			<string key="concept:instance" value="10.1"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Ader"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Helmut"/>
+			<date key="time:timestamp" value="2022-02-23T01:45:04.667+01:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="1000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:45:31.406+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:45:54.187+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:46:03.661+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:46:19.915+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="10.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:46:27.527+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="11"/>
+		<event>
+			<string key="concept:instance" value="11.1"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Wies"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Petra"/>
+			<date key="time:timestamp" value="2022-02-23T01:52:04.713+01:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="4000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:52:20.765+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:53:25.598+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:53:38.977+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:53:49.052+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="11.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T01:54:05.561+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="12"/>
+		<event>
+			<string key="concept:instance" value="12.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="6"/>
+			<string key="last_name" value="Hart"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Merle"/>
+			<date key="time:timestamp" value="2022-02-23T02:03:48.362+01:00"/>
+			<int key="budget" value="3000"/>
+			<string key="desired_destination" value="Spanien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T02:04:04.791+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T02:04:19.032+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T02:04:30.582+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="12.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T02:05:03.093+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="13"/>
+		<event>
+			<string key="concept:instance" value="13.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Winter"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Hannah"/>
+			<date key="time:timestamp" value="2022-02-23T16:04:11.255+01:00"/>
+			<int key="budget" value="6000"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="13.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:04:26.222+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="14"/>
+		<event>
+			<string key="concept:instance" value="14.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Winter"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Hannah"/>
+			<date key="time:timestamp" value="2022-02-23T16:04:56.239+01:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="6000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:05:10.733+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="14.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:06:25.934+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="15"/>
+		<event>
+			<string key="concept:instance" value="15.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Farmer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Heiko"/>
+			<date key="time:timestamp" value="2022-02-23T16:08:20.775+01:00"/>
+			<string key="desired_destination" value="Italien"/>
+			<int key="budget" value="1800"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:08:45.844+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:09:14.009+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:09:49.088+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="15.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-02-23T16:10:07.290+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="16"/>
+		<event>
+			<string key="concept:instance" value="16.1"/>
+			<int key="duration" value="9"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="5"/>
+			<string key="last_name" value="Dampf"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Heiko"/>
+			<date key="time:timestamp" value="2022-03-03T16:03:39.162+01:00"/>
+			<int key="budget" value="2000"/>
+			<string key="desired_destination" value="Spanien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="16.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:05:22.071+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="16.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:06:08.304+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="17"/>
+		<event>
+			<string key="concept:instance" value="17.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Büffel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Andrea"/>
+			<date key="time:timestamp" value="2022-03-03T16:39:22.764+01:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="2000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:39:50.677+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:40:53.298+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="17.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:41:16.251+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="18"/>
+		<event>
+			<string key="concept:instance" value="18.1"/>
+			<int key="duration" value="14"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Dattel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Paul"/>
+			<date key="time:timestamp" value="2022-03-03T16:48:04.033+01:00"/>
+			<int key="budget" value="10000"/>
+			<string key="desired_destination" value="Kroatien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="18.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:48:14.967+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="18.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:48:36.066+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="18.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:48:54.158+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="18.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:49:22.064+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="18.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:49:40.782+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="19"/>
+		<event>
+			<string key="concept:instance" value="19.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Dotter"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Maike"/>
+			<date key="time:timestamp" value="2022-03-03T16:50:18.993+01:00"/>
+			<string key="desired_destination" value="Italien"/>
+			<int key="budget" value="2500"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="19.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:50:37.613+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="19.3"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:54:16.204+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="19.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T16:54:43.501+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="20"/>
+		<event>
+			<string key="concept:instance" value="20.1"/>
+			<int key="duration" value="3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="9"/>
+			<string key="last_name" value="Baum"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Miriam"/>
+			<date key="time:timestamp" value="2022-03-03T17:00:32.212+01:00"/>
+			<int key="budget" value="2500"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="20.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:00:49.991+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="20.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:04:14.541+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="21"/>
+		<event>
+			<string key="concept:instance" value="21.1"/>
+			<int key="duration" value="3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="5"/>
+			<string key="last_name" value="vdm"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Jan"/>
+			<date key="time:timestamp" value="2022-03-03T17:04:54.115+01:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="2999"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="21.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:05:13.869+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="21.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:05:40.812+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="22"/>
+		<event>
+			<string key="concept:instance" value="22.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="1"/>
+			<string key="last_name" value="Serrano"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Lukas"/>
+			<date key="time:timestamp" value="2022-03-03T17:10:43.276+01:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="1000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="22.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:10:55.109+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="22.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:11:17.585+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="23"/>
+		<event>
+			<string key="concept:instance" value="23.1"/>
+			<int key="duration" value="2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="1"/>
+			<string key="last_name" value="Freitag"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="lena"/>
+			<date key="time:timestamp" value="2022-03-03T17:16:05.752+01:00"/>
+			<int key="budget" value="1000"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="23.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:16:38.467+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="23.3"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:17:17.715+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="23.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:17:44.637+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="24"/>
+		<event>
+			<string key="concept:instance" value="24.1"/>
+			<int key="duration" value="3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Kahl"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Alina"/>
+			<date key="time:timestamp" value="2022-03-03T17:26:55.336+01:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="2400"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="24.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:27:09.558+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="24.3"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:27:26.872+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="24.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:27:46.620+01:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="24.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-03-03T17:27:59.366+01:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="68"/>
+		<event>
+			<string key="concept:instance" value="68.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="L"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="LArs"/>
+			<date key="time:timestamp" value="2022-05-09T18:52:15.502+02:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="1500"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="68.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-09T18:52:59.559+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="68.3"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-09T18:53:52.907+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="68.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-09T18:54:58.320+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="68.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-09T18:55:47.584+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="68.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-09T18:56:10.198+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="71"/>
+		<event>
+			<string key="concept:instance" value="71.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Hammel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Heiko"/>
+			<date key="time:timestamp" value="2022-05-23T13:56:24.330+02:00"/>
+			<string key="desired_destination" value="Italien"/>
+			<int key="budget" value="4700"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="71.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T13:56:49.817+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="71.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T13:57:20.743+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="71.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T13:57:33.829+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="71.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T13:58:14.025+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="71.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T13:58:25.261+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="72"/>
+		<event>
+			<string key="concept:instance" value="72.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Assel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Anna-Lena"/>
+			<date key="time:timestamp" value="2022-05-23T14:00:13.432+02:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="1200"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="72.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:00:30.864+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="72.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:02:21.656+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="72.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:02:35.665+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="72.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:02:36.037+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="73"/>
+		<event>
+			<string key="concept:instance" value="73.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Winter"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Ella"/>
+			<date key="time:timestamp" value="2022-05-23T14:03:15.762+02:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="2300"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="73.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:03:28.031+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="73.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:03:39.819+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="74"/>
+		<event>
+			<string key="concept:instance" value="74.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="6"/>
+			<string key="last_name" value="Tigel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Ralf"/>
+			<date key="time:timestamp" value="2022-05-23T14:06:50.286+02:00"/>
+			<int key="budget" value="3600"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="74.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:07:00.190+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="74.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:07:15.393+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="74.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:07:23.440+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="74.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:07:31.278+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="74.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:07:54.415+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="75"/>
+		<event>
+			<string key="concept:instance" value="75.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="1"/>
+			<string key="last_name" value="Achen"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Leonie"/>
+			<date key="time:timestamp" value="2022-05-23T14:10:12.714+02:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="600"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="75.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:10:32.844+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="75.4"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:10:47.295+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="75.5"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:10:56.530+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="75.6"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:11:06.940+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="75.7"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:11:18.734+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="76"/>
+		<event>
+			<string key="concept:instance" value="76.1"/>
+			<int key="duration" value="10"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="5"/>
+			<string key="last_name" value="Semmel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Leon"/>
+			<date key="time:timestamp" value="2022-05-23T14:13:09.844+02:00"/>
+			<int key="budget" value="2300"/>
+			<string key="desired_destination" value="Kroatien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="76.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:13:26.192+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="76.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:13:42.632+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="76.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:13:51.125+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="76.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:13:51.456+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="77"/>
+		<event>
+			<string key="concept:instance" value="77.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Walder"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Sabine"/>
+			<date key="time:timestamp" value="2022-05-23T14:14:18.560+02:00"/>
+			<int key="budget" value="1400"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="77.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:14:28.151+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="77.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:15:07.432+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="77.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:15:14.284+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="78"/>
+		<event>
+			<string key="concept:instance" value="78.1"/>
+			<int key="duration" value="9"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Kassel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Kevin"/>
+			<date key="time:timestamp" value="2022-05-23T14:18:19.193+02:00"/>
+			<int key="budget" value="1400"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="78.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:18:38.772+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="78.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:18:50.258+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="78.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:19:01.972+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="78.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:19:12.715+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="78.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:19:35.017+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="79"/>
+		<event>
+			<string key="concept:instance" value="79.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Dunther"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Anton"/>
+			<date key="time:timestamp" value="2022-05-23T14:20:03.478+02:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="2000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="79.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:20:18.780+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="79.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:20:30.891+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="79.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:20:40.886+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="79.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:20:48.371+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="80"/>
+		<event>
+			<string key="concept:instance" value="80.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="6"/>
+			<string key="last_name" value="White"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Walter"/>
+			<date key="time:timestamp" value="2022-05-23T14:21:10.947+02:00"/>
+			<string key="desired_destination" value="Italien"/>
+			<int key="budget" value="14000"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="80.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:21:26.661+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="80.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:21:35.533+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="80.5"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:21:47.420+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="80.6"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:21:56.912+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="80.7"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:22:15.169+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="81"/>
+		<event>
+			<string key="concept:instance" value="81.1"/>
+			<int key="duration" value="9"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="13"/>
+			<string key="last_name" value="Lager"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Karl"/>
+			<date key="time:timestamp" value="2022-05-23T14:25:01.311+02:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="18600"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="81.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:25:14.131+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="81.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:25:26.496+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="81.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:25:36.475+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="81.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:25:43.408+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="81.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:26:35.936+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="82"/>
+		<event>
+			<string key="concept:instance" value="82.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="8"/>
+			<string key="last_name" value="Malter"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Melissa"/>
+			<date key="time:timestamp" value="2022-05-23T14:26:09.085+02:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="3400"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="82.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:26:18.057+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="82.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:26:53.493+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="82.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:27:01.401+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="82.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:27:08.134+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="82.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:27:16.359+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="83"/>
+		<event>
+			<string key="concept:instance" value="83.1"/>
+			<int key="duration" value="8"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="7"/>
+			<string key="last_name" value="Engel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Maren"/>
+			<date key="time:timestamp" value="2022-05-23T14:27:48.289+02:00"/>
+			<int key="budget" value="5648"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="83.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:27:57.862+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="83.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:28:11.847+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="83.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:28:19.201+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="84"/>
+		<event>
+			<string key="concept:instance" value="84.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Abelt"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Andre"/>
+			<date key="time:timestamp" value="2022-05-23T14:28:44.373+02:00"/>
+			<int key="budget" value="2500"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="84.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:28:51.215+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="84.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:28:58.799+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="84.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:29:04.336+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="84.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:29:12.555+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="84.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:29:26.493+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="85"/>
+		<event>
+			<string key="concept:instance" value="85.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Schallenberg"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Esther"/>
+			<date key="time:timestamp" value="2022-05-23T14:33:38.558+02:00"/>
+			<int key="budget" value="1800"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="85.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:33:49.211+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="85.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:33:57.443+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="85.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:34:05.152+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="85.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:34:13.640+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="85.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:34:22.642+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="86"/>
+		<event>
+			<string key="concept:instance" value="86.1"/>
+			<int key="duration" value="14"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Wirst"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Angela"/>
+			<date key="time:timestamp" value="2022-05-23T14:36:31.189+02:00"/>
+			<int key="budget" value="2000"/>
+			<string key="desired_destination" value="Spanien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="86.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:36:43.159+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="86.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:36:57.385+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="86.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:37:05.461+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="87"/>
+		<event>
+			<string key="concept:instance" value="87.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="7"/>
+			<string key="last_name" value="Garcia"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Pablo"/>
+			<date key="time:timestamp" value="2022-05-23T14:37:45.326+02:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="3600"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="87.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:37:59.088+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="87.4"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:38:08.427+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="87.5"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:38:15.473+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="87.6"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:38:24.216+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="87.7"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:38:39.707+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="88"/>
+		<event>
+			<string key="concept:instance" value="88.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Hussel"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Manja"/>
+			<date key="time:timestamp" value="2022-05-23T14:47:21.660+02:00"/>
+			<string key="desired_destination" value="Kroatien"/>
+			<int key="budget" value="2100"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="88.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:47:31.352+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="88.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:47:45.334+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="88.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:47:51.880+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="88.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:47:58.503+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="88.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:48:06.052+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="89"/>
+		<event>
+			<string key="concept:instance" value="89.1"/>
+			<int key="duration" value="10"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="9"/>
+			<string key="last_name" value="Sommer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Finn"/>
+			<date key="time:timestamp" value="2022-05-23T14:48:43.386+02:00"/>
+			<int key="budget" value="21000"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="89.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:48:53.194+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="89.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:49:01.022+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="89.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:49:09.059+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="89.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:49:16.118+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="89.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:49:28.709+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="90"/>
+		<event>
+			<string key="concept:instance" value="90.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Weitent"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Till"/>
+			<date key="time:timestamp" value="2022-05-23T14:50:22.780+02:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="1200"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="90.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:50:28.498+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="91"/>
+		<event>
+			<string key="concept:instance" value="91.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="1"/>
+			<string key="last_name" value="West"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Edgar"/>
+			<date key="time:timestamp" value="2022-05-23T14:54:58.791+02:00"/>
+			<int key="budget" value="1000"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="91.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:55:08.017+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="91.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:55:22.365+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="91.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:55:31.991+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="91.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:55:38.373+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="91.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T14:55:48.252+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="92"/>
+		<event>
+			<string key="concept:instance" value="92.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="5"/>
+			<string key="last_name" value="Windberg"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Carmen"/>
+			<date key="time:timestamp" value="2022-05-23T15:02:36.806+02:00"/>
+			<int key="budget" value="2600"/>
+			<string key="desired_destination" value="Italien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="92.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:02:44.994+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="92.3"/>
+			<string key="accomodation" value="3 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:03:01.668+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="92.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:03:10.375+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="93"/>
+		<event>
+			<string key="concept:instance" value="93.1"/>
+			<int key="duration" value="8"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Laufenburg"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Gisela"/>
+			<date key="time:timestamp" value="2022-05-23T15:03:45.836+02:00"/>
+			<int key="budget" value="3000"/>
+			<string key="desired_destination" value="Kroatien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="93.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:03:54.635+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="93.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:04:03.510+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="93.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:04:12.057+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="93.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:04:18.765+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="93.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:04:28.202+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="94"/>
+		<event>
+			<string key="concept:instance" value="94.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="7"/>
+			<string key="last_name" value="Appert"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Wilfred"/>
+			<date key="time:timestamp" value="2022-05-23T15:05:10.340+02:00"/>
+			<string key="desired_destination" value="Griechenland"/>
+			<int key="budget" value="3290"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="94.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:05:43.171+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="94.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:05.500+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="94.4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="cancel_request"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:27.346+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="95"/>
+		<event>
+			<string key="concept:instance" value="95.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Nasky"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Pavel"/>
+			<date key="time:timestamp" value="2022-05-23T15:05:30.969+02:00"/>
+			<string key="desired_destination" value="Spanien"/>
+			<int key="budget" value="1900"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="95.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:05:53.159+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="95.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_plane"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:12.103+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="95.4"/>
+			<boolean key="approved" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:30.537+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="95.5"/>
+			<boolean key="paid" value="true"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="pay_the_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:36.911+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="95.6"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<boolean key="booked" value="true"/>
+			<string key="concept:name" value="book_trip"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-23T15:06:45.908+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="161"/>
+		<event>
+			<string key="concept:instance" value="161.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="7"/>
+			<string key="last_name" value="Freiabend"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Lena"/>
+			<date key="time:timestamp" value="2022-05-25T12:28:40.438+02:00"/>
+			<int key="budget" value="3200"/>
+			<string key="desired_destination" value="Spanien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="161.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:29:33.619+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="161.4"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:29:50.202+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="161.5"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:30:22.013+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="161.6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:30:22.543+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="162"/>
+		<event>
+			<string key="concept:instance" value="162.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="4"/>
+			<string key="last_name" value="Weiler"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Barney"/>
+			<date key="time:timestamp" value="2022-05-25T12:31:14.256+02:00"/>
+			<string key="desired_destination" value="Italien"/>
+			<int key="budget" value="2040"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="162.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Camping"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:31:28.075+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="162.4"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:31:41.366+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="162.5"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:31:51.056+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="162.6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:31:51.524+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="163"/>
+		<event>
+			<string key="concept:instance" value="163.1"/>
+			<int key="duration" value="6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="10"/>
+			<string key="last_name" value="Assen"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Chris"/>
+			<date key="time:timestamp" value="2022-05-25T12:32:46.099+02:00"/>
+			<int key="budget" value="5412"/>
+			<string key="desired_destination" value="Kroatien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="163.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:32:57.521+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="163.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:33:07.854+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="163.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:33:15.861+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="163.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:33:16.088+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="164"/>
+		<event>
+			<string key="concept:instance" value="164.1"/>
+			<int key="duration" value="5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="3"/>
+			<string key="last_name" value="Dimat"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Marco"/>
+			<date key="time:timestamp" value="2022-05-25T12:33:50.067+02:00"/>
+			<int key="budget" value="1469"/>
+			<string key="desired_destination" value="Kroatien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="164.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:34:00.023+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="164.3"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:34:08.836+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="164.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:34:17.103+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="164.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:34:17.256+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="165"/>
+		<event>
+			<string key="concept:instance" value="165.1"/>
+			<int key="duration" value="7"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="2"/>
+			<string key="last_name" value="Abt"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Daniel"/>
+			<date key="time:timestamp" value="2022-05-25T12:34:51.939+02:00"/>
+			<int key="budget" value="3000"/>
+			<string key="desired_destination" value="Griechenland"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="165.3"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Hotel"/>
+			<string key="transport" value="Bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:35:00.964+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="165.4"/>
+			<string key="accomodation" value="5 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_bus"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:35:10.683+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="165.5"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:35:17.964+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="165.6"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-05-25T12:35:18.157+02:00"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="199"/>
+		<event>
+			<string key="concept:instance" value="199.1"/>
+			<int key="duration" value="4"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="travel_request"/>
+			<int key="number_persons" value="6"/>
+			<string key="last_name" value="Schnee"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="first_name" value="Kim"/>
+			<date key="time:timestamp" value="2022-06-11T22:53:49.671+02:00"/>
+			<int key="budget" value="1900"/>
+			<string key="desired_destination" value="Spanien"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="199.2"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="refining_the_request"/>
+			<string key="hotel" value="Apartment"/>
+			<string key="transport" value="Train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-06-11T22:54:02.403+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="199.3"/>
+			<string key="accomodation" value="4 Star"/>
+			<string key="org:resource" value="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60"/>
+			<string key="concept:name" value="offer_with_train"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-06-11T22:54:16.028+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="199.4"/>
+			<boolean key="approved" value="false"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="approve_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-06-11T22:54:33.822+02:00"/>
+		</event>
+		<event>
+			<string key="concept:instance" value="199.5"/>
+			<string key="org:resource" value="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003"/>
+			<string key="concept:name" value="decline_offer"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<date key="time:timestamp" value="2022-06-11T22:54:34.807+02:00"/>
+		</event>
+	</trace>
+</log>

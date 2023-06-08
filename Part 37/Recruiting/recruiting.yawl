@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="recruiting">
+    <documentation>No description provided</documentation>
+    <metaData>
+      <creator>Studium</creator>
+      <description>No description provided</description>
+      <coverage>4.3.1.771</coverage>
+      <version>0.1</version>
+      <persistent>false</persistent>
+      <identifier>UID_62e6b088-7083-48e2-9b11-ad0f61fae33d</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="CandidateType">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" />
+          <xs:element name="age" type="xs:int" />
+          <xs:element name="degree" type="xs:string" />
+          <xs:element name="phonenumber" type="xs:int" />
+          <xs:element name="approved" type="xs:boolean" />
+          <xs:element name="rejected" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Candidate">
+        <xs:sequence>
+          <xs:element name="Candidate" type="CandidateType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <decomposition id="Net" isRootNet="true" xsi:type="NetFactsType">
+      <localVariable>
+        <index>0</index>
+        <name>Candidate</name>
+        <type>Candidate</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+        <initialValue>&lt;Candidate&gt;    &lt;name&gt;Max Mustermann&lt;/name&gt;    &lt;age&gt;26&lt;/age&gt;    &lt;degree&gt;Bachelor&lt;/degree&gt;    &lt;phonenumber&gt;12345&lt;/phonenumber&gt;    &lt;approved&gt;false&lt;/approved&gt;    &lt;rejected&gt;false&lt;/rejected&gt; &lt;/Candidate&gt;</initialValue>
+      </localVariable>
+      <processControlElements>
+        <inputCondition id="InputCondition">
+          <flowsInto>
+            <nextElementRef id="pick_candidates" />
+          </flowsInto>
+        </inputCondition>
+        <task id="pick_candidates">
+          <name>pick candidates</name>
+          <flowsInto>
+            <nextElementRef id="individual_check" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate&gt;{/Net/Candidate/*}&lt;/Candidate&gt;" />
+              <mapsTo>Candidate</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Candidate&gt;{/pick_candidates/Candidate/*}&lt;/Candidate&gt;" />
+              <mapsTo>Candidate</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="pick_candidates" />
+        </task>
+        <task id="individual_check" xsi:type="MultipleInstanceExternalTaskFactsType">
+          <name>individual check</name>
+          <flowsInto>
+            <nextElementRef id="list_candidates" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="null" />
+              <mapsTo>null</mapsTo>
+            </mapping>
+          </startingMappings>
+          <decomposesTo id="Individual_check" />
+          <minimum>1</minimum>
+          <maximum>2147483647</maximum>
+          <threshold>2147483647</threshold>
+          <creationMode code="static" />
+          <miDataInput>
+            <expression query="/Net/Candidate" />
+            <splittingExpression query="for $s in /Candidate/* return &lt;Candidate_Item&gt;{$s/*}&lt;/Candidate_Item&gt;" />
+            <formalInputParam>Candidate_Item</formalInputParam>
+          </miDataInput>
+          <miDataOutput>
+            <formalOutputExpression query="&lt;Candidate&gt;{/Individual_check/Candidate_Item/*}&lt;/Candidate&gt;" />
+            <outputJoiningExpression query="&lt;Candidate&gt;{for $j in /Individual_check/Candidate return $j}&lt;/Candidate&gt;" />
+            <resultAppliedToLocalVariable>Candidate</resultAppliedToLocalVariable>
+          </miDataOutput>
+        </task>
+        <task id="list_candidates">
+          <name>list candidates</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate&gt;{/Net/Candidate/*}&lt;/Candidate&gt;" />
+              <mapsTo>Candidate</mapsTo>
+            </mapping>
+          </startingMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="list_candidates" />
+        </task>
+        <outputCondition id="OutputCondition" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="Individual_check" xsi:type="NetFactsType">
+      <name>Individual check</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <processControlElements>
+        <inputCondition id="InputCondition_1">
+          <flowsInto>
+            <nextElementRef id="phone_interview" />
+          </flowsInto>
+        </inputCondition>
+        <task id="phone_interview">
+          <name>phone interview</name>
+          <flowsInto>
+            <nextElementRef id="rejected" />
+            <predicate ordering="0">/Individual_check/Candidate_Item/rejected = 'true'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="live_interview" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/Individual_check/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/phone_interview/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="pick_candidates" />
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="phone_interview" />
+        </task>
+        <task id="live_interview">
+          <name>live interview</name>
+          <flowsInto>
+            <nextElementRef id="final_approve" />
+            <isDefaultFlow />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="rejected" />
+            <predicate ordering="0">/Individual_check/Candidate_Item/rejected = 'true'</predicate>
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/Individual_check/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/live_interview/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+                </initialSet>
+                <constraints>
+                  <constraint>
+                    <name>SeparationOfDuties</name>
+                    <params>
+                      <param>
+                        <key>familiarTask</key>
+                        <value>phone_interview</value>
+                      </param>
+                    </params>
+                  </constraint>
+                </constraints>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="live_interview" />
+        </task>
+        <task id="rejected">
+          <name>rejected</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/Individual_check/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/rejected/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+                </initialSet>
+              </distributionSet>
+              <familiarParticipant taskID="phone_interview" />
+            </offer>
+            <allocate initiator="system">
+              <allocator>
+                <name>ShortestQueue</name>
+              </allocator>
+            </allocate>
+            <start initiator="system" />
+          </resourcing>
+          <decomposesTo id="rejected" />
+        </task>
+        <task id="final_approve">
+          <name>final approve</name>
+          <flowsInto>
+            <nextElementRef id="rejected" />
+            <predicate ordering="0">/Individual_check/Candidate_Item/approved = 'false'</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="OutputCondition_1" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <startingMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/Individual_check/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </startingMappings>
+          <completedMappings>
+            <mapping>
+              <expression query="&lt;Candidate_Item&gt;{/final_approve/Candidate_Item/*}&lt;/Candidate_Item&gt;" />
+              <mapsTo>Candidate_Item</mapsTo>
+            </mapping>
+          </completedMappings>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-42631839-bf87-4d7a-9aac-a5a14ed7b051</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="final_approve" />
+        </task>
+        <outputCondition id="OutputCondition_1" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="final_approve" xsi:type="WebServiceGatewayFactsType">
+      <name>final approve</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="list_candidates" xsi:type="WebServiceGatewayFactsType">
+      <name>list candidates</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate</name>
+        <type>Candidate</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="live_interview" xsi:type="WebServiceGatewayFactsType">
+      <name>live interview</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="phone_interview" xsi:type="WebServiceGatewayFactsType">
+      <name>phone interview</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="pick_candidates" xsi:type="WebServiceGatewayFactsType">
+      <name>pick candidates</name>
+      <inputParam>
+        <index>0</index>
+        <name>Candidate</name>
+        <type>Candidate</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate</name>
+        <type>Candidate</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="rejected" xsi:type="WebServiceGatewayFactsType">
+      <inputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </inputParam>
+      <outputParam>
+        <index>0</index>
+        <name>Candidate_Item</name>
+        <type>CandidateType</type>
+        <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+      </outputParam>
+      <externalInteraction>automated</externalInteraction>
+    </decomposition>
+  </specification>
+  <layout>
+    <locale language="de" country="DE"/>
+    <specification id="recruiting" defaultBgColor="-526351">
+      <size w="58" h="28"/>
+      <net id="Individual_check">
+        <bounds x="0" y="0" w="1176" h="513"/>
+        <frame x="0" y="0" w="1179" h="516"/>
+        <viewport x="0" y="0" w="1179" h="516"/>
+        <scale>1.38</scale>
+        <vertex id="InputCondition_1">
+          <attributes>
+            <bounds x="32" y="187" w="33" h="33"/>
+          </attributes>
+        </vertex>
+        <vertex id="OutputCondition_1">
+          <attributes>
+            <bounds x="541" y="187" w="33" h="33"/>
+          </attributes>
+        </vertex>
+        <container id="phone_interview">
+          <vertex>
+            <attributes>
+              <bounds x="141" y="187" w="35" h="34"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="119" y="218" w="96" h="33"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="172" y="187" w="14" h="34"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="rejected">
+          <vertex>
+            <attributes>
+              <bounds x="475" y="58" w="34" h="34"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="442" y="88" w="96" h="18"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="465" y="58" w="12" h="34"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="live_interview">
+          <vertex>
+            <attributes>
+              <bounds x="279" y="187" w="33" h="34"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="256" y="221" w="96" h="17"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="310" y="187" w="12" h="34"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="final_approve">
+          <vertex>
+            <attributes>
+              <bounds x="409" y="187" w="35" h="34"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="381" y="221" w="95" h="18"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="441" y="187" w="13" h="34"/>
+            </attributes>
+          </decorator>
+        </container>
+        <flow source="phone_interview" target="rejected">
+          <ports in="0" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="178,967" y="191,249"/>
+              <value x="444,906" y="79,38"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="rejected" target="OutputCondition_1">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="531" y="135,5"/>
+              <value x="748" y="291,5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="InputCondition_1" target="phone_interview">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="63,244" y="193,486"/>
+              <value x="141,967" y="193,986"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="live_interview" target="rejected">
+          <ports in="0" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="final_approve" target="OutputCondition_1">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="574,959" y="291,5"/>
+              <value x="748" y="291,5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="final_approve" target="rejected">
+          <ports in="0" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="phone_interview" target="live_interview">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="184,967" y="195,474"/>
+              <value x="279,775" y="195,474"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="live_interview" target="final_approve">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="320,775" y="194,596"/>
+              <value x="409,362" y="194,596"/>
+            </points>
+          </attributes>
+        </flow>
+      </net>
+      <net id="Net">
+        <bounds x="0" y="0" w="1176" h="513"/>
+        <frame x="0" y="0" w="1179" h="516"/>
+        <viewport x="0" y="0" w="1179" h="516"/>
+        <vertex id="OutputCondition">
+          <attributes>
+            <bounds x="503" y="276" w="36" h="34"/>
+          </attributes>
+        </vertex>
+        <vertex id="InputCondition">
+          <attributes>
+            <bounds x="36" y="276" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="list_candidates">
+          <vertex>
+            <attributes>
+              <bounds x="383" y="276" w="33" h="33"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="353" y="307" w="98" h="17"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="individual_check">
+          <vertex>
+            <attributes>
+              <bounds x="258" y="276" w="35" h="33"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="223" y="309" w="96" h="32"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="pick_candidates">
+          <vertex>
+            <attributes>
+              <bounds x="139" y="276" w="33" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="109" y="307" w="96" h="32"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="individual_check" target="list_candidates">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="292" y="282"/>
+              <value x="435" y="282"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="pick_candidates" target="individual_check">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="171" y="281,5"/>
+              <value x="258" y="282"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="InputCondition" target="pick_candidates">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="67" y="282,5"/>
+              <value x="139" y="282,5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="list_candidates" target="OutputCondition">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="466" y="282"/>
+              <value x="572" y="282,5"/>
+            </points>
+          </attributes>
+        </flow>
+      </net>
+    </specification>
+  </layout>
+</specificationSet>

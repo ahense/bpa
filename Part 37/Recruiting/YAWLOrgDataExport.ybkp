@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orgdata>
+  <participants>
+    <participant id="PA-33cce3d2-e8fd-43d3-9bd0-1769bb7786ee">
+      <userid>Frank</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Frank</firstname>
+      <lastname>Pronto</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-37555f4d-c5a3-40ae-8c20-3585c71b6664</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-40dabc4d-ec33-4e6d-87cd-38ad9afbe003">
+      <userid>Lars</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Lars</firstname>
+      <lastname>Schmidt</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-d0e87e20-feb4-4321-93a3-1cfcf8799f60">
+      <userid>Anna</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Anna</firstname>
+      <lastname>Dietrich</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-01cec598-41a4-4595-b633-bebf58680fca">
+      <userid>Bernd</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Bernd</firstname>
+      <lastname>B.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-64bdfc45-efda-4fd3-a52d-e90f0c3bf21a</role>
+      </roles>
+      <positions>
+        <position>PO-a67ba059-42dc-4491-b8b7-c7723fd6c90d</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-4d3d2a9c-b0fb-4ce5-8a3b-16bbda653744">
+      <userid>Dan</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Dan</firstname>
+      <lastname>D.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-ef232ef5-8e84-4fd2-9a51-7bb5e03c2611</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-d5d89452-d07c-456d-bd16-69fc1d1e4d52">
+      <userid>Memmet</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Memmet</firstname>
+      <lastname>M.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-285b9e05-4f26-4d98-b4db-4b7030c6ca87</role>
+      </roles>
+      <positions>
+        <position>PO-20b76868-13df-493d-bb41-a065d62ad8d9</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-ed6697cc-084a-4b47-b0fb-9597682ce5ce">
+      <userid>lom</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Lorenzo</firstname>
+      <lastname>Monaco</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles/>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-cc27989e-d057-41d7-a932-d9bfd2f0fd2a">
+      <userid>Ernst</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Ernst</firstname>
+      <lastname>E.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-42631839-bf87-4d7a-9aac-a5a14ed7b051</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-e1ef7e73-9cf7-4271-9280-3074eb17237b">
+      <userid>Lisa</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Lisa</firstname>
+      <lastname>L.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-a0132384-d655-492c-ba3e-a1a7e2f2075c">
+      <userid>Heiko</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Heiko</firstname>
+      <lastname>H.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-d86d8109-1cee-4bf0-ab3f-0cb6bb2b929b</role>
+      </roles>
+      <positions>
+        <position>PO-a01181ab-2c3b-4d2a-a137-b7c5c50dc163</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-ed448137-4cab-462e-b15c-0f1edaeeb1cf">
+      <userid>Anja</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Anja</firstname>
+      <lastname>Dickens</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-7afb1492-15c9-469f-98e4-e05ca0d87963</role>
+      </roles>
+      <positions>
+        <position>PO-b639b0e3-cf14-487a-bb51-785b7418426b</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-a8b17a3b-ab1a-42fa-bf95-84b1a384a909">
+      <userid>Dennis</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Dennis</firstname>
+      <lastname>D.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-198f3ba7-a530-466f-a151-5f177b173baa</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-dbd5cb01-1991-4258-91bc-b1f05a00321e">
+      <userid>Wilfred</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Wilfred</firstname>
+      <lastname>A.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles/>
+      <positions>
+        <position>PO-53c80db8-4298-417e-846f-93a81432df5e</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-208e1b41-2a47-41c4-aa40-ddc38d9d54b5">
+      <userid>Axel</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Axel</firstname>
+      <lastname>A.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-d295ce9a-53fc-4a1c-bd80-f4d4a5764298</role>
+      </roles>
+      <positions>
+        <position>PO-e91e106a-4512-4df6-bf8e-d27d935b6afd</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-cb77695d-3a0a-4f5d-9c21-9881b6122da6">
+      <userid>Nina</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Nina</firstname>
+      <lastname>N.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-e975e2d7-827c-44d1-a289-e23e7ab42f8b</role>
+      </roles>
+      <positions>
+        <position>PO-4f64e3e3-522e-4af2-88fe-267080b8128b</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-7caf8aef-fe60-4d36-93e0-13a80a8e3561">
+      <userid>Flavio</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Flavio</firstname>
+      <lastname>F.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-15bbb55a-24d8-448e-9a3f-e746ddcbce7b</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-1e89b38f-0ba3-4af9-9294-bb655390ba4b">
+      <userid>Ellen</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Ellen</firstname>
+      <lastname>E.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-4ceaa825-a783-4a49-bf0e-88585afd1d1b</role>
+      </roles>
+      <positions>
+        <position>PO-aa932a05-c2aa-4fcc-a189-009ca2cb61ff</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-a8b01a22-9122-4548-a734-1c7a8137d529">
+      <userid>Ute</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Ute</firstname>
+      <lastname>U.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-bef00824-2fa5-4377-b8c5-8437a5a09f94</role>
+      </roles>
+      <positions>
+        <position>PO-a87485b6-d8e9-44ea-bdab-aa2f77718355</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-ad90a0af-3b42-4f67-abb0-e8ca9efe775f">
+      <userid>Dieter</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Dieter</firstname>
+      <lastname>Freiland</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-b018c80c-72b9-4a2c-ad39-6f65284119db</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-08e56e91-018f-418e-b1ca-805100e4a35f">
+      <userid>Otto</userid>
+      <password>cRDtpNCeBiql5KOQsKVyrA0sAiA=</password>
+      <firstname>Otto</firstname>
+      <lastname>O.</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-3e6143b5-9efd-407a-aebc-f3479c7ef92b</role>
+      </roles>
+      <positions>
+        <position>PO-8a053fcc-1a39-47d0-9b99-3793b5343ef8</position>
+      </positions>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+  </participants>
+  <roles>
+    <role id="RO-42631839-bf87-4d7a-9aac-a5a14ed7b051">
+      <name>Boss_Company</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-b018c80c-72b9-4a2c-ad39-6f65284119db">
+      <name>Customer</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-37555f4d-c5a3-40ae-8c20-3585c71b6664">
+      <name>delivery_guy</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-64bdfc45-efda-4fd3-a52d-e90f0c3bf21a">
+      <name>Dry Construction Worker</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-d86d8109-1cee-4bf0-ab3f-0cb6bb2b929b">
+      <name>Electronics</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-7afb1492-15c9-469f-98e4-e05ca0d87963">
+      <name>Employee</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-e975e2d7-827c-44d1-a289-e23e7ab42f8b">
+      <name>Heating</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-198f3ba7-a530-466f-a151-5f177b173baa">
+      <name>HR_Employee</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-bef00824-2fa5-4377-b8c5-8437a5a09f94">
+      <name>Painter</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-ef232ef5-8e84-4fd2-9a51-7bb5e03c2611">
+      <name>Restaurant_customer</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-4ceaa825-a783-4a49-bf0e-88585afd1d1b">
+      <name>Roofer</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-285b9e05-4f26-4d98-b4db-4b7030c6ca87">
+      <name>Sanitary</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-d295ce9a-53fc-4a1c-bd80-f4d4a5764298">
+      <name>Tiler</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-15bbb55a-24d8-448e-9a3f-e746ddcbce7b">
+      <name>Waiter</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-3e6143b5-9efd-407a-aebc-f3479c7ef92b">
+      <name>Window Constructer</name>
+      <description/>
+      <notes/>
+    </role>
+  </roles>
+  <positions>
+    <position id="PO-53c80db8-4298-417e-846f-93a81432df5e">
+      <title>Construction Manager</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</orggroupid>
+    </position>
+    <position id="PO-a67ba059-42dc-4491-b8b7-c7723fd6c90d">
+      <title>DC Worker 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-6daaba8b-cb83-4879-a68d-b6a01f80e18f</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-93feb268-933e-49fc-9512-df45e8481f3a">
+      <title>DC Worker 2</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-6daaba8b-cb83-4879-a68d-b6a01f80e18f</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-a01181ab-2c3b-4d2a-a137-b7c5c50dc163">
+      <title>Electronics 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-86453ca8-36a6-4602-9f01-5132dc483873</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-4f64e3e3-522e-4af2-88fe-267080b8128b">
+      <title>Heating 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-5b1dae13-85ec-4854-8d24-c27e7e04613a</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-a87485b6-d8e9-44ea-bdab-aa2f77718355">
+      <title>Painter 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-8b8d4ef6-0d09-485f-9199-033747e37209</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-750cd64f-9d5d-4d45-8ff7-855b5f167f81">
+      <title>Painter 2</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-8b8d4ef6-0d09-485f-9199-033747e37209</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-b639b0e3-cf14-487a-bb51-785b7418426b">
+      <title>Post_supervisor</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-990d659e-39b8-45e0-bc9c-5649b15928f0</orggroupid>
+    </position>
+    <position id="PO-ca7444c0-0295-4989-8c8a-598bc25b2202">
+      <title>Roofer 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-9cffa2a1-f9b3-465d-875d-f381ecada1d5</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-aa932a05-c2aa-4fcc-a189-009ca2cb61ff">
+      <title>Roofer 2</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-9cffa2a1-f9b3-465d-875d-f381ecada1d5</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-20b76868-13df-493d-bb41-a065d62ad8d9">
+      <title>Sanitary 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-a7a4d43b-b244-4e83-babf-45976ac96d1e</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-e91e106a-4512-4df6-bf8e-d27d935b6afd">
+      <title>Tiler 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-698cf0c2-0e45-4fe5-8480-78239b8588aa</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-aac4d158-f297-4481-bfb2-f62ac4a0d95a">
+      <title>Tiler 2</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-698cf0c2-0e45-4fe5-8480-78239b8588aa</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-8a053fcc-1a39-47d0-9b99-3793b5343ef8">
+      <title>WC Worker 1</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-30770236-028d-42e8-902e-e2af2d1a9935</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+    <position id="PO-f5984326-0a67-4f2e-ae39-02a239aee13a">
+      <title>WC Worker 2</title>
+      <positionid/>
+      <description/>
+      <notes/>
+      <orggroupid>OG-30770236-028d-42e8-902e-e2af2d1a9935</orggroupid>
+      <reportstoid>PO-53c80db8-4298-417e-846f-93a81432df5e</reportstoid>
+    </position>
+  </positions>
+  <capabilities/>
+  <orggroups>
+    <orggroup id="OG-4873ec0d-5d28-434e-aec8-a2252da318f4">
+      <groupName>Construction Management</groupName>
+      <groupType>DEPARTMENT</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+    <orggroup id="OG-6daaba8b-cb83-4879-a68d-b6a01f80e18f">
+      <groupName>Dry Construction</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-86453ca8-36a6-4602-9f01-5132dc483873">
+      <groupName>Electronics</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-5b1dae13-85ec-4854-8d24-c27e7e04613a">
+      <groupName>Heating</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-8b8d4ef6-0d09-485f-9199-033747e37209">
+      <groupName>Painter</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-990d659e-39b8-45e0-bc9c-5649b15928f0">
+      <groupName>Post_Office</groupName>
+      <groupType>GROUP</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+    <orggroup id="OG-9cffa2a1-f9b3-465d-875d-f381ecada1d5">
+      <groupName>Roofer</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-a7a4d43b-b244-4e83-babf-45976ac96d1e">
+      <groupName>Sanitary</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-698cf0c2-0e45-4fe5-8480-78239b8588aa">
+      <groupName>Tiler</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+    <orggroup id="OG-30770236-028d-42e8-902e-e2af2d1a9935">
+      <groupName>Window Construction</groupName>
+      <groupType>TEAM</groupType>
+      <description/>
+      <notes/>
+      <belongsToID>OG-4873ec0d-5d28-434e-aec8-a2252da318f4</belongsToID>
+    </orggroup>
+  </orggroups>
+  <nonhumanresources/>
+  <nonhumancategories/>
+</orgdata>
+

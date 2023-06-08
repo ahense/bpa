@@ -1,0 +1,10 @@
+activity Create report
+activity Edit report
+activity Check report
+activity Publish report
+Init[Create report] | |
+Exactly1[Create report] | |
+Exactly1[Publish report] | |
+Precedence[Check report, Publish report] | | |
+Precedence[Edit report, Check report] | | |
+End[Publish report] | |
