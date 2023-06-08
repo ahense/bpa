@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?><specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="LoanApplicationResources">
+    <documentation>No description provided</documentation>
+    <metaData>
+      <creator>Creator</creator>
+      <description>No description provided</description>
+      <coverage>4.3.1.772</coverage>
+      <version>0.1</version>
+      <persistent>false</persistent>
+      <identifier>UID_1</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <decomposition id="LoanApplicationResources" isRootNet="true" xsi:type="NetFactsType">
+      <processControlElements>
+        <inputCondition id="start">
+          <name>start</name>
+          <flowsInto>
+            <nextElementRef id="register"/>
+          </flowsInto>
+        </inputCondition>
+        <task id="check_history">
+          <name>check history</name>
+          <flowsInto>
+            <nextElementRef id="merge"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Clerk</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="check_form">
+          <name>check form</name>
+          <flowsInto>
+            <nextElementRef id="inform_customer"/>
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="merge"/>
+            <isDefaultFlow/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="xor"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Clerk</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="inform_customer">
+          <name>inform customer</name>
+          <flowsInto>
+            <nextElementRef id="wait_for_reply"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Clerk</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="wait_for_reply">
+          <name>wait for reply</name>
+          <flowsInto>
+            <nextElementRef id="check_form"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="user"/>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="merge">
+          <name>merge</name>
+          <flowsInto>
+            <nextElementRef id="decide"/>
+          </flowsInto>
+          <join code="and"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="user"/>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="decide">
+          <name>decide</name>
+          <flowsInto>
+            <nextElementRef id="send_approval"/>
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="send_rejection"/>
+            <isDefaultFlow/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="xor"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Manager</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="archive">
+          <name>archive</name>
+          <flowsInto>
+            <nextElementRef id="end"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Office worker</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="send_approval">
+          <name>send approval</name>
+          <flowsInto>
+            <nextElementRef id="archive"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Secretary</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="send_rejection">
+          <name>send rejection</name>
+          <flowsInto>
+            <nextElementRef id="archive"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Secretary</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="register">
+          <name>register</name>
+          <flowsInto>
+            <nextElementRef id="clone"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Office worker</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="clone">
+          <name>clone</name>
+          <flowsInto>
+            <nextElementRef id="check_form"/>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="check_history"/>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="check_funds"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="user"/>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <task id="check_funds">
+          <name>check funds</name>
+          <flowsInto>
+            <nextElementRef id="merge"/>
+          </flowsInto>
+          <join code="xor"/>
+          <split code="and"/>
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>Manager</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user"/>
+            <start initiator="user"/>
+          </resourcing>
+        </task>
+        <outputCondition id="end">
+          <name>end</name>
+        </outputCondition>
+      </processControlElements>
+    </decomposition>
+  </specification>
+  <layout>
+    <locale country="DE" language="de"/>
+    <specification defaultBgColor="-526351" id="LoanApplicationResources">
+      <size h="28" w="58"/>
+      <net bgColor="-526351" id="LoanApplicationResources">
+        <bounds h="651" w="1684" x="0" y="0"/>
+        <frame h="654" w="1687" x="0" y="0"/>
+        <viewport h="654" w="1687" x="0" y="0"/>
+        <container id="check_history">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="370" y="440"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="338" y="472"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="check_history" target="merge">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="check_form">
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds h="32" w="11" x="360" y="160"/>
+            </attributes>
+          </decorator>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds h="32" w="11" x="401" y="160"/>
+            </attributes>
+          </decorator>
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="370" y="160"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="338" y="192"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="check_form" target="merge">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="check_form" target="inform_customer">
+          <ports in="13" out="13"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="inform_customer">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="280" y="60"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="248" y="92"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="inform_customer" target="wait_for_reply">
+          <ports in="12" out="13"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="wait_for_reply">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="210" y="160"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="178" y="192"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="wait_for_reply" target="check_form">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="merge">
+          <decorator type="AND_join">
+            <position>12</position>
+            <attributes>
+              <bounds h="32" w="11" x="490" y="300"/>
+            </attributes>
+          </decorator>
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="500" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="468" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="merge" target="decide">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="end">
+          <vertex id="end">
+            <attributes>
+              <bounds h="32" w="32" x="930" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="898" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="decide">
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds h="32" w="11" x="661" y="300"/>
+            </attributes>
+          </decorator>
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="630" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="598" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="decide" target="send_rejection">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="decide" target="send_approval">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="archive">
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds h="32" w="11" x="860" y="300"/>
+            </attributes>
+          </decorator>
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="870" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="838" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="archive" target="end">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="send_approval">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="750" y="360"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="718" y="392"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="send_approval" target="archive">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="start">
+          <vertex id="start">
+            <attributes>
+              <bounds h="32" w="32" x="30" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="-2" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="start" target="register">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="send_rejection">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="750" y="240"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="718" y="272"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="send_rejection" target="archive">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="register">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="100" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="68" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="register" target="clone">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="clone">
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds h="32" w="11" x="261" y="300"/>
+            </attributes>
+          </decorator>
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="230" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="198" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="clone" target="check_funds">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="clone" target="check_history">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="clone" target="check_form">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <container id="check_funds">
+          <vertex>
+            <attributes>
+              <bounds h="32" w="32" x="370" y="300"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds h="20" w="96" x="338" y="332"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="check_funds" target="merge">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+      </net>
+    </specification>
+  </layout>
+</specificationSet>

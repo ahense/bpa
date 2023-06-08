@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="Swimlanes">
+    <name>Swimlanes</name>
+    <documentation>Swimlane workflow from VALIDATION OF BUSINESS PROCESS MODELS USING SWIMLANE DIAGRAMS</documentation>
+    <metaData>
+      <title>Swimlanes</title>
+      <creator>User</creator>
+      <description>Swimlane workflow from VALIDATION OF BUSINESS PROCESS MODELS USING SWIMLANE DIAGRAMS</description>
+      <coverage>4.5.1.794</coverage>
+      <version>0.1</version>
+      <persistent>false</persistent>
+      <identifier>UID_9f459792-284d-4202-9270-7cd164dc325c</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" />
+    <decomposition id="Net" isRootNet="true" xsi:type="NetFactsType">
+      <processControlElements>
+        <inputCondition id="InputCondition">
+          <flowsInto>
+            <nextElementRef id="Receive_order_from_customer" />
+          </flowsInto>
+        </inputCondition>
+        <task id="Receive_order_from_customer">
+          <name>Receive order from customer</name>
+          <flowsInto>
+            <nextElementRef id="Check_inventory_on_hand" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c4de2afc-b15e-486a-be46-ffa0a79abd47</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_order_from_customer" />
+        </task>
+        <task id="Check_inventory_on_hand">
+          <name>Check inventory on hand</name>
+          <flowsInto>
+            <nextElementRef id="Pick_items_for_order" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Check_with_customer_about_splitting_order" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Check_inventory_on_hand" />
+        </task>
+        <task id="Check_with_customer_about_splitting_order">
+          <name>Check with customer about splitting order</name>
+          <flowsInto>
+            <nextElementRef id="Cancel_order_by_customer" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c4de2afc-b15e-486a-be46-ffa0a79abd47</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Check_with_customer_about_splitting_order" />
+        </task>
+        <task id="Pick_items_for_order">
+          <name>Pick items for order</name>
+          <flowsInto>
+            <nextElementRef id="Send_items_for_shipping" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Pick_items_for_order" />
+        </task>
+        <task id="Cancel_order_by_customer">
+          <name>Cancel order by customer</name>
+          <flowsInto>
+            <nextElementRef id="OutputCondition" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c4de2afc-b15e-486a-be46-ffa0a79abd47</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Cancel_order_by_customer" />
+        </task>
+        <task id="Send_items_for_shipping">
+          <name>Send items for shipping</name>
+          <flowsInto>
+            <nextElementRef id="Package_items_for_order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_items_for_shipping" />
+        </task>
+        <task id="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse">
+          <name>Split order from customer, send work order to production, split order to warehouse</name>
+          <flowsInto>
+            <nextElementRef id="Check_raw_materials_on_hand" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Pick_and_hold_items_for_split_order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c4de2afc-b15e-486a-be46-ffa0a79abd47</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse" />
+        </task>
+        <task id="Check_raw_materials_on_hand">
+          <name>Check raw materials on hand</name>
+          <flowsInto>
+            <nextElementRef id="Prepare_list_of_raw_materials_needed" />
+            <isDefaultFlow />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Schedule_order_for_manufacturing" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Check_raw_materials_on_hand" />
+        </task>
+        <task id="Package_items_for_order">
+          <name>Package items for order</name>
+          <flowsInto>
+            <nextElementRef id="Send_packaging_list_to_accounting" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Select_provider_for_shipping_package" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-0012649a-2a8a-4e29-90ba-8e447880d404</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Package_items_for_order" />
+        </task>
+        <task id="Pick_and_hold_items_for_split_order">
+          <name>Pick and hold items for split order</name>
+          <flowsInto>
+            <nextElementRef id="T" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Pick_and_hold_items_for_split_order" />
+        </task>
+        <task id="Prepare_list_of_raw_materials_needed">
+          <name>Prepare list of raw materials needed</name>
+          <flowsInto>
+            <nextElementRef id="Check_the_cost_of_raw_materials" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Prepare_list_of_raw_materials_needed" />
+        </task>
+        <task id="Schedule_order_for_manufacturing">
+          <name>Schedule order for manufacturing</name>
+          <flowsInto>
+            <nextElementRef id="Manufacture_items_for_order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Schedule_order_for_manufacturing" />
+        </task>
+        <task id="Select_provider_for_shipping_package">
+          <name>Select provider for shipping package</name>
+          <flowsInto>
+            <nextElementRef id="Hand_over_package_to_provider_for_shipment" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-0012649a-2a8a-4e29-90ba-8e447880d404</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Select_provider_for_shipping_package" />
+        </task>
+        <task id="Send_packaging_list_to_accounting">
+          <name>Send packaging list to accounting</name>
+          <flowsInto>
+            <nextElementRef id="Send_invoice_for_order_to_customer" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-0012649a-2a8a-4e29-90ba-8e447880d404</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_package_list_to_accounting" />
+        </task>
+        <task id="T">
+          <flowsInto>
+            <nextElementRef id="Send_items_for_shipping" />
+          </flowsInto>
+          <join code="and" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Check_the_cost_of_raw_materials">
+          <name>Check the cost of raw materials</name>
+          <flowsInto>
+            <nextElementRef id="Place_purchase_order_for_raw_materials_with_supplier" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Verify_records_for_authorisation" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-4f9dc210-bcd5-4066-affb-a33256c87f42</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Check_the_cost_of_raw_materials" />
+        </task>
+        <task id="Hand_over_package_to_provider_for_shipment">
+          <name>Hand over package to provider for shipment</name>
+          <flowsInto>
+            <nextElementRef id="T_1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-0012649a-2a8a-4e29-90ba-8e447880d404</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Hand_over_package_to_provider_for_shipment" />
+        </task>
+        <task id="Manufacture_items_for_order">
+          <name>Manufacture items for order</name>
+          <flowsInto>
+            <nextElementRef id="Inspect_items_for_quality" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Manufacture_items_for_order" />
+        </task>
+        <task id="Send_invoice_for_order_to_customer">
+          <name>Send invoice for order to customer</name>
+          <flowsInto>
+            <nextElementRef id="Receive_payment_from_customer" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-808638cf-4944-4ab2-8d10-aedfe0805bcd</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_invoice_for_order_to_customer" />
+        </task>
+        <task id="Inspect_items_for_quality">
+          <name>Inspect items for quality</name>
+          <flowsInto>
+            <nextElementRef id="Gather_items_for_order" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Dispose_failed_items" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Inspect_items_for_quality" />
+        </task>
+        <task id="Place_purchase_order_for_raw_materials_with_supplier">
+          <name>Place purchase order for raw materials with supplier</name>
+          <flowsInto>
+            <nextElementRef id="Receive_invoice_for_raw_materials_from_supplier" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Receive_raw_materials_from_supplier" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-4f9dc210-bcd5-4066-affb-a33256c87f42</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Place_purchase_order_for_raw_materials_with_supplier" />
+        </task>
+        <task id="Receive_payment_from_customer">
+          <name>Receive payment from customer</name>
+          <flowsInto>
+            <nextElementRef id="T_1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-808638cf-4944-4ab2-8d10-aedfe0805bcd</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_payment_from_customer" />
+        </task>
+        <task id="T_1">
+          <flowsInto>
+            <nextElementRef id="OutputCondition" />
+          </flowsInto>
+          <join code="and" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Verify_records_for_authorisation">
+          <name>Verify records for authorisation</name>
+          <flowsInto>
+            <nextElementRef id="Check_the_cost_of_raw_materials" />
+            <predicate ordering="0">true()</predicate>
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Place_purchase_order_for_raw_materials_with_supplier" />
+            <isDefaultFlow />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-808638cf-4944-4ab2-8d10-aedfe0805bcd</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Verify_records_for_authorisation" />
+        </task>
+        <task id="Dispose_failed_items">
+          <name>Dispose failed items</name>
+          <flowsInto>
+            <nextElementRef id="Gather_items_for_order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Dispose_failed_items" />
+        </task>
+        <task id="Gather_items_for_order">
+          <name>Gather items for order</name>
+          <flowsInto>
+            <nextElementRef id="Receive_finished_items_for_order_from_production" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-f4eeb887-b7b1-4184-a354-4c21f89926d9</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Gather_items_for_order" />
+        </task>
+        <task id="Receive_invoice_for_raw_materials_from_supplier">
+          <name>Receive invoice for raw materials from supplier</name>
+          <flowsInto>
+            <nextElementRef id="Send_payment_to_supplier" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-808638cf-4944-4ab2-8d10-aedfe0805bcd</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_invoice_for_raw_materials_from_supplier" />
+        </task>
+        <task id="Receive_raw_materials_from_supplier">
+          <name>Receive raw materials from supplier</name>
+          <flowsInto>
+            <nextElementRef id="Send_raw_materials_to_production" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-4f9dc210-bcd5-4066-affb-a33256c87f42</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_raw_materials_from_supplier" />
+        </task>
+        <task id="Receive_finished_items_for_order_from_production">
+          <name>Receive finished items for order from production</name>
+          <flowsInto>
+            <nextElementRef id="Add_items_produced_with_items_already_picked" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Receive_finished_items_for_order_from_production" />
+        </task>
+        <task id="Send_payment_to_supplier">
+          <name>Send payment to supplier</name>
+          <flowsInto>
+            <nextElementRef id="T" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-808638cf-4944-4ab2-8d10-aedfe0805bcd</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_payment_to_supplier" />
+        </task>
+        <task id="Send_raw_materials_to_production">
+          <name>Send raw materials to production</name>
+          <flowsInto>
+            <nextElementRef id="Schedule_order_for_manufacturing" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-4f9dc210-bcd5-4066-affb-a33256c87f42</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Send_raw_materials_to_production" />
+        </task>
+        <task id="Add_items_produced_with_items_already_picked">
+          <name>Add items produced with items already picked</name>
+          <flowsInto>
+            <nextElementRef id="T" />
+          </flowsInto>
+          <join code="and" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="system">
+              <distributionSet>
+                <initialSet>
+                  <role>RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a</role>
+                </initialSet>
+              </distributionSet>
+            </offer>
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+          <decomposesTo id="Add_items_produced_with_items_already_picked" />
+        </task>
+        <outputCondition id="OutputCondition" />
+      </processControlElements>
+    </decomposition>
+    <decomposition id="Add_items_produced_with_items_already_picked" xsi:type="WebServiceGatewayFactsType">
+      <name>Add items produced with items already picked</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Cancel_order_by_customer" xsi:type="WebServiceGatewayFactsType">
+      <name>Cancel order by customer</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Check_inventory_on_hand" xsi:type="WebServiceGatewayFactsType">
+      <name>Check inventory on hand</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Check_raw_materials_on_hand" xsi:type="WebServiceGatewayFactsType">
+      <name>Check raw materials on hand</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Check_the_cost_of_raw_materials" xsi:type="WebServiceGatewayFactsType">
+      <name>Check the cost of raw materials</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Check_with_customer_about_splitting_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Check with customer about splitting order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Dispose_failed_items" xsi:type="WebServiceGatewayFactsType">
+      <name>Dispose failed items</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Gather_items_for_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Gather items for order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Hand_over_package_to_provider_for_shipment" xsi:type="WebServiceGatewayFactsType">
+      <name>Hand over package to provider for shipment</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Inspect_items_for_quality" xsi:type="WebServiceGatewayFactsType">
+      <name>Inspect items for quality</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Manufacture_items_for_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Manufacture items for order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Package_items_for_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Package items for order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Pick_and_hold_items_for_split_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Pick and hold items for split order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Pick_items_for_order" xsi:type="WebServiceGatewayFactsType">
+      <name>Pick items for order</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Place_purchase_order_for_raw_materials_with_supplier" xsi:type="WebServiceGatewayFactsType">
+      <name>Place purchase order for raw materials with supplier</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Prepare_list_of_raw_materials_needed" xsi:type="WebServiceGatewayFactsType">
+      <name>Prepare list of raw materials needed</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_finished_items_for_order_from_production" xsi:type="WebServiceGatewayFactsType">
+      <name>Receive finished items for order from production</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_invoice_for_raw_materials_from_supplier" xsi:type="WebServiceGatewayFactsType">
+      <name>Receive invoice for raw materials from supplier</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_order_from_customer" xsi:type="WebServiceGatewayFactsType">
+      <name>Receive order from customer</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_payment_from_customer" xsi:type="WebServiceGatewayFactsType">
+      <name>Receive payment from customer</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Receive_raw_materials_from_supplier" xsi:type="WebServiceGatewayFactsType">
+      <name>Receive raw materials from supplier</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Schedule_order_for_manufacturing" xsi:type="WebServiceGatewayFactsType">
+      <name>Schedule order for manufacturing</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Select_provider_for_shipping_package" xsi:type="WebServiceGatewayFactsType">
+      <name>Select provider for shipping package</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_invoice_for_order_to_customer" xsi:type="WebServiceGatewayFactsType">
+      <name>Send invoice for order to customer</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_items_for_shipping" xsi:type="WebServiceGatewayFactsType">
+      <name>Send items for shipping</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_package_list_to_accounting" xsi:type="WebServiceGatewayFactsType">
+      <name>Send package list to accounting</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_payment_to_supplier" xsi:type="WebServiceGatewayFactsType">
+      <name>Send payment to supplier</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Send_raw_materials_to_production" xsi:type="WebServiceGatewayFactsType">
+      <name>Send raw materials to production</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse" xsi:type="WebServiceGatewayFactsType">
+      <name>Split order from customer, send work order to production, split order to warehouse</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+    <decomposition id="Verify_records_for_authorisation" xsi:type="WebServiceGatewayFactsType">
+      <name>Verify records for authorisation</name>
+      <externalInteraction>manual</externalInteraction>
+    </decomposition>
+  </specification>
+  <layout>
+    <locale language="en" country="GB"/>
+    <specification id="Swimlanes" defaultBgColor="-526351">
+      <size w="233" h="81"/>
+      <net id="Net">
+        <bounds x="-377" y="-72" w="2047" h="736"/>
+        <frame x="0" y="0" w="1688" h="682"/>
+        <viewport x="0" y="0" w="1688" h="682"/>
+        <vertex id="OutputCondition">
+          <attributes>
+            <bounds x="1,995" y="658" w="32" h="33"/>
+          </attributes>
+        </vertex>
+        <vertex id="InputCondition">
+          <attributes>
+            <bounds x="32" y="240" w="32" h="32"/>
+          </attributes>
+        </vertex>
+        <container id="T_1">
+          <vertex>
+            <attributes>
+              <bounds x="1,968" y="228" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <decorator type="AND_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="1,958" y="228" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Dispose_failed_items">
+          <vertex>
+            <attributes>
+              <bounds x="1,248" y="268" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,216" y="300" w="96" h="28"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Package_items_for_order">
+          <vertex>
+            <attributes>
+              <bounds x="1,688" y="108" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,660" y="140" w="96" h="28"/>
+            </attributes>
+          </label>
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="1,719" y="108" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Receive_order_from_customer">
+          <vertex>
+            <attributes>
+              <bounds x="32" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="0" y="393" w="97" h="29"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Check_the_cost_of_raw_materials">
+          <vertex>
+            <attributes>
+              <bounds x="612" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="581" y="392" w="97" h="30"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="643" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="602" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Check_inventory_on_hand">
+          <vertex>
+            <attributes>
+              <bounds x="124" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="96" y="392" w="97" h="30"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="155" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Schedule_order_for_manufacturing">
+          <vertex>
+            <attributes>
+              <bounds x="996" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="960" y="392" w="97" h="30"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="986" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="T">
+          <vertex>
+            <attributes>
+              <bounds x="1,524" y="148" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <decorator type="AND_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="1,514" y="148" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Receive_invoice_for_raw_materials_from_supplier">
+          <vertex>
+            <attributes>
+              <bounds x="993" y="200" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="964" y="232" w="96" h="42"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse">
+          <vertex>
+            <attributes>
+              <bounds x="332" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="305" y="393" w="96" h="84"/>
+            </attributes>
+          </label>
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="363" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Select_provider_for_shipping_package">
+          <vertex>
+            <attributes>
+              <bounds x="1,792" y="108" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,761" y="141" w="96" h="42"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_raw_materials_to_production">
+          <vertex>
+            <attributes>
+              <bounds x="900" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="869" y="392" w="97" h="44"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Inspect_items_for_quality">
+          <vertex>
+            <attributes>
+              <bounds x="1,188" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,160" y="392" w="97" h="30"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="1,219" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Check_raw_materials_on_hand">
+          <vertex>
+            <attributes>
+              <bounds x="420" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="392" y="392" w="97" h="44"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="451" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Place_purchase_order_for_raw_materials_with_supplier">
+          <vertex>
+            <attributes>
+              <bounds x="720" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="688" y="392" w="97" h="57"/>
+            </attributes>
+          </label>
+          <decorator type="AND_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="751" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="710" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Receive_raw_materials_from_supplier">
+          <vertex>
+            <attributes>
+              <bounds x="812" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="781" y="392" w="97" h="44"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_items_for_shipping">
+          <vertex>
+            <attributes>
+              <bounds x="1,604" y="108" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,568" y="140" w="96" h="28"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="1,594" y="108" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Receive_payment_from_customer">
+          <vertex>
+            <attributes>
+              <bounds x="1,920" y="296" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,888" y="328" w="96" h="42"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Check_with_customer_about_splitting_order">
+          <vertex>
+            <attributes>
+              <bounds x="224" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="197" y="392" w="97" h="44"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>13</position>
+            <attributes>
+              <bounds x="255" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Add_items_produced_with_items_already_picked">
+          <vertex>
+            <attributes>
+              <bounds x="1,504" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,472" y="392" w="97" h="57"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Gather_items_for_order">
+          <vertex>
+            <attributes>
+              <bounds x="1,308" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,272" y="392" w="96" h="28"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_join">
+            <position>12</position>
+            <attributes>
+              <bounds x="1,298" y="360" w="11" h="32"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Verify_records_for_authorisation">
+          <vertex>
+            <attributes>
+              <bounds x="645" y="264" w="33" h="33"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="612" y="297" w="99" h="28"/>
+            </attributes>
+          </label>
+          <decorator type="XOR_split">
+            <position>10</position>
+            <attributes>
+              <bounds x="645" y="254" w="33" h="11"/>
+            </attributes>
+          </decorator>
+        </container>
+        <container id="Pick_items_for_order">
+          <vertex>
+            <attributes>
+              <bounds x="552" y="108" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="520" y="140" w="96" h="28"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Pick_and_hold_items_for_split_order">
+          <vertex>
+            <attributes>
+              <bounds x="664" y="153" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="633" y="185" w="96" h="42"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Receive_finished_items_for_order_from_production">
+          <vertex>
+            <attributes>
+              <bounds x="1,408" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,376" y="392" w="97" h="44"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_payment_to_supplier">
+          <vertex>
+            <attributes>
+              <bounds x="1,097" y="201" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,068" y="232" w="97" h="29"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Prepare_list_of_raw_materials_needed">
+          <vertex>
+            <attributes>
+              <bounds x="524" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="493" y="392" w="96" h="42"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Manufacture_items_for_order">
+          <vertex>
+            <attributes>
+              <bounds x="1,092" y="360" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,061" y="392" w="97" h="30"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_invoice_for_order_to_customer">
+          <vertex>
+            <attributes>
+              <bounds x="1,820" y="296" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,788" y="328" w="96" h="28"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Send_packaging_list_to_accounting">
+          <vertex>
+            <attributes>
+              <bounds x="1,712" y="296" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,680" y="328" w="96" h="28"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Hand_over_package_to_provider_for_shipment">
+          <vertex>
+            <attributes>
+              <bounds x="1,884" y="108" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="1,852" y="141" w="96" h="56"/>
+            </attributes>
+          </label>
+        </container>
+        <container id="Cancel_order_by_customer">
+          <vertex>
+            <attributes>
+              <bounds x="436" y="656" w="32" h="32"/>
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="404" y="688" w="96" h="28"/>
+            </attributes>
+          </label>
+        </container>
+        <flow source="Receive_finished_items_for_order_from_production" target="Add_items_produced_with_items_already_picked">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,447" y="375.5"/>
+              <value x="1,520" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Check_with_customer_about_splitting_order" target="Cancel_order_by_customer">
+          <label>nok</label>
+          <ports in="2" out="12"/>
+          <attributes>
+            <offset x="0" y="0"/>
+            <labelposition x="357.387" y="22.33"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="265" y="375.5"/>
+              <value x="408" y="671.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Send_packaging_list_to_accounting" target="Send_invoice_for_order_to_customer">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,907" y="291.5"/>
+              <value x="1,988" y="355.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Check_raw_materials_on_hand" target="Prepare_list_of_raw_materials_needed">
+          <label>nok</label>
+          <ports in="2" out="12"/>
+          <attributes>
+            <labelposition x="428.571" y="-17.5"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="461" y="375.5"/>
+              <value x="524" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Send_raw_materials_to_production" target="Schedule_order_for_manufacturing">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="931" y="375.5"/>
+              <value x="986" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Cancel_order_by_customer" target="OutputCondition">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="395" y="671.5"/>
+              <value x="2,323" y="694"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Check_raw_materials_on_hand" target="Schedule_order_for_manufacturing">
+          <label>ok</label>
+          <ports in="2" out="2"/>
+          <attributes>
+            <offset x="-0" y="0"/>
+            <labelposition x="151.798" y="35.592"/>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="461" y="375.5"/>
+              <value x="784" y="584"/>
+              <value x="986" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="T" target="Send_items_for_shipping">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,619" y="163.5"/>
+              <value x="1,646" y="123.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Dispose_failed_items" target="Gather_items_for_order">
+          <ports in="13" out="4"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Check_the_cost_of_raw_materials" target="Verify_records_for_authorisation">
+          <ports in="0" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="648" y="360"/>
+              <value x="646" y="335"/>
+              <value x="645" y="280"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Verify_records_for_authorisation" target="Place_purchase_order_for_raw_materials_with_supplier">
+          <label>ok</label>
+          <ports in="4" out="4"/>
+          <attributes>
+            <offset x="0" y="-0"/>
+            <labelposition x="174.238" y="-16.899"/>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="677" y="259"/>
+              <value x="748" y="284"/>
+              <value x="715" y="356"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Check_with_customer_about_splitting_order" target="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse">
+          <label>ok</label>
+          <ports in="2" out="12"/>
+          <attributes>
+            <labelposition x="432.836" y="-15.5"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="265" y="375.5"/>
+              <value x="332" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Schedule_order_for_manufacturing" target="Manufacture_items_for_order">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,027" y="375.5"/>
+              <value x="1,096" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="InputCondition" target="Receive_order_from_customer">
+          <ports in="11" out="10"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="47.5" y="271"/>
+              <value x="47.5" y="360"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Prepare_list_of_raw_materials_needed" target="Check_the_cost_of_raw_materials">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="563" y="375.5"/>
+              <value x="606" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inspect_items_for_quality" target="Gather_items_for_order">
+          <label>ok</label>
+          <ports in="2" out="2"/>
+          <attributes>
+            <labelposition x="436.782" y="-15.5"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,229" y="375.5"/>
+              <value x="1,316" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Select_provider_for_shipping_package" target="Hand_over_package_to_provider_for_shipment">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,911" y="119.5"/>
+              <value x="2,020" y="119.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Pick_items_for_order" target="Send_items_for_shipping">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="291" y="123.5"/>
+              <value x="1,646" y="123.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Verify_records_for_authorisation" target="Check_the_cost_of_raw_materials">
+          <label>nok</label>
+          <ports in="0" out="4"/>
+          <attributes>
+            <offset x="0" y="0"/>
+            <labelposition x="206.402" y="16.002"/>
+            <lineStyle>13</lineStyle>
+            <points>
+              <value x="645" y="259"/>
+              <value x="588" y="284"/>
+              <value x="607" y="360"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Receive_order_from_customer" target="Check_inventory_on_hand">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="63" y="375.5"/>
+              <value x="132" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Place_purchase_order_for_raw_materials_with_supplier" target="Receive_raw_materials_from_supplier">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="761" y="371.5"/>
+              <value x="812" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Receive_raw_materials_from_supplier" target="Send_raw_materials_to_production">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="843" y="375.5"/>
+              <value x="900" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Package_items_for_order" target="Send_packaging_list_to_accounting">
+          <ports in="4" out="10"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Pick_and_hold_items_for_split_order" target="T">
+          <ports in="13" out="3"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="439" y="168.5"/>
+              <value x="1,578" y="163.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="T_1" target="OutputCondition">
+          <ports in="11" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Receive_invoice_for_raw_materials_from_supplier" target="Send_payment_to_supplier">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="864" y="535.5"/>
+              <value x="993" y="548.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Hand_over_package_to_provider_for_shipment" target="T_1">
+          <ports in="13" out="2"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Send_items_for_shipping" target="Package_items_for_order">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,687" y="123.5"/>
+              <value x="1,760" y="183.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Send_invoice_for_order_to_customer" target="Receive_payment_from_customer">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="2,019" y="355.5"/>
+              <value x="2,096" y="387.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Add_items_produced_with_items_already_picked" target="T">
+          <ports in="10" out="0"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Check_the_cost_of_raw_materials" target="Place_purchase_order_for_raw_materials_with_supplier">
+          <label>&lt;= 5000</label>
+          <ports in="2" out="2"/>
+          <attributes>
+            <labelposition x="542" y="10"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="657" y="375.5"/>
+              <value x="710" y="371.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Place_purchase_order_for_raw_materials_with_supplier" target="Receive_invoice_for_raw_materials_from_supplier">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="761" y="371.5"/>
+              <value x="833" y="535.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Package_items_for_order" target="Select_provider_for_shipping_package">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,801" y="183.5"/>
+              <value x="1,880" y="119.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse" target="Check_raw_materials_on_hand">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="381" y="375.5"/>
+              <value x="440" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Receive_payment_from_customer" target="T_1">
+          <ports in="10" out="3"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Check_inventory_on_hand" target="Check_with_customer_about_splitting_order">
+          <label>nok</label>
+          <ports in="2" out="12"/>
+          <attributes>
+            <labelposition x="509.804" y="10.5"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="173" y="375.5"/>
+              <value x="224" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Manufacture_items_for_order" target="Inspect_items_for_quality">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,127" y="375.5"/>
+              <value x="1,196" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Check_inventory_on_hand" target="Pick_items_for_order">
+          <label>ok</label>
+          <ports in="2" out="12"/>
+          <attributes>
+            <offset x="0" y="-0"/>
+            <labelposition x="530.241" y="17.742"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="173" y="375.5"/>
+              <value x="260" y="123.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Inspect_items_for_quality" target="Dispose_failed_items">
+          <label>nok</label>
+          <ports in="0" out="12"/>
+          <attributes>
+            <offset x="0" y="0"/>
+            <labelposition x="329" y="-26"/>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,224" y="360"/>
+              <value x="1,248" y="283.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Split_order_from_customer_send_work_order_to_production_split_order_to_warehouse" target="Pick_and_hold_items_for_split_order">
+          <ports in="2" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="381" y="375.5"/>
+              <value x="408" y="168.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Gather_items_for_order" target="Receive_finished_items_for_order_from_production">
+          <ports in="13" out="12"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+            <points>
+              <value x="1,347" y="375.5"/>
+              <value x="1,416" y="375.5"/>
+            </points>
+          </attributes>
+        </flow>
+        <flow source="Send_payment_to_supplier" target="T">
+          <ports in="13" out="3"/>
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+      </net>
+      <labelFontSize>12</labelFontSize>
+    </specification>
+  </layout>
+</specificationSet>

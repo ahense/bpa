@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><orgdata>
+  <participants>
+    <participant id="Brenda">
+      <userid>brenda</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Brenda</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Secretary</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="John">
+      <userid>john</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>John</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Manager</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Bert">
+      <userid>bert</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Bert</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Manager</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Charlie">
+      <userid>charlie</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Charlie</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Clerk</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Linda">
+      <userid>linda</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Linda</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Secretary</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Howard">
+      <userid>howard</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Howard</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Clerk</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Jane">
+      <userid>jane</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Jane</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Secretary</role>
+        <role>Clerk</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+    <participant id="Heather">
+      <userid>heather</userid>
+      <password>Se4tMaQCi9gr0Q2usp7P56Sk5vM=</password>
+      <firstname>Heather</firstname>
+      <lastname/>
+      <description/>
+      <notes/>
+      <isAdministrator/>
+      <roles>
+        <role>Clerk</role>
+        <role>Office worker</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges/>
+    </participant>
+  </participants>
+  <roles>
+    <role id="Clerk">
+      <name>Clerk</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="Manager">
+      <name>Manager</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="Office worker">
+      <name>Office worker</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="Secretary">
+      <name>Secretary</name>
+      <description/>
+      <notes/>
+    </role>
+  </roles>
+  <orggroups>
+    <orggroup id="Accounting">
+      <groupName>Accounting</groupName>
+      <groupType>GROUP</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+    <orggroup id="Credit">
+      <groupName>Credit</groupName>
+      <groupType>GROUP</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+    <orggroup id="All">
+      <groupName>All</groupName>
+      <groupType>GROUP</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+    <orggroup id="Service">
+      <groupName>Service</groupName>
+      <groupType>GROUP</groupType>
+      <description/>
+      <notes/>
+    </orggroup>
+  </orggroups>
+</orgdata>

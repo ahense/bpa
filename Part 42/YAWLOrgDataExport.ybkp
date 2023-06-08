@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orgdata>
+  <participants/>
+  <roles>
+    <role id="RO-808638cf-4944-4ab2-8d10-aedfe0805bcd">
+      <name>Accounting</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-f4eeb887-b7b1-4184-a354-4c21f89926d9">
+      <name>Production</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-4f9dc210-bcd5-4066-affb-a33256c87f42">
+      <name>Purchasing</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-c4de2afc-b15e-486a-be46-ffa0a79abd47">
+      <name>Sales</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-0012649a-2a8a-4e29-90ba-8e447880d404">
+      <name>Shipping</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-c1d05d9f-eec3-4dc0-9791-e6f2ceab611a">
+      <name>Warehouse</name>
+      <description/>
+      <notes/>
+    </role>
+  </roles>
+  <positions/>
+  <capabilities/>
+  <orggroups/>
+  <nonhumanresources/>
+  <nonhumancategories/>
+</orgdata>
+
