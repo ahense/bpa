@@ -1,0 +1,67 @@
+[2025-03-21 16:48:21,237] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-03-21 16:48:21,260] 23  INFO CORE_LOGGER: START INIT Application
+[2025-03-21 16:48:21,272] 35  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-03-21 16:48:21,276] 39  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-03-21 16:48:21,396] 159  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-03-21 16:48:21,399] 162  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-03-21 16:48:21,400] 163  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 10 Extractor fan
+[2025-03-21 16:48:21,413] 176  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-03-21 16:48:21,426] 189  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-03-21 16:48:21,444] 207  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-03-21 16:48:21,468] 231  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-03-21 16:48:21,815] 578  INFO GUI_LOGGER: END  INIT Application
+[2025-03-21 16:48:21,961] 724 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-03-21 16:48:21,967] 730 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-03-21 16:48:22,006] 769 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-03-21 16:48:22,129] 892 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-03-21 16:48:22,129] 892 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (8 ms)
+[2025-03-21 16:48:22,278] 1041 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-03-21 16:48:22,278] 1041 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-03-21 16:48:22,278] 1041 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-03-21 16:48:22,279] 1042 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-03-21 16:48:22,279] 1042 DEBUG FILE_LOGGER:  ... Place (ID:p6) imported
+[2025-03-21 16:48:22,279] 1042 DEBUG FILE_LOGGER:  ... Place (ID:p8) imported
+[2025-03-21 16:48:22,279] 1042 DEBUG FILE_LOGGER:  ... Place (ID:p9) imported
+[2025-03-21 16:48:22,281] 1044 DEBUG FILE_LOGGER:  ... Place (ID:p10) imported
+[2025-03-21 16:48:22,281] 1044 DEBUG FILE_LOGGER:  ... Place (ID:p12) imported
+[2025-03-21 16:48:22,281] 1044 DEBUG FILE_LOGGER:  ... Place (ID:p11) imported
+[2025-03-21 16:48:22,284] 1047 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-03-21 16:48:22,284] 1047 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-03-21 16:48:22,284] 1047 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-03-21 16:48:22,284] 1047 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-03-21 16:48:22,285] 1048 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-03-21 16:48:22,286] 1049 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-03-21 16:48:22,294] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p10 -> t2 
+[2025-03-21 16:48:22,294] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t3 -> p10 
+[2025-03-21 16:48:22,294] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) p11 -> t1 
+[2025-03-21 16:48:22,294] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) t2 -> p11 
+[2025-03-21 16:48:22,297] 1060 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) p6 -> t3 
+[2025-03-21 16:48:22,297] 1060 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) t1 -> p12 
+[2025-03-21 16:48:22,297] 1060 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) p12 -> t4 
+[2025-03-21 16:48:22,297] 1060 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p6 -> t4 
+[2025-03-21 16:48:22,297] 1060 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t2 -> p9 
+[2025-03-21 16:48:22,298] 1061 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p3 
+[2025-03-21 16:48:22,298] 1061 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) t1 -> p9 
+[2025-03-21 16:48:22,298] 1061 DEBUG FILE_LOGGER:  ... Arc created: (ID:a22) p9 -> t5 
+[2025-03-21 16:48:22,298] 1061 DEBUG FILE_LOGGER:  ... Arc created: (ID:a21) t4 -> p9 
+[2025-03-21 16:48:22,298] 1061 DEBUG FILE_LOGGER:  ... Arc created: (ID:a24) t6 -> p9 
+[2025-03-21 16:48:22,299] 1062 DEBUG FILE_LOGGER:  ... Arc created: (ID:a23) p6 -> t6 
+[2025-03-21 16:48:22,299] 1062 DEBUG FILE_LOGGER:  ... Arc created: (ID:a25) t5 -> p6 
+[2025-03-21 16:48:22,299] 1062 DEBUG FILE_LOGGER:  ... Arc created: (ID:a28) t3 -> p6 
+[2025-03-21 16:48:22,299] 1062 DEBUG FILE_LOGGER:  ... Arc created: (ID:a27) p9 -> t6 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p2 -> t1 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) p8 -> t2 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p1 -> t3 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) p4 -> t4 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p3 -> t3 
+[2025-03-21 16:48:22,301] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t3 -> p9 
+[2025-03-21 16:48:22,302] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p6 -> t1 
+[2025-03-21 16:48:22,302] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) p6 -> t2 
+[2025-03-21 16:48:22,302] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p8 -> t6 
+[2025-03-21 16:48:22,385] 1148 DEBUG EDITOR_LOGGER: Net updated. (3 ms)
+[2025-03-21 16:48:22,387] 1150 DEBUG EDITOR_LOGGER: Net updated. (1 ms)
+[2025-03-21 16:48:22,388] 1151 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (382 ms)
+[2025-03-21 16:48:22,389] 1152  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 11 Lasagne
+[2025-03-21 16:48:22,389] 1152  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 11 Lasagne\lasagne.pnml
+[2025-03-21 16:48:50,647] 29410  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-03-21 16:48:50,647] 29410  INFO GUI_LOGGER: EXIT WoPeD
