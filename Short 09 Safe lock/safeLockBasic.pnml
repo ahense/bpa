@@ -7,7 +7,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>tokens</text>
         <graphics>
-          <offset x="510" y="160"/>
+          <offset x="560" y="130"/>
         </graphics>
       </name>
       <graphics>
@@ -46,7 +46,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>digit 3</text>
         <graphics>
-          <offset x="620" y="380"/>
+          <offset x="640" y="380"/>
         </graphics>
       </name>
       <graphics>
@@ -102,7 +102,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>increment 1</text>
         <graphics>
-          <offset x="380" y="270"/>
+          <offset x="400" y="270"/>
         </graphics>
       </name>
       <graphics>
@@ -119,7 +119,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>increment 2</text>
         <graphics>
-          <offset x="510" y="270"/>
+          <offset x="540" y="270"/>
         </graphics>
       </name>
       <graphics>
@@ -136,7 +136,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>increment 3</text>
         <graphics>
-          <offset x="620" y="270"/>
+          <offset x="650" y="270"/>
         </graphics>
       </name>
       <graphics>
@@ -149,34 +149,6 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
         <orientation>1</orientation>
       </toolspecific>
     </transition>
-    <arc id="a10" source="t4" target="p5">
-      <inscription>
-        <text>1</text>
-        <graphics>
-          <offset x="500.0" y="-12.0"/>
-        </graphics>
-      </inscription>
-      <graphics/>
-      <toolspecific tool="WoPeD" version="1.0">
-        <probability>1.0</probability>
-        <displayProbabilityOn>false</displayProbabilityOn>
-        <displayProbabilityPosition x="500.0" y="12.0"/>
-      </toolspecific>
-    </arc>
-    <arc id="a13" source="p6" target="t4">
-      <inscription>
-        <text>1</text>
-        <graphics>
-          <offset x="500.0" y="-12.0"/>
-        </graphics>
-      </inscription>
-      <graphics/>
-      <toolspecific tool="WoPeD" version="1.0">
-        <probability>1.0</probability>
-        <displayProbabilityOn>false</displayProbabilityOn>
-        <displayProbabilityPosition x="500.0" y="12.0"/>
-      </toolspecific>
-    </arc>
     <arc id="a1" source="p1" target="t1">
       <inscription>
         <text>1</text>
@@ -191,7 +163,35 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
         <displayProbabilityPosition x="500.0" y="12.0"/>
       </toolspecific>
     </arc>
+    <arc id="a10" source="t4" target="p5">
+      <inscription>
+        <text>1</text>
+        <graphics>
+          <offset x="500.0" y="-12.0"/>
+        </graphics>
+      </inscription>
+      <graphics/>
+      <toolspecific tool="WoPeD" version="1.0">
+        <probability>1.0</probability>
+        <displayProbabilityOn>false</displayProbabilityOn>
+        <displayProbabilityPosition x="500.0" y="12.0"/>
+      </toolspecific>
+    </arc>
     <arc id="a2" source="t1" target="p2">
+      <inscription>
+        <text>1</text>
+        <graphics>
+          <offset x="500.0" y="-12.0"/>
+        </graphics>
+      </inscription>
+      <graphics/>
+      <toolspecific tool="WoPeD" version="1.0">
+        <probability>1.0</probability>
+        <displayProbabilityOn>false</displayProbabilityOn>
+        <displayProbabilityPosition x="500.0" y="12.0"/>
+      </toolspecific>
+    </arc>
+    <arc id="a13" source="p6" target="t4">
       <inscription>
         <text>1</text>
         <graphics>
@@ -312,10 +312,10 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     <toolspecific tool="WoPeD" version="1.0">
       <bounds>
         <position x="2" y="25"/>
-        <dimension x="1908" y="812"/>
+        <dimension x="1900" y="752"/>
       </bounds>
-      <scale>100</scale>
-      <treeWidthRight>1541</treeWidthRight>
+      <scale>120</scale>
+      <treeWidthRight>1535</treeWidthRight>
       <overviewPanelVisible>true</overviewPanelVisible>
       <treeHeightOverview>100</treeHeightOverview>
       <treePanelVisible>true</treePanelVisible>

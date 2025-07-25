@@ -7,7 +7,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Man left</text>
         <graphics>
-          <offset x="430" y="130"/>
+          <offset x="400" y="130"/>
         </graphics>
       </name>
       <graphics>
@@ -22,7 +22,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Wolf left</text>
         <graphics>
-          <offset x="430" y="320"/>
+          <offset x="390" y="320"/>
         </graphics>
       </name>
       <graphics>
@@ -37,7 +37,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Goat left</text>
         <graphics>
-          <offset x="430" y="530"/>
+          <offset x="390" y="530"/>
         </graphics>
       </name>
       <graphics>
@@ -67,7 +67,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Man right</text>
         <graphics>
-          <offset x="680" y="120"/>
+          <offset x="700" y="120"/>
         </graphics>
       </name>
       <graphics>
@@ -79,7 +79,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Wolf right</text>
         <graphics>
-          <offset x="680" y="320"/>
+          <offset x="710" y="320"/>
         </graphics>
       </name>
       <graphics>
@@ -91,7 +91,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Goat right</text>
         <graphics>
-          <offset x="680" y="530"/>
+          <offset x="700" y="530"/>
         </graphics>
       </name>
       <graphics>
@@ -217,7 +217,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>WGR</text>
         <graphics>
-          <offset x="680" y="430"/>
+          <offset x="710" y="430"/>
         </graphics>
       </name>
       <graphics>
@@ -234,7 +234,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>WGL</text>
         <graphics>
-          <offset x="430" y="430"/>
+          <offset x="410" y="430"/>
         </graphics>
       </name>
       <graphics>
@@ -251,7 +251,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>GCR</text>
         <graphics>
-          <offset x="680" y="640"/>
+          <offset x="710" y="640"/>
         </graphics>
       </name>
       <graphics>
@@ -268,7 +268,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>GCL</text>
         <graphics>
-          <offset x="420" y="650"/>
+          <offset x="410" y="640"/>
         </graphics>
       </name>
       <graphics>

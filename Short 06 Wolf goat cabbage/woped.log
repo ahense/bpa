@@ -1,92 +1,262 @@
-[2025-03-20 14:01:34,021] 0  INFO GUI_LOGGER: INIT APPLICATION
-[2025-03-20 14:01:34,044] 23  INFO CORE_LOGGER: START INIT Application
-[2025-03-20 14:01:34,054] 33  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-03-20 14:01:34,057] 36  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
-[2025-03-20 14:01:34,172] 151  INFO CONFIG_LOGGER: Setting Locale to en_GB
-[2025-03-20 14:01:34,173] 152  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-03-20 14:01:34,173] 152  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 05 Espresso
-[2025-03-20 14:01:34,189] 168  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-03-20 14:01:34,214] 193  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
-[2025-03-20 14:01:34,234] 213  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-03-20 14:01:34,260] 239  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
-[2025-03-20 14:01:34,610] 589  INFO GUI_LOGGER: END  INIT Application
-[2025-03-20 14:01:34,749] 728 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-03-20 14:01:34,756] 735 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-03-20 14:01:34,795] 774 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
-[2025-03-20 14:01:34,919] 898 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
-[2025-03-20 14:01:34,919] 898 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (11 ms)
-[2025-03-20 14:01:35,068] 1047 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
-[2025-03-20 14:01:35,068] 1047 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
-[2025-03-20 14:01:35,068] 1047 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
-[2025-03-20 14:01:35,068] 1047 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
-[2025-03-20 14:01:35,069] 1048 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
-[2025-03-20 14:01:35,069] 1048 DEBUG FILE_LOGGER:  ... Place (ID:p6) imported
-[2025-03-20 14:01:35,069] 1048 DEBUG FILE_LOGGER:  ... Place (ID:p7) imported
-[2025-03-20 14:01:35,069] 1048 DEBUG FILE_LOGGER:  ... Place (ID:p8) imported
-[2025-03-20 14:01:35,073] 1052 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
-[2025-03-20 14:01:35,073] 1052 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
-[2025-03-20 14:01:35,073] 1052 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
-[2025-03-20 14:01:35,074] 1053 DEBUG FILE_LOGGER:  ... Transition (ID:t7) imported 
-[2025-03-20 14:01:35,074] 1053 DEBUG FILE_LOGGER:  ... Transition (ID:t8) imported 
-[2025-03-20 14:01:35,074] 1053 DEBUG FILE_LOGGER:  ... Transition (ID:t9) imported 
-[2025-03-20 14:01:35,075] 1054 DEBUG FILE_LOGGER:  ... Transition (ID:t14) imported 
-[2025-03-20 14:01:35,075] 1054 DEBUG FILE_LOGGER:  ... Transition (ID:t13) imported 
-[2025-03-20 14:01:35,076] 1055 DEBUG FILE_LOGGER:  ... Transition (ID:t16) imported 
-[2025-03-20 14:01:35,076] 1055 DEBUG FILE_LOGGER:  ... Transition (ID:t15) imported 
-[2025-03-20 14:01:35,076] 1055 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
-[2025-03-20 14:01:35,076] 1055 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
-[2025-03-20 14:01:35,084] 1063 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p2 -> t4 
-[2025-03-20 14:01:35,085] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a33) p5 -> t9 
-[2025-03-20 14:01:35,085] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a55) t16 -> p7 
-[2025-03-20 14:01:35,085] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a32) t7 -> p1 
-[2025-03-20 14:01:35,085] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a54) t16 -> p1 
-[2025-03-20 14:01:35,085] 1064 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p2 
-[2025-03-20 14:01:35,086] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a35) p2 -> t13 
-[2025-03-20 14:01:35,086] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p6 -> t5 
-[2025-03-20 14:01:35,086] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a34) t9 -> p1 
-[2025-03-20 14:01:35,086] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a56) t15 -> p5 
-[2025-03-20 14:01:35,086] 1065 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p7 
-[2025-03-20 14:01:35,087] 1066 DEBUG FILE_LOGGER:  ... Arc created: (ID:a37) p5 -> t13 
-[2025-03-20 14:01:35,087] 1066 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p3 -> t6 
-[2025-03-20 14:01:35,087] 1066 DEBUG FILE_LOGGER:  ... Arc created: (ID:a36) p3 -> t13 
-[2025-03-20 14:01:35,087] 1066 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t7 -> p3 
-[2025-03-20 14:01:35,088] 1067 DEBUG FILE_LOGGER:  ... Arc created: (ID:a39) t13 -> p2 
-[2025-03-20 14:01:35,088] 1067 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p7 -> t7 
-[2025-03-20 14:01:35,088] 1067 DEBUG FILE_LOGGER:  ... Arc created: (ID:a38) t13 -> p5 
-[2025-03-20 14:01:35,088] 1067 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t8 -> p8 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) p4 -> t8 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a40) p6 -> t14 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p8 -> t9 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a42) p1 -> t14 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a41) p7 -> t14 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a22) p1 -> t4 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a44) t14 -> p6 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a21) t9 -> p4 
-[2025-03-20 14:01:35,089] 1068 DEBUG FILE_LOGGER:  ... Arc created: (ID:a43) t14 -> p1 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a24) p1 -> t6 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a46) p4 -> t15 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a23) t4 -> p5 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a45) p3 -> t15 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a25) t6 -> p5 
-[2025-03-20 14:01:35,091] 1070 DEBUG FILE_LOGGER:  ... Arc created: (ID:a28) t8 -> p5 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a27) p1 -> t8 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a29) p5 -> t5 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p5 -> t15 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) p1 -> t2 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) t2 -> p5 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) p5 -> t3 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) t3 -> p1 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) t4 -> p6 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a51) p7 -> t16 
-[2025-03-20 14:01:35,092] 1071 DEBUG FILE_LOGGER:  ... Arc created: (ID:a50) t15 -> p3 
-[2025-03-20 14:01:35,093] 1072 DEBUG FILE_LOGGER:  ... Arc created: (ID:a31) p5 -> t7 
-[2025-03-20 14:01:35,093] 1072 DEBUG FILE_LOGGER:  ... Arc created: (ID:a53) p1 -> t16 
-[2025-03-20 14:01:35,093] 1072 DEBUG FILE_LOGGER:  ... Arc created: (ID:a30) t5 -> p1 
-[2025-03-20 14:01:35,093] 1072 DEBUG FILE_LOGGER:  ... Arc created: (ID:a52) p8 -> t16 
-[2025-03-20 14:01:35,207] 1186 DEBUG EDITOR_LOGGER: Net updated. (3 ms)
-[2025-03-20 14:01:35,211] 1190 DEBUG EDITOR_LOGGER: Net updated. (3 ms)
-[2025-03-20 14:01:35,211] 1190 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (416 ms)
-[2025-03-20 14:01:35,212] 1191  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage
-[2025-03-20 14:01:35,213] 1192  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage\ManBoatRiddle.pnml
-[2025-03-20 14:02:14,822] 40801  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
-[2025-03-20 14:02:14,823] 40802  INFO GUI_LOGGER: EXIT WoPeD
+[2025-07-22 18:33:05,451] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-07-22 18:33:05,473] 22  INFO CORE_LOGGER: START INIT Application
+[2025-07-22 18:33:05,479] 28  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-07-22 18:33:05,479] 28  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-07-22 18:33:05,630] 179  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-07-22 18:33:05,632] 181  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-07-22 18:33:05,633] 182  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-07-22 18:33:05,633] 182  INFO CONFIG_LOGGER: Setting current working directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-07-22 18:33:05,645] 194  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-07-22 18:33:05,651] 200  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-07-22 18:33:05,669] 218  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-07-22 18:33:05,695] 244  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-07-22 18:33:06,018] 567  INFO GUI_LOGGER: END  INIT Application
+[2025-07-22 18:33:06,182] 731 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-07-22 18:33:06,188] 737 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-07-22 18:33:06,241] 790 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-07-22 18:33:06,382] 931 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-07-22 18:33:06,382] 931 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (5 ms)
+[2025-07-22 18:33:06,538] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-07-22 18:33:06,538] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-07-22 18:33:06,538] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-07-22 18:33:06,539] 1088 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-07-22 18:33:06,539] 1088 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-07-22 18:33:06,539] 1088 DEBUG FILE_LOGGER:  ... Place (ID:p6) imported
+[2025-07-22 18:33:06,539] 1088 DEBUG FILE_LOGGER:  ... Place (ID:p7) imported
+[2025-07-22 18:33:06,540] 1089 DEBUG FILE_LOGGER:  ... Place (ID:p8) imported
+[2025-07-22 18:33:06,543] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-07-22 18:33:06,543] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-07-22 18:33:06,544] 1093 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-07-22 18:33:06,544] 1093 DEBUG FILE_LOGGER:  ... Transition (ID:t7) imported 
+[2025-07-22 18:33:06,544] 1093 DEBUG FILE_LOGGER:  ... Transition (ID:t8) imported 
+[2025-07-22 18:33:06,545] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t9) imported 
+[2025-07-22 18:33:06,545] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t14) imported 
+[2025-07-22 18:33:06,545] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t13) imported 
+[2025-07-22 18:33:06,545] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t16) imported 
+[2025-07-22 18:33:06,545] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t15) imported 
+[2025-07-22 18:33:06,546] 1095 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-07-22 18:33:06,546] 1095 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-07-22 18:33:06,551] 1100 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p2 -> t4 
+[2025-07-22 18:33:06,552] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a33) p5 -> t9 
+[2025-07-22 18:33:06,552] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a55) t16 -> p7 
+[2025-07-22 18:33:06,552] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a32) t7 -> p1 
+[2025-07-22 18:33:06,553] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a54) t16 -> p1 
+[2025-07-22 18:33:06,553] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p2 
+[2025-07-22 18:33:06,553] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a35) p2 -> t13 
+[2025-07-22 18:33:06,553] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p6 -> t5 
+[2025-07-22 18:33:06,554] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a34) t9 -> p1 
+[2025-07-22 18:33:06,554] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a56) t15 -> p5 
+[2025-07-22 18:33:06,554] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p7 
+[2025-07-22 18:33:06,554] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a37) p5 -> t13 
+[2025-07-22 18:33:06,554] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p3 -> t6 
+[2025-07-22 18:33:06,555] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a36) p3 -> t13 
+[2025-07-22 18:33:06,555] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t7 -> p3 
+[2025-07-22 18:33:06,555] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a39) t13 -> p2 
+[2025-07-22 18:33:06,555] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p7 -> t7 
+[2025-07-22 18:33:06,555] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a38) t13 -> p5 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t8 -> p8 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) p4 -> t8 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a40) p6 -> t14 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p8 -> t9 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a42) p1 -> t14 
+[2025-07-22 18:33:06,556] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a41) p7 -> t14 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a22) p1 -> t4 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a44) t14 -> p6 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a21) t9 -> p4 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a43) t14 -> p1 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a24) p1 -> t6 
+[2025-07-22 18:33:06,557] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a46) p4 -> t15 
+[2025-07-22 18:33:06,558] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a23) t4 -> p5 
+[2025-07-22 18:33:06,558] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a45) p3 -> t15 
+[2025-07-22 18:33:06,558] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a25) t6 -> p5 
+[2025-07-22 18:33:06,558] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a28) t8 -> p5 
+[2025-07-22 18:33:06,559] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a27) p1 -> t8 
+[2025-07-22 18:33:06,559] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a29) p5 -> t5 
+[2025-07-22 18:33:06,559] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p5 -> t15 
+[2025-07-22 18:33:06,559] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) p1 -> t2 
+[2025-07-22 18:33:06,559] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) t2 -> p5 
+[2025-07-22 18:33:06,560] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) p5 -> t3 
+[2025-07-22 18:33:06,560] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) t3 -> p1 
+[2025-07-22 18:33:06,560] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) t4 -> p6 
+[2025-07-22 18:33:06,560] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a51) p7 -> t16 
+[2025-07-22 18:33:06,561] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a50) t15 -> p3 
+[2025-07-22 18:33:06,561] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a31) p5 -> t7 
+[2025-07-22 18:33:06,561] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a53) p1 -> t16 
+[2025-07-22 18:33:06,561] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a30) t5 -> p1 
+[2025-07-22 18:33:06,562] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a52) p8 -> t16 
+[2025-07-22 18:33:06,683] 1232 DEBUG EDITOR_LOGGER: Net updated. (9 ms)
+[2025-07-22 18:33:06,706] 1255 DEBUG EDITOR_LOGGER: Net updated. (11 ms)
+[2025-07-22 18:33:06,706] 1255 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (465 ms)
+[2025-07-22 18:33:06,708] 1257  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage
+[2025-07-22 18:33:06,708] 1257  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage\ManBoatRiddle.pnml
+[2025-07-22 18:33:50,785] 45334 DEBUG EDITOR_LOGGER: Net updated. (3 ms)
+[2025-07-22 18:33:55,650] 50199 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-07-22 18:33:55,978] 50527 DEBUG EDITOR_LOGGER: Net updated. (18 ms)
+[2025-07-22 18:34:15,172] 69721 DEBUG EDITOR_LOGGER: Net updated. (11 ms)
+[2025-07-22 18:34:19,162] 73711 DEBUG EDITOR_LOGGER: Net updated. (11 ms)
+[2025-07-22 18:34:21,657] 76206 DEBUG EDITOR_LOGGER: Net updated. (11 ms)
+[2025-07-22 18:34:21,747] 76296 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-07-22 18:34:23,405] 77954 DEBUG EDITOR_LOGGER: Net updated. (11 ms)
+[2025-07-22 18:34:23,488] 78037 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-07-22 18:34:27,595] 82144 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-07-22 18:35:56,368] 170917 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-07-22 18:36:03,195] 177744 DEBUG EDITOR_LOGGER: Net updated. (1 ms)
+[2025-07-22 18:43:40,412] 634961 DEBUG EDITOR_LOGGER: START TokenGame
+[2025-07-22 18:43:40,417] 634966 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:43:40,419] 634968 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-07-22 18:43:45,373] 639922 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:43:45,380] 639929 DEBUG QUALANALYSIS_LOGGER:            ... DONE (7 ms)
+[2025-07-22 18:43:56,302] 650851 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:43:56,308] 650857 DEBUG QUALANALYSIS_LOGGER:            ... DONE (6 ms)
+[2025-07-22 18:44:00,652] 655201 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:44:00,655] 655204 DEBUG QUALANALYSIS_LOGGER:            ... DONE (3 ms)
+[2025-07-22 18:44:09,549] 664098 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:44:09,553] 664102 DEBUG QUALANALYSIS_LOGGER:            ... DONE (4 ms)
+[2025-07-22 18:44:19,453] 674002 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:44:19,459] 674008 DEBUG QUALANALYSIS_LOGGER:            ... DONE (6 ms)
+[2025-07-22 18:44:29,950] 684499 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:44:29,955] 684504 DEBUG QUALANALYSIS_LOGGER:            ... DONE (5 ms)
+[2025-07-22 18:44:42,043] 696592 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:44:42,045] 696594 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-07-22 18:47:41,564] 876113 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:47:41,566] 876115 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-07-22 18:51:50,652] 1125201 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-07-22 18:51:50,653] 1125202 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-07-22 18:51:50,654] 1125203 DEBUG EDITOR_LOGGER: STOP TokenGame
+[2025-07-22 18:51:51,804] 1126353 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,822] 1126371 DEBUG EDITOR_LOGGER: Net updated. (9 ms)
+[2025-07-22 18:51:51,822] 1126371 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-07-22 18:51:51,885] 1126434 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-07-22 18:51:51,927] 1126476 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,927] 1126476 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,990] 1126539 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,990] 1126539 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,997] 1126546 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:51,997] 1126546 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:51:52,003] 1126552 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:52:20,914] 1155463 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:52:20,919] 1155468 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:52:20,919] 1155468 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:52:20,926] 1155475 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-07-22 18:52:26,583] 1161132 DEBUG FILE_LOGGER: ##### START PNML EXPORT #####
+[2025-07-22 18:52:26,607] 1161156 DEBUG FILE_LOGGER:    ... Transition (ID:t4) set
+[2025-07-22 18:52:26,607] 1161156 DEBUG FILE_LOGGER:    ... Place (ID:p1) set
+[2025-07-22 18:52:26,608] 1161157 DEBUG FILE_LOGGER:    ... Transition (ID:t5) set
+[2025-07-22 18:52:26,608] 1161157 DEBUG FILE_LOGGER:    ... Place (ID:p2) set
+[2025-07-22 18:52:26,608] 1161157 DEBUG FILE_LOGGER:    ... Transition (ID:t6) set
+[2025-07-22 18:52:26,608] 1161157 DEBUG FILE_LOGGER:    ... Place (ID:p3) set
+[2025-07-22 18:52:26,609] 1161158 DEBUG FILE_LOGGER:    ... Transition (ID:t7) set
+[2025-07-22 18:52:26,609] 1161158 DEBUG FILE_LOGGER:    ... Place (ID:p4) set
+[2025-07-22 18:52:26,609] 1161158 DEBUG FILE_LOGGER:    ... Transition (ID:t8) set
+[2025-07-22 18:52:26,609] 1161158 DEBUG FILE_LOGGER:    ... Place (ID:p5) set
+[2025-07-22 18:52:26,609] 1161158 DEBUG FILE_LOGGER:    ... Transition (ID:t9) set
+[2025-07-22 18:52:26,610] 1161159 DEBUG FILE_LOGGER:    ... Place (ID:p6) set
+[2025-07-22 18:52:26,610] 1161159 DEBUG FILE_LOGGER:    ... Place (ID:p7) set
+[2025-07-22 18:52:26,610] 1161159 DEBUG FILE_LOGGER:    ... Place (ID:p8) set
+[2025-07-22 18:52:26,610] 1161159 DEBUG FILE_LOGGER:    ... Transition (ID:t14) set
+[2025-07-22 18:52:26,610] 1161159 DEBUG FILE_LOGGER:    ... Transition (ID:t13) set
+[2025-07-22 18:52:26,611] 1161160 DEBUG FILE_LOGGER:    ... Transition (ID:t16) set
+[2025-07-22 18:52:26,611] 1161160 DEBUG FILE_LOGGER:    ... Transition (ID:t15) set
+[2025-07-22 18:52:26,611] 1161160 DEBUG FILE_LOGGER:    ... Transition (ID:t2) set
+[2025-07-22 18:52:26,611] 1161160 DEBUG FILE_LOGGER:    ... Transition (ID:t3) set
+[2025-07-22 18:52:26,612] 1161161 DEBUG FILE_LOGGER:    ... Arc (ID:a11( p2 -> t4) set
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER:    ... Arc (ID:a33( p5 -> t9) set
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER:    ... Arc (ID:a55( t16 -> p7) set
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER:    ... Arc (ID:a32( t7 -> p1) set
+[2025-07-22 18:52:26,613] 1161162 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER:    ... Arc (ID:a54( t16 -> p1) set
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER:    ... Arc (ID:a13( t5 -> p2) set
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER:    ... Arc (ID:a35( p2 -> t13) set
+[2025-07-22 18:52:26,614] 1161163 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER:    ... Arc (ID:a12( p6 -> t5) set
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER:    ... Arc (ID:a34( t9 -> p1) set
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER:    ... Arc (ID:a56( t15 -> p5) set
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER:    ... Arc (ID:a15( t6 -> p7) set
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,615] 1161164 DEBUG FILE_LOGGER:    ... Arc (ID:a37( p5 -> t13) set
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER:    ... Arc (ID:a14( p3 -> t6) set
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER:    ... Arc (ID:a36( p3 -> t13) set
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,616] 1161165 DEBUG FILE_LOGGER:    ... Arc (ID:a17( t7 -> p3) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER:    ... Arc (ID:a39( t13 -> p2) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER:    ... Arc (ID:a16( p7 -> t7) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER:    ... Arc (ID:a38( t13 -> p5) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER:    ... Arc (ID:a19( t8 -> p8) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER:    ... Arc (ID:a18( p4 -> t8) set
+[2025-07-22 18:52:26,617] 1161166 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER:    ... Arc (ID:a40( p6 -> t14) set
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER:    ... Arc (ID:a20( p8 -> t9) set
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER:    ... Arc (ID:a42( p1 -> t14) set
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER:    ... Arc (ID:a41( p7 -> t14) set
+[2025-07-22 18:52:26,618] 1161167 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER:    ... Arc (ID:a22( p1 -> t4) set
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER:    ... Arc (ID:a44( t14 -> p6) set
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER:    ... Arc (ID:a21( t9 -> p4) set
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER:    ... Arc (ID:a43( t14 -> p1) set
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER:    ... Arc (ID:a24( p1 -> t6) set
+[2025-07-22 18:52:26,619] 1161168 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER:    ... Arc (ID:a46( p4 -> t15) set
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER:    ... Arc (ID:a23( t4 -> p5) set
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER:    ... Arc (ID:a45( p3 -> t15) set
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER:    ... Arc (ID:a25( t6 -> p5) set
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER:    ... Arc (ID:a28( t8 -> p5) set
+[2025-07-22 18:52:26,620] 1161169 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER:    ... Arc (ID:a27( p1 -> t8) set
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER:    ... Arc (ID:a29( p5 -> t5) set
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER:    ... Arc (ID:a1( p5 -> t15) set
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER:    ... Arc (ID:a2( p1 -> t2) set
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER:    ... Arc (ID:a3( t2 -> p5) set
+[2025-07-22 18:52:26,621] 1161170 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER:    ... Arc (ID:a4( p5 -> t3) set
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER:    ... Arc (ID:a5( t3 -> p1) set
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER:    ... Arc (ID:a7( t4 -> p6) set
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,622] 1161171 DEBUG FILE_LOGGER:    ... Arc (ID:a51( p7 -> t16) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER:    ... Arc (ID:a50( t15 -> p3) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER:    ... Arc (ID:a31( p5 -> t7) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER:    ... Arc (ID:a53( p1 -> t16) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER:    ... Arc (ID:a30( t5 -> p1) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER:    ... Arc (ID:a52( p8 -> t16) set
+[2025-07-22 18:52:26,623] 1161172 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-07-22 18:52:26,646] 1161195 DEBUG FILE_LOGGER: ##### END PNML EXPORT ##### (63 ms)
+[2025-07-22 18:52:26,646] 1161195  INFO FILE_LOGGER: Petrinet saved in file: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage\ManBoatRiddle.pnml
+[2025-07-22 18:52:26,646] 1161195  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-07-22 18:53:28,627] 1223176  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-07-22 18:53:28,628] 1223177  INFO GUI_LOGGER: EXIT WoPeD

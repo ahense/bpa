@@ -152,7 +152,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </place>
     <transition id="t4">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="490" y="120"/>
         </graphics>
@@ -169,7 +169,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t5">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="490" y="160"/>
         </graphics>
@@ -186,7 +186,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t6">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="350" y="160"/>
         </graphics>
@@ -203,7 +203,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t7">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="580" y="520"/>
         </graphics>
@@ -220,7 +220,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t8">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="540" y="520"/>
         </graphics>
@@ -237,7 +237,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t9">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="440" y="570"/>
         </graphics>
@@ -254,7 +254,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t10">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="400" y="570"/>
         </graphics>
@@ -271,7 +271,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t12">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="320" y="520"/>
         </graphics>
@@ -288,7 +288,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t11">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="280" y="520"/>
         </graphics>
@@ -305,7 +305,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t1">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="390" y="240"/>
         </graphics>
@@ -322,7 +322,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t2">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="420" y="360"/>
         </graphics>
@@ -339,7 +339,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     </transition>
     <transition id="t3">
       <name>
-        <text></text>
+        <text/>
         <graphics>
           <offset x="350" y="120"/>
         </graphics>
@@ -687,7 +687,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <toolspecific tool="WoPeD" version="1.0">
         <probability>1.0</probability>
         <displayProbabilityOn>false</displayProbabilityOn>
-        <displayProbabilityPosition x="471.78299321365137" y="6.067415730337075"/>
+        <displayProbabilityPosition x="471.0" y="6.0"/>
       </toolspecific>
     </arc>
     <arc id="a4" source="t2" target="p1">
@@ -805,10 +805,10 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     <toolspecific tool="WoPeD" version="1.0">
       <bounds>
         <position x="2" y="25"/>
-        <dimension x="1908" y="772"/>
+        <dimension x="1900" y="752"/>
       </bounds>
       <scale>110</scale>
-      <treeWidthRight>1541</treeWidthRight>
+      <treeWidthRight>1535</treeWidthRight>
       <overviewPanelVisible>true</overviewPanelVisible>
       <treeHeightOverview>100</treeHeightOverview>
       <treePanelVisible>true</treePanelVisible>

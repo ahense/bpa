@@ -7,7 +7,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>bechamel</text>
         <graphics>
-          <offset x="330" y="60"/>
+          <offset x="320" y="0"/>
         </graphics>
       </name>
       <graphics>
@@ -22,7 +22,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>pasta</text>
         <graphics>
-          <offset x="550" y="60"/>
+          <offset x="560" y="0"/>
         </graphics>
       </name>
       <graphics>
@@ -52,7 +52,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>ragu</text>
         <graphics>
-          <offset x="640" y="60"/>
+          <offset x="650" y="0"/>
         </graphics>
       </name>
       <graphics>
@@ -67,7 +67,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>layers needed</text>
         <graphics>
-          <offset x="480" y="120"/>
+          <offset x="460" y="60"/>
         </graphics>
       </name>
       <graphics>
@@ -82,11 +82,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>parmigiano</text>
         <graphics>
-          <offset x="420" y="60"/>
+          <offset x="410" y="0"/>
         </graphics>
       </name>
       <graphics>
-        <position x="426" y="23"/>
+        <position x="418" y="23"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
@@ -162,7 +162,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>cook lasagne</text>
         <graphics>
-          <offset x="490" y="340"/>
+          <offset x="470" y="360"/>
         </graphics>
       </name>
       <graphics>
@@ -628,10 +628,10 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     <toolspecific tool="WoPeD" version="1.0">
       <bounds>
         <position x="2" y="25"/>
-        <dimension x="1908" y="812"/>
+        <dimension x="1900" y="752"/>
       </bounds>
-      <scale>137</scale>
-      <treeWidthRight>1541</treeWidthRight>
+      <scale>127</scale>
+      <treeWidthRight>1535</treeWidthRight>
       <overviewPanelVisible>true</overviewPanelVisible>
       <treeHeightOverview>100</treeHeightOverview>
       <treePanelVisible>true</treePanelVisible>

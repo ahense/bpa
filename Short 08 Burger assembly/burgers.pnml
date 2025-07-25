@@ -7,7 +7,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>bread</text>
         <graphics>
-          <offset x="440" y="70"/>
+          <offset x="400" y="40"/>
         </graphics>
       </name>
       <graphics>
@@ -22,7 +22,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>meat</text>
         <graphics>
-          <offset x="680" y="70"/>
+          <offset x="730" y="40"/>
         </graphics>
       </name>
       <graphics>
@@ -76,7 +76,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>parts needed</text>
         <graphics>
-          <offset x="560" y="130"/>
+          <offset x="550" y="60"/>
         </graphics>
       </name>
       <graphics>
@@ -91,7 +91,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>position meat</text>
         <graphics>
-          <offset x="680" y="180"/>
+          <offset x="720" y="160"/>
         </graphics>
       </name>
       <graphics>
@@ -108,7 +108,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>produce burger</text>
         <graphics>
-          <offset x="560" y="400"/>
+          <offset x="640" y="380"/>
         </graphics>
       </name>
       <graphics>
@@ -125,7 +125,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>position bread</text>
         <graphics>
-          <offset x="440" y="180"/>
+          <offset x="350" y="160"/>
         </graphics>
       </name>
       <graphics>
@@ -149,7 +149,7 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <toolspecific tool="WoPeD" version="1.0">
         <probability>1.0</probability>
         <displayProbabilityOn>false</displayProbabilityOn>
-        <displayProbabilityPosition x="503.5460992907801" y="0.0"/>
+        <displayProbabilityPosition x="503.0" y="0.0"/>
       </toolspecific>
     </arc>
     <arc id="a10" source="t4" target="p3">
@@ -337,10 +337,10 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
     <toolspecific tool="WoPeD" version="1.0">
       <bounds>
         <position x="2" y="25"/>
-        <dimension x="1908" y="812"/>
+        <dimension x="1900" y="752"/>
       </bounds>
       <scale>137</scale>
-      <treeWidthRight>1541</treeWidthRight>
+      <treeWidthRight>1535</treeWidthRight>
       <overviewPanelVisible>true</overviewPanelVisible>
       <treeHeightOverview>100</treeHeightOverview>
       <treePanelVisible>true</treePanelVisible>
