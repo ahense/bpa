@@ -521,3 +521,113 @@
 [2025-07-24 15:11:06,441] 406305  INFO CONFIG_LOGGER: Setting current working directory: null
 [2025-07-24 15:11:06,452] 406316  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
 [2025-07-24 15:11:06,452] 406316  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 17:38:18,634] 1  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 17:38:18,664] 31  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 17:38:18,669] 36  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:38:18,669] 36  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 17:38:18,831] 198  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 17:38:18,834] 201  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:38:18,834] 201  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 10 Extractor fan
+[2025-11-01 17:38:18,847] 214  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:38:18,854] 221  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 17:38:18,876] 243  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:38:18,908] 275  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 17:38:19,262] 629  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 17:38:19,419] 786 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:38:19,424] 791 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:38:19,486] 853 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 17:38:19,615] 982 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 17:38:19,616] 983 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (6 ms)
+[2025-11-01 17:38:19,768] 1135 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 17:38:19,769] 1136 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 17:38:19,769] 1136 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 17:38:19,769] 1136 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 17:38:19,769] 1136 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 17:38:19,769] 1136 DEBUG FILE_LOGGER:  ... Place (ID:p6) imported
+[2025-11-01 17:38:19,770] 1137 DEBUG FILE_LOGGER:  ... Place (ID:p7) imported
+[2025-11-01 17:38:19,770] 1137 DEBUG FILE_LOGGER:  ... Place (ID:p8) imported
+[2025-11-01 17:38:19,770] 1137 DEBUG FILE_LOGGER:  ... Place (ID:p9) imported
+[2025-11-01 17:38:19,775] 1142 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 17:38:19,776] 1143 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 17:38:19,776] 1143 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 17:38:19,776] 1143 DEBUG FILE_LOGGER:  ... Transition (ID:t7) imported 
+[2025-11-01 17:38:19,776] 1143 DEBUG FILE_LOGGER:  ... Transition (ID:t8) imported 
+[2025-11-01 17:38:19,776] 1143 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 17:38:19,777] 1144 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 17:38:19,777] 1144 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 17:38:19,784] 1151 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p6 -> t5 
+[2025-11-01 17:38:19,784] 1151 DEBUG FILE_LOGGER:  ... Arc created: (ID:a22) t4 -> p9 
+[2025-11-01 17:38:19,784] 1151 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t6 -> p6 
+[2025-11-01 17:38:19,784] 1151 DEBUG FILE_LOGGER:  ... Arc created: (ID:a21) t2 -> p9 
+[2025-11-01 17:38:19,785] 1152 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) p8 -> t7 
+[2025-11-01 17:38:19,785] 1152 DEBUG FILE_LOGGER:  ... Arc created: (ID:a24) t7 -> p9 
+[2025-11-01 17:38:19,785] 1152 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) t5 -> p5 
+[2025-11-01 17:38:19,787] 1154 DEBUG FILE_LOGGER:  ... Arc created: (ID:a23) t5 -> p9 
+[2025-11-01 17:38:19,787] 1154 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t8 -> p8 
+[2025-11-01 17:38:19,787] 1154 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p7 -> t8 
+[2025-11-01 17:38:19,787] 1154 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) p9 -> t1 
+[2025-11-01 17:38:19,788] 1155 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) t7 -> p7 
+[2025-11-01 17:38:19,788] 1155 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) p9 -> t6 
+[2025-11-01 17:38:19,788] 1155 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) p9 -> t3 
+[2025-11-01 17:38:19,788] 1155 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 17:38:19,788] 1155 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 17:38:19,789] 1156 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 17:38:19,789] 1156 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 17:38:19,789] 1156 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p3 -> t3 
+[2025-11-01 17:38:19,789] 1156 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t3 -> p4 
+[2025-11-01 17:38:19,789] 1156 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p4 -> t4 
+[2025-11-01 17:38:19,790] 1157 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t4 -> p3 
+[2025-11-01 17:38:19,790] 1157 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p5 -> t6 
+[2025-11-01 17:38:19,790] 1157 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p9 -> t8 
+[2025-11-01 17:38:19,866] 1233 DEBUG EDITOR_LOGGER: Net updated. (8 ms)
+[2025-11-01 17:38:19,871] 1238 DEBUG EDITOR_LOGGER: Net updated. (4 ms)
+[2025-11-01 17:38:19,871] 1238 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (385 ms)
+[2025-11-01 17:38:19,872] 1239  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 31 Electric Roller Shutters
+[2025-11-01 17:38:19,872] 1239  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 31 Electric Roller Shutters\shutters.pnml
+[2025-11-01 17:38:56,483] 37850 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:38:56,494] 37861 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p9' to 't1'
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p9' to 't8'
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p9' to 't6'
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p9' to 't3'
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (675 ms)
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't5' to 'p9'
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,495] 37862 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p9'
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p9'
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't7' to 'p9'
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 1
+[2025-11-01 17:38:56,496] 37863 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (451 ms)
+[2025-11-01 17:38:56,511] 37878  INFO FILE_LOGGER: Local WoPeD analysis started.
+[2025-11-01 17:39:54,864] 96231 DEBUG EDITOR_LOGGER: START TokenGame
+[2025-11-01 17:39:54,869] 96236 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 17:39:54,870] 96237 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 17:45:35,248] 436615 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 17:45:35,249] 436616 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 17:45:35,249] 436616 DEBUG EDITOR_LOGGER: STOP TokenGame
+[2025-11-01 17:45:36,744] 438111 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,749] 438116 DEBUG EDITOR_LOGGER: Net updated. (4 ms)
+[2025-11-01 17:45:36,749] 438116 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-11-01 17:45:36,778] 438145 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-11-01 17:45:36,798] 438165 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,798] 438165 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,822] 438189 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,822] 438189 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,826] 438193 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,826] 438193 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:45:36,829] 438196 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,472] 468839 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,472] 468839 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,480] 468847 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,480] 468847 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,490] 468857 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,490] 468857 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,495] 468862 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:07,495] 468862 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:46:23,615] 484982  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 17:46:23,615] 484982  INFO GUI_LOGGER: EXIT WoPeD

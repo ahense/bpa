@@ -7,11 +7,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>fan off</text>
         <graphics>
-          <offset x="620" y="210"/>
+          <offset x="620" y="80"/>
         </graphics>
       </name>
       <graphics>
-        <position x="620" y="170"/>
+        <position x="620" y="40"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
@@ -22,11 +22,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>fan low</text>
         <graphics>
-          <offset x="620" y="320"/>
+          <offset x="620" y="190"/>
         </graphics>
       </name>
       <graphics>
-        <position x="620" y="280"/>
+        <position x="620" y="150"/>
         <dimension x="40" y="40"/>
       </graphics>
     </place>
@@ -34,11 +34,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>fan high</text>
         <graphics>
-          <offset x="620" y="440"/>
+          <offset x="620" y="310"/>
         </graphics>
       </name>
       <graphics>
-        <position x="620" y="400"/>
+        <position x="620" y="270"/>
         <dimension x="40" y="40"/>
       </graphics>
     </place>
@@ -46,11 +46,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>temp high</text>
         <graphics>
-          <offset x="410" y="460"/>
+          <offset x="410" y="320"/>
         </graphics>
       </name>
       <graphics>
-        <position x="430" y="410"/>
+        <position x="430" y="280"/>
         <dimension x="40" y="40"/>
       </graphics>
     </place>
@@ -58,11 +58,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>temp low</text>
         <graphics>
-          <offset x="820" y="460"/>
+          <offset x="820" y="330"/>
         </graphics>
       </name>
       <graphics>
-        <position x="820" y="420"/>
+        <position x="820" y="290"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
@@ -73,11 +73,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>decrease</text>
         <graphics>
-          <offset x="730" y="390"/>
+          <offset x="720" y="260"/>
         </graphics>
       </name>
       <graphics>
-        <position x="725" y="350"/>
+        <position x="725" y="220"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -90,11 +90,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>cool off</text>
         <graphics>
-          <offset x="620" y="560"/>
+          <offset x="620" y="430"/>
         </graphics>
       </name>
       <graphics>
-        <position x="620" y="520"/>
+        <position x="620" y="390"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -107,11 +107,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>heat</text>
         <graphics>
-          <offset x="620" y="660"/>
+          <offset x="660" y="500"/>
         </graphics>
       </name>
       <graphics>
-        <position x="620" y="620"/>
+        <position x="620" y="490"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -124,11 +124,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>turn on</text>
         <graphics>
-          <offset x="520" y="150"/>
+          <offset x="480" y="50"/>
         </graphics>
       </name>
       <graphics>
-        <position x="520" y="170"/>
+        <position x="520" y="40"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -141,11 +141,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>turn off</text>
         <graphics>
-          <offset x="710" y="150"/>
+          <offset x="750" y="50"/>
         </graphics>
       </name>
       <graphics>
-        <position x="710" y="170"/>
+        <position x="710" y="40"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -158,11 +158,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>increase</text>
         <graphics>
-          <offset x="510" y="390"/>
+          <offset x="510" y="260"/>
         </graphics>
       </name>
       <graphics>
-        <position x="510" y="350"/>
+        <position x="510" y="220"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -456,8 +456,8 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
         <position x="2" y="25"/>
         <dimension x="1900" y="752"/>
       </bounds>
-      <scale>126</scale>
-      <treeWidthRight>1535</treeWidthRight>
+      <scale>146</scale>
+      <treeWidthRight>1580</treeWidthRight>
       <overviewPanelVisible>true</overviewPanelVisible>
       <treeHeightOverview>100</treeHeightOverview>
       <treePanelVisible>true</treePanelVisible>

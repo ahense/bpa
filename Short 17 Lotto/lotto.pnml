@@ -7,71 +7,71 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>Francesco</text>
         <graphics>
-          <offset x="200" y="130"/>
+          <offset x="180" y="20"/>
         </graphics>
       </name>
       <graphics>
-        <position x="200" y="160"/>
+        <position x="130" y="10"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
-        <text>10</text>
+        <text>5</text>
       </initialMarking>
     </place>
     <place id="p2">
       <name>
         <text>Giulia</text>
         <graphics>
-          <offset x="330" y="130"/>
+          <offset x="300" y="20"/>
         </graphics>
       </name>
       <graphics>
-        <position x="320" y="160"/>
+        <position x="250" y="10"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
-        <text>10</text>
+        <text>5</text>
       </initialMarking>
     </place>
     <place id="p3">
       <name>
         <text>Matteo</text>
         <graphics>
-          <offset x="440" y="130"/>
+          <offset x="410" y="20"/>
         </graphics>
       </name>
       <graphics>
-        <position x="440" y="160"/>
+        <position x="370" y="10"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
-        <text>10</text>
+        <text>5</text>
       </initialMarking>
     </place>
     <place id="p4">
       <name>
         <text>Chiara</text>
         <graphics>
-          <offset x="560" y="130"/>
+          <offset x="530" y="20"/>
         </graphics>
       </name>
       <graphics>
-        <position x="560" y="160"/>
+        <position x="490" y="10"/>
         <dimension x="40" y="40"/>
       </graphics>
       <initialMarking>
-        <text>10</text>
+        <text>5</text>
       </initialMarking>
     </place>
     <place id="p5">
       <name>
         <text>jackpot</text>
         <graphics>
-          <offset x="380" y="500"/>
+          <offset x="310" y="350"/>
         </graphics>
       </name>
       <graphics>
-        <position x="380" y="460"/>
+        <position x="310" y="310"/>
         <dimension x="40" y="40"/>
       </graphics>
     </place>
@@ -79,11 +79,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>tesoreria nazionale</text>
         <graphics>
-          <offset x="430" y="620"/>
+          <offset x="360" y="470"/>
         </graphics>
       </name>
       <graphics>
-        <position x="380" y="610"/>
+        <position x="310" y="460"/>
         <dimension x="40" y="40"/>
       </graphics>
     </place>
@@ -91,11 +91,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>vince</text>
         <graphics>
-          <offset x="230" y="320"/>
+          <offset x="150" y="180"/>
         </graphics>
       </name>
       <graphics>
-        <position x="200" y="350"/>
+        <position x="130" y="200"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -108,11 +108,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>vince</text>
         <graphics>
-          <offset x="350" y="320"/>
+          <offset x="270" y="180"/>
         </graphics>
       </name>
       <graphics>
-        <position x="320" y="350"/>
+        <position x="250" y="200"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -125,11 +125,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>vince</text>
         <graphics>
-          <offset x="470" y="320"/>
+          <offset x="390" y="180"/>
         </graphics>
       </name>
       <graphics>
-        <position x="440" y="350"/>
+        <position x="370" y="200"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -142,11 +142,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>vince</text>
         <graphics>
-          <offset x="590" y="320"/>
+          <offset x="510" y="180"/>
         </graphics>
       </name>
       <graphics>
-        <position x="560" y="350"/>
+        <position x="490" y="200"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -159,11 +159,11 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
       <name>
         <text>giocano</text>
         <graphics>
-          <offset x="400" y="300"/>
+          <offset x="330" y="140"/>
         </graphics>
       </name>
       <graphics>
-        <position x="377" y="247"/>
+        <position x="307" y="97"/>
         <dimension x="40" y="40"/>
       </graphics>
       <toolspecific tool="WoPeD" version="1.0">
@@ -416,10 +416,10 @@ Created with Workflow PetriNet Designer Version 3.2.0 (woped.org)-->
         <dimension x="1900" y="752"/>
       </bounds>
       <scale>129</scale>
-      <treeWidthRight>1610</treeWidthRight>
+      <treeWidthRight>1889</treeWidthRight>
       <overviewPanelVisible>false</overviewPanelVisible>
       <treeHeightOverview>1</treeHeightOverview>
-      <treePanelVisible>true</treePanelVisible>
+      <treePanelVisible>false</treePanelVisible>
       <verticalLayout>false</verticalLayout>
       <resources/>
       <simulations/>

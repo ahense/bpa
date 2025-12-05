@@ -1,166 +1,694 @@
-[2025-03-20 17:22:07,127] 1  INFO GUI_LOGGER: INIT APPLICATION
-[2025-03-20 17:22:07,147] 21  INFO CORE_LOGGER: START INIT Application
-[2025-03-20 17:22:07,159] 33  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-03-20 17:22:07,163] 37  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
-[2025-03-20 17:22:07,279] 153  INFO CONFIG_LOGGER: Setting Locale to en_GB
-[2025-03-20 17:22:07,283] 157  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-03-20 17:22:07,283] 157  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 06 Wolf goat cabbage
-[2025-03-20 17:22:07,301] 175  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-03-20 17:22:07,320] 194  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
-[2025-03-20 17:22:07,342] 216  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-03-20 17:22:07,369] 243  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
-[2025-03-20 17:22:07,713] 587  INFO GUI_LOGGER: END  INIT Application
-[2025-03-20 17:22:07,851] 725 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-03-20 17:22:07,857] 731 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-03-20 17:22:07,901] 775 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
-[2025-03-20 17:22:08,019] 893 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
-[2025-03-20 17:22:08,020] 894 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (8 ms)
-[2025-03-20 17:22:08,163] 1037 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
-[2025-03-20 17:22:08,164] 1038 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
-[2025-03-20 17:22:08,164] 1038 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
-[2025-03-20 17:22:08,164] 1038 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
-[2025-03-20 17:22:08,164] 1038 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
-[2025-03-20 17:22:08,169] 1043 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
-[2025-03-20 17:22:08,169] 1043 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
-[2025-03-20 17:22:08,169] 1043 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
-[2025-03-20 17:22:08,169] 1043 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
-[2025-03-20 17:22:08,170] 1044 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
-[2025-03-20 17:22:08,170] 1044 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
-[2025-03-20 17:22:08,179] 1053 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
-[2025-03-20 17:22:08,180] 1054 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
-[2025-03-20 17:22:08,180] 1054 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
-[2025-03-20 17:22:08,180] 1054 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
-[2025-03-20 17:22:08,180] 1054 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
-[2025-03-20 17:22:08,181] 1055 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
-[2025-03-20 17:22:08,181] 1055 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
-[2025-03-20 17:22:08,181] 1055 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
-[2025-03-20 17:22:08,182] 1056 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
-[2025-03-20 17:22:08,182] 1056 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
-[2025-03-20 17:22:08,182] 1056 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
-[2025-03-20 17:22:08,182] 1056 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
-[2025-03-20 17:22:08,183] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
-[2025-03-20 17:22:08,183] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
-[2025-03-20 17:22:08,183] 1057 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
-[2025-03-20 17:22:08,184] 1058 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
-[2025-03-20 17:22:08,185] 1059 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
-[2025-03-20 17:22:08,185] 1059 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
-[2025-03-20 17:22:08,185] 1059 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
-[2025-03-20 17:22:08,185] 1059 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
-[2025-03-20 17:22:08,239] 1113 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
-[2025-03-20 17:22:08,241] 1115 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
-[2025-03-20 17:22:08,241] 1115 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (339 ms)
-[2025-03-20 17:22:08,243] 1117  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
-[2025-03-20 17:22:08,243] 1117  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
-[2025-03-20 17:23:13,882] 66756  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
-[2025-03-20 17:23:13,882] 66756  INFO GUI_LOGGER: EXIT WoPeD
-[2025-07-22 18:53:23,600] 0  INFO GUI_LOGGER: INIT APPLICATION
-[2025-07-22 18:53:23,633] 33  INFO CORE_LOGGER: START INIT Application
-[2025-07-22 18:53:23,638] 38  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-07-22 18:53:23,639] 39  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
-[2025-07-22 18:53:23,788] 188  INFO CONFIG_LOGGER: Setting Locale to en_GB
-[2025-07-22 18:53:23,792] 192  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-07-22 18:53:23,792] 192  INFO CONFIG_LOGGER: Setting current working directory: null
-[2025-07-22 18:53:23,792] 192  INFO CONFIG_LOGGER: Setting current working directory: C:\Users\User\.WoPeD-3.9.0\nets\
-[2025-07-22 18:53:23,808] 208  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-07-22 18:53:23,814] 214  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
-[2025-07-22 18:53:23,832] 232  INFO CONFIG_LOGGER: Configuration successfully loaded.
-[2025-07-22 18:53:23,859] 259  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
-[2025-07-22 18:53:24,198] 598  INFO GUI_LOGGER: END  INIT Application
-[2025-07-22 18:53:24,380] 780 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-07-22 18:53:24,386] 786 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
-[2025-07-22 18:53:24,433] 833 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
-[2025-07-22 18:53:24,567] 967 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
-[2025-07-22 18:53:24,568] 968 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (6 ms)
-[2025-07-22 18:53:24,723] 1123 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
-[2025-07-22 18:53:24,723] 1123 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
-[2025-07-22 18:53:24,724] 1124 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
-[2025-07-22 18:53:24,724] 1124 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
-[2025-07-22 18:53:24,724] 1124 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
-[2025-07-22 18:53:24,731] 1131 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
-[2025-07-22 18:53:24,731] 1131 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
-[2025-07-22 18:53:24,731] 1131 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
-[2025-07-22 18:53:24,732] 1132 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
-[2025-07-22 18:53:24,732] 1132 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
-[2025-07-22 18:53:24,732] 1132 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
-[2025-07-22 18:53:24,737] 1137 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
-[2025-07-22 18:53:24,737] 1137 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
-[2025-07-22 18:53:24,738] 1138 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
-[2025-07-22 18:53:24,738] 1138 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
-[2025-07-22 18:53:24,738] 1138 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
-[2025-07-22 18:53:24,738] 1138 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
-[2025-07-22 18:53:24,739] 1139 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
-[2025-07-22 18:53:24,739] 1139 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
-[2025-07-22 18:53:24,739] 1139 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
-[2025-07-22 18:53:24,740] 1140 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
-[2025-07-22 18:53:24,740] 1140 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
-[2025-07-22 18:53:24,740] 1140 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
-[2025-07-22 18:53:24,740] 1140 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
-[2025-07-22 18:53:24,741] 1141 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
-[2025-07-22 18:53:24,741] 1141 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
-[2025-07-22 18:53:24,741] 1141 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
-[2025-07-22 18:53:24,742] 1142 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
-[2025-07-22 18:53:24,742] 1142 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
-[2025-07-22 18:53:24,742] 1142 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
-[2025-07-22 18:53:24,742] 1142 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
-[2025-07-22 18:53:24,807] 1207 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
-[2025-07-22 18:53:24,813] 1213 DEBUG EDITOR_LOGGER: Net updated. (5 ms)
-[2025-07-22 18:53:24,813] 1213 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (380 ms)
-[2025-07-22 18:53:24,814] 1214  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
-[2025-07-22 18:53:24,814] 1214  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
-[2025-07-22 18:57:27,003] 243403 DEBUG FILE_LOGGER: ##### START PNML EXPORT #####
-[2025-07-22 18:57:27,026] 243426 DEBUG FILE_LOGGER:    ... Transition (ID:t4) set
-[2025-07-22 18:57:27,027] 243427 DEBUG FILE_LOGGER:    ... Place (ID:p1) set
-[2025-07-22 18:57:27,027] 243427 DEBUG FILE_LOGGER:    ... Transition (ID:t5) set
-[2025-07-22 18:57:27,027] 243427 DEBUG FILE_LOGGER:    ... Place (ID:p2) set
-[2025-07-22 18:57:27,027] 243427 DEBUG FILE_LOGGER:    ... Transition (ID:t6) set
-[2025-07-22 18:57:27,028] 243428 DEBUG FILE_LOGGER:    ... Place (ID:p3) set
-[2025-07-22 18:57:27,028] 243428 DEBUG FILE_LOGGER:    ... Place (ID:p4) set
-[2025-07-22 18:57:27,028] 243428 DEBUG FILE_LOGGER:    ... Place (ID:p5) set
-[2025-07-22 18:57:27,028] 243428 DEBUG FILE_LOGGER:    ... Transition (ID:t1) set
-[2025-07-22 18:57:27,028] 243428 DEBUG FILE_LOGGER:    ... Transition (ID:t2) set
-[2025-07-22 18:57:27,029] 243429 DEBUG FILE_LOGGER:    ... Transition (ID:t3) set
-[2025-07-22 18:57:27,029] 243429 DEBUG FILE_LOGGER:    ... Arc (ID:a11( p5 -> t4) set
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER:    ... Arc (ID:a10( t4 -> p5) set
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER:    ... Arc (ID:a13( t5 -> p5) set
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER:    ... Arc (ID:a12( p4 -> t5) set
-[2025-07-22 18:57:27,030] 243430 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER:    ... Arc (ID:a15( t6 -> p4) set
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER:    ... Arc (ID:a14( p5 -> t6) set
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER:    ... Arc (ID:a17( t3 -> p3) set
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,031] 243431 DEBUG FILE_LOGGER:    ... Arc (ID:a16( p2 -> t3) set
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER:    ... Arc (ID:a19( t3 -> p4) set
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER:    ... Arc (ID:a18( t4 -> p2) set
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER:    ... Arc (ID:a1( p1 -> t1) set
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,032] 243432 DEBUG FILE_LOGGER:    ... Arc (ID:a2( t1 -> p2) set
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER:    ... Arc (ID:a3( p2 -> t2) set
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER:    ... Arc (ID:a4( t2 -> p1) set
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER:    ... Arc (ID:a5( p4 -> t1) set
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,033] 243433 DEBUG FILE_LOGGER:    ... Arc (ID:a6( t1 -> p4) set
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER:    ... Arc (ID:a7( p5 -> t2) set
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER:    ... Arc (ID:a8( t2 -> p5) set
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER:    ... Arc (ID:a9( p3 -> t4) set
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,034] 243434 DEBUG FILE_LOGGER:    ... Arc (ID:a20( p4 -> t3) set
-[2025-07-22 18:57:27,035] 243435 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
-[2025-07-22 18:57:27,050] 243450 DEBUG FILE_LOGGER: ##### END PNML EXPORT ##### (47 ms)
-[2025-07-22 18:57:27,050] 243450  INFO FILE_LOGGER: Petrinet saved in file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
-[2025-07-22 18:57:27,051] 243451  INFO CONFIG_LOGGER: Setting current working directory: null
-[2025-07-22 18:57:29,254] 245654  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
-[2025-07-22 18:57:29,254] 245654  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 16:06:31,239] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 16:06:31,261] 22  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 16:06:31,265] 26  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:06:31,265] 26  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 16:06:31,415] 176  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 16:06:31,418] 179  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:06:31,418] 179  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-11-01 16:06:31,418] 179  INFO CONFIG_LOGGER: Setting current working directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:06:31,430] 191  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:06:31,436] 197  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 16:06:31,455] 216  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:06:31,484] 245  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 16:06:31,838] 599  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 16:06:31,999] 760 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:06:32,005] 766 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:06:32,047] 808 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 16:06:32,183] 944 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 16:06:32,183] 944 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (6 ms)
+[2025-11-01 16:06:32,333] 1094 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 16:06:32,333] 1094 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 16:06:32,333] 1094 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 16:06:32,334] 1095 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 16:06:32,334] 1095 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 16:06:32,339] 1100 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 16:06:32,339] 1100 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 16:06:32,340] 1101 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 16:06:32,340] 1101 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 16:06:32,340] 1101 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 16:06:32,340] 1101 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 16:06:32,347] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 16:06:32,347] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 16:06:32,347] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 16:06:32,347] 1108 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 16:06:32,348] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 16:06:32,348] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 16:06:32,348] 1109 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 16:06:32,349] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 16:06:32,349] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 16:06:32,349] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 16:06:32,349] 1110 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 16:06:32,350] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 16:06:32,350] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 16:06:32,350] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 16:06:32,350] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 16:06:32,350] 1111 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 16:06:32,351] 1112 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 16:06:32,351] 1112 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 16:06:32,351] 1112 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 16:06:32,351] 1112 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 16:06:32,416] 1177 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-11-01 16:06:32,422] 1183 DEBUG EDITOR_LOGGER: Net updated. (5 ms)
+[2025-11-01 16:06:32,422] 1183 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (375 ms)
+[2025-11-01 16:06:32,423] 1184  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 16:06:32,423] 1184  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 16:07:57,824] 86585 DEBUG EDITOR_LOGGER: START TokenGame
+[2025-11-01 16:07:57,828] 86589 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:07:57,829] 86590 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:08:20,914] 109675 DEBUG FILE_LOGGER: ##### START PNML EXPORT #####
+[2025-11-01 16:08:20,930] 109691 DEBUG FILE_LOGGER:    ... Transition (ID:t4) set
+[2025-11-01 16:08:20,930] 109691 DEBUG FILE_LOGGER:    ... Place (ID:p1) set
+[2025-11-01 16:08:20,930] 109691 DEBUG FILE_LOGGER:    ... Transition (ID:t5) set
+[2025-11-01 16:08:20,931] 109692 DEBUG FILE_LOGGER:    ... Place (ID:p2) set
+[2025-11-01 16:08:20,931] 109692 DEBUG FILE_LOGGER:    ... Transition (ID:t6) set
+[2025-11-01 16:08:20,931] 109692 DEBUG FILE_LOGGER:    ... Place (ID:p3) set
+[2025-11-01 16:08:20,931] 109692 DEBUG FILE_LOGGER:    ... Place (ID:p4) set
+[2025-11-01 16:08:20,932] 109693 DEBUG FILE_LOGGER:    ... Place (ID:p5) set
+[2025-11-01 16:08:20,932] 109693 DEBUG FILE_LOGGER:    ... Transition (ID:t1) set
+[2025-11-01 16:08:20,932] 109693 DEBUG FILE_LOGGER:    ... Transition (ID:t2) set
+[2025-11-01 16:08:20,932] 109693 DEBUG FILE_LOGGER:    ... Transition (ID:t3) set
+[2025-11-01 16:08:20,933] 109694 DEBUG FILE_LOGGER:    ... Arc (ID:a11( p5 -> t4) set
+[2025-11-01 16:08:20,933] 109694 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,933] 109694 DEBUG FILE_LOGGER:    ... Arc (ID:a10( t4 -> p5) set
+[2025-11-01 16:08:20,933] 109694 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER:    ... Arc (ID:a13( t5 -> p5) set
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER:    ... Arc (ID:a12( p4 -> t5) set
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER:    ... Arc (ID:a15( t6 -> p4) set
+[2025-11-01 16:08:20,934] 109695 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER:    ... Arc (ID:a14( p5 -> t6) set
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER:    ... Arc (ID:a17( t3 -> p3) set
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER:    ... Arc (ID:a16( p2 -> t3) set
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER:    ... Arc (ID:a19( t3 -> p4) set
+[2025-11-01 16:08:20,935] 109696 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER:    ... Arc (ID:a18( t4 -> p2) set
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER:    ... Arc (ID:a1( p1 -> t1) set
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER:    ... Arc (ID:a2( t1 -> p2) set
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,936] 109697 DEBUG FILE_LOGGER:    ... Arc (ID:a3( p2 -> t2) set
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER:    ... Arc (ID:a4( t2 -> p1) set
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER:    ... Arc (ID:a5( p4 -> t1) set
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER:    ... Arc (ID:a6( t1 -> p4) set
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,937] 109698 DEBUG FILE_LOGGER:    ... Arc (ID:a7( p5 -> t2) set
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER:    ... Arc (ID:a8( t2 -> p5) set
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER:    ... Arc (ID:a9( p3 -> t4) set
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER:    ... Arc (ID:a20( p4 -> t3) set
+[2025-11-01 16:08:20,938] 109699 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:08:20,954] 109715 DEBUG FILE_LOGGER: ##### END PNML EXPORT ##### (39 ms)
+[2025-11-01 16:08:20,954] 109715  INFO FILE_LOGGER: Petrinet saved in file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 16:08:20,954] 109715  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-11-01 16:08:46,584] 135345 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 16:08:48,667] 137428 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 16:09:01,341] 150102  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 16:09:01,341] 150102  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 16:09:04,245] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 16:09:04,267] 22  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 16:09:04,272] 27  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:09:04,272] 27  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 16:09:04,421] 176  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 16:09:04,424] 179  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:09:04,424] 179  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-11-01 16:09:04,424] 179  INFO CONFIG_LOGGER: Setting current working directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:09:04,436] 191  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:09:04,443] 198  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 16:09:04,465] 220  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:09:04,498] 253  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 16:09:04,839] 594  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 16:09:05,002] 757 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:09:05,009] 764 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:09:05,051] 806 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 16:09:05,187] 942 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 16:09:05,188] 943 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (7 ms)
+[2025-11-01 16:09:05,346] 1101 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 16:09:05,346] 1101 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 16:09:05,347] 1102 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 16:09:05,347] 1102 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 16:09:05,347] 1102 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 16:09:05,353] 1108 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 16:09:05,353] 1108 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 16:09:05,353] 1108 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 16:09:05,354] 1109 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 16:09:05,354] 1109 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 16:09:05,354] 1109 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 16:09:05,362] 1117 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 16:09:05,362] 1117 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 16:09:05,363] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 16:09:05,363] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 16:09:05,363] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 16:09:05,363] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 16:09:05,364] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 16:09:05,364] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 16:09:05,364] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 16:09:05,364] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 16:09:05,365] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 16:09:05,365] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 16:09:05,365] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 16:09:05,365] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 16:09:05,366] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 16:09:05,366] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 16:09:05,366] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 16:09:05,366] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 16:09:05,367] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 16:09:05,367] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 16:09:05,433] 1188 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-11-01 16:09:05,441] 1196 DEBUG EDITOR_LOGGER: Net updated. (7 ms)
+[2025-11-01 16:09:05,441] 1196 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (390 ms)
+[2025-11-01 16:09:05,442] 1197  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 16:09:05,442] 1197  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 16:11:30,416] 146171 DEBUG EDITOR_LOGGER: START TokenGame
+[2025-11-01 16:11:30,422] 146177 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:30,423] 146178 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:11:32,199] 147954 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:32,202] 147957 DEBUG QUALANALYSIS_LOGGER:            ... DONE (3 ms)
+[2025-11-01 16:11:35,799] 151554 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:35,801] 151556 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:11:37,295] 153050 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:37,297] 153052 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:11:38,255] 154010 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:38,257] 154012 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:11:40,904] 156659 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:40,905] 156660 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:11:43,151] 158906 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:11:43,152] 158907 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:12:02,183] 177938 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:12:02,184] 177939 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:16:15,839] 431594 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:15,840] 431595 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:16:17,246] 433001 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:17,248] 433003 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:16:18,646] 434401 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:18,648] 434403 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:16:19,855] 435610 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:19,856] 435611 DEBUG QUALANALYSIS_LOGGER:            ... DONE (1 ms)
+[2025-11-01 16:16:22,638] 438393 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:22,640] 438395 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:16:52,102] 467857 DEBUG QUALANALYSIS_LOGGER: TokenGame: CHECK NET
+[2025-11-01 16:16:52,104] 467859 DEBUG QUALANALYSIS_LOGGER:            ... DONE (2 ms)
+[2025-11-01 16:17:20,508] 496263 DEBUG FILE_LOGGER: ##### START PNML EXPORT #####
+[2025-11-01 16:17:20,522] 496277 DEBUG FILE_LOGGER:    ... Transition (ID:t4) set
+[2025-11-01 16:17:20,523] 496278 DEBUG FILE_LOGGER:    ... Place (ID:p1) set
+[2025-11-01 16:17:20,523] 496278 DEBUG FILE_LOGGER:    ... Transition (ID:t5) set
+[2025-11-01 16:17:20,523] 496278 DEBUG FILE_LOGGER:    ... Place (ID:p2) set
+[2025-11-01 16:17:20,524] 496279 DEBUG FILE_LOGGER:    ... Transition (ID:t6) set
+[2025-11-01 16:17:20,524] 496279 DEBUG FILE_LOGGER:    ... Place (ID:p3) set
+[2025-11-01 16:17:20,524] 496279 DEBUG FILE_LOGGER:    ... Place (ID:p4) set
+[2025-11-01 16:17:20,524] 496279 DEBUG FILE_LOGGER:    ... Place (ID:p5) set
+[2025-11-01 16:17:20,524] 496279 DEBUG FILE_LOGGER:    ... Transition (ID:t1) set
+[2025-11-01 16:17:20,525] 496280 DEBUG FILE_LOGGER:    ... Transition (ID:t2) set
+[2025-11-01 16:17:20,525] 496280 DEBUG FILE_LOGGER:    ... Transition (ID:t3) set
+[2025-11-01 16:17:20,525] 496280 DEBUG FILE_LOGGER:    ... Arc (ID:a11( p5 -> t4) set
+[2025-11-01 16:17:20,526] 496281 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,526] 496281 DEBUG FILE_LOGGER:    ... Arc (ID:a10( t4 -> p5) set
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER:    ... Arc (ID:a13( t5 -> p5) set
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER:    ... Arc (ID:a12( p4 -> t5) set
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER:    ... Arc (ID:a15( t6 -> p4) set
+[2025-11-01 16:17:20,527] 496282 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER:    ... Arc (ID:a14( p5 -> t6) set
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER:    ... Arc (ID:a17( t3 -> p3) set
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER:    ... Arc (ID:a16( p2 -> t3) set
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER:    ... Arc (ID:a19( t3 -> p4) set
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,528] 496283 DEBUG FILE_LOGGER:    ... Arc (ID:a18( t4 -> p2) set
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER:    ... Arc (ID:a1( p1 -> t1) set
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER:    ... Arc (ID:a2( t1 -> p2) set
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER:    ... Arc (ID:a3( p2 -> t2) set
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER:    ... Arc (ID:a4( t2 -> p1) set
+[2025-11-01 16:17:20,529] 496284 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER:    ... Arc (ID:a5( p4 -> t1) set
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER:    ... Arc (ID:a6( t1 -> p4) set
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER:    ... Arc (ID:a7( p5 -> t2) set
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER:    ... Arc (ID:a8( t2 -> p5) set
+[2025-11-01 16:17:20,530] 496285 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,531] 496286 DEBUG FILE_LOGGER:    ... Arc (ID:a9( p3 -> t4) set
+[2025-11-01 16:17:20,531] 496286 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,531] 496286 DEBUG FILE_LOGGER:    ... Arc (ID:a20( p4 -> t3) set
+[2025-11-01 16:17:20,531] 496286 DEBUG FILE_LOGGER: ... Arc label position: X = 500.0 / Y = 12.0
+[2025-11-01 16:17:20,544] 496299 DEBUG FILE_LOGGER: ##### END PNML EXPORT ##### (36 ms)
+[2025-11-01 16:17:20,544] 496299  INFO FILE_LOGGER: Petrinet saved in file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 16:17:20,545] 496300  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-11-01 16:17:20,555] 496310  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 16:17:20,555] 496310  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 16:56:21,730] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 16:56:21,753] 23  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 16:56:21,757] 27  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:56:21,757] 27  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 16:56:21,915] 185  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 16:56:21,918] 188  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:56:21,918] 188  INFO CONFIG_LOGGER: Setting current working directory: null
+[2025-11-01 16:56:21,918] 188  INFO CONFIG_LOGGER: Setting current working directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 16:56:21,930] 200  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:56:21,939] 209  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 16:56:21,955] 225  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 16:56:21,985] 255  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 16:56:22,331] 601  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 16:56:22,484] 754 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:56:22,489] 759 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 16:56:22,532] 802 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 16:56:22,658] 928 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 16:56:22,659] 929 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (7 ms)
+[2025-11-01 16:56:22,809] 1079 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 16:56:22,809] 1079 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 16:56:22,809] 1079 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 16:56:22,809] 1079 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 16:56:22,810] 1080 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 16:56:22,814] 1084 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 16:56:22,814] 1084 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 16:56:22,815] 1085 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 16:56:22,815] 1085 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 16:56:22,815] 1085 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 16:56:22,815] 1085 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 16:56:22,821] 1091 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 16:56:22,822] 1092 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 16:56:22,822] 1092 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 16:56:22,822] 1092 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 16:56:22,822] 1092 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 16:56:22,823] 1093 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 16:56:22,823] 1093 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 16:56:22,823] 1093 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 16:56:22,823] 1093 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 16:56:22,823] 1093 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 16:56:22,824] 1094 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 16:56:22,824] 1094 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 16:56:22,824] 1094 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 16:56:22,824] 1094 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 16:56:22,825] 1095 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 16:56:22,825] 1095 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 16:56:22,825] 1095 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 16:56:22,825] 1095 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 16:56:22,825] 1095 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 16:56:22,826] 1096 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 16:56:22,892] 1162 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-11-01 16:56:22,900] 1170 DEBUG EDITOR_LOGGER: Net updated. (7 ms)
+[2025-11-01 16:56:22,900] 1170 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (368 ms)
+[2025-11-01 16:56:22,901] 1171  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 16:56:22,901] 1171  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 16:56:30,957] 9227 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 16:56:38,044] 16314 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 16:56:40,188] 18458 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 16:56:46,529] 24799  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 16:56:46,529] 24799  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 17:28:08,231] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 17:28:08,251] 20  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 17:28:08,255] 24  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:28:08,256] 25  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 17:28:08,424] 193  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 17:28:08,427] 196  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:28:08,427] 196  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 17:28:08,439] 208  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:28:08,445] 214  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 17:28:08,463] 232  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:28:08,494] 263  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 17:28:08,871] 640  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 17:28:09,022] 791 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:28:09,027] 796 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:28:09,061] 830 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 17:28:09,189] 958 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 17:28:09,189] 958 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (15 ms)
+[2025-11-01 17:28:09,336] 1105 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 17:28:09,337] 1106 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 17:28:09,337] 1106 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 17:28:09,337] 1106 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 17:28:09,337] 1106 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 17:28:09,342] 1111 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 17:28:09,342] 1111 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 17:28:09,342] 1111 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 17:28:09,343] 1112 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 17:28:09,343] 1112 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 17:28:09,343] 1112 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 17:28:09,349] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 17:28:09,349] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 17:28:09,349] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 17:28:09,349] 1118 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 17:28:09,350] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 17:28:09,350] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 17:28:09,350] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 17:28:09,350] 1119 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 17:28:09,351] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 17:28:09,351] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 17:28:09,351] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 17:28:09,351] 1120 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 17:28:09,352] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 17:28:09,352] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 17:28:09,352] 1121 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 17:28:09,353] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 17:28:09,353] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 17:28:09,353] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 17:28:09,353] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 17:28:09,353] 1122 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 17:28:09,416] 1185 DEBUG EDITOR_LOGGER: Net updated. (4 ms)
+[2025-11-01 17:28:09,423] 1192 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-11-01 17:28:09,423] 1192 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (362 ms)
+[2025-11-01 17:28:09,424] 1193  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 17:28:09,424] 1193  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 17:28:19,605] 11374 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't1'
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't4'
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't3'
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,585] 13354 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't2'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't1'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't4'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't3'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't2'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't1'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't4'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't3'
+[2025-11-01 17:28:21,586] 13355 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,587] 13356 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't2'
+[2025-11-01 17:28:21,587] 13356 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,587] 13356 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (1817 ms)
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p4'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p5'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p2'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p4'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p5'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p2'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p4'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p5'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p2'
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,591] 13360 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p4'
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p5'
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p2'
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:28:21,592] 13361 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (1235 ms)
+[2025-11-01 17:28:21,599] 13368  INFO FILE_LOGGER: Local WoPeD analysis started.
+[2025-11-01 17:29:43,300] 95069 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:29:43,302] 95071 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't4'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't3'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't2'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't4'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't3'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't2'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't4'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't3'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't2'
+[2025-11-01 17:29:43,308] 95077 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (890 ms)
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p4'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p5'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p2'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p4'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p5'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p2'
+[2025-11-01 17:29:43,309] 95078 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p4'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p5'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p2'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p4'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p5'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p2'
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:43,310] 95079 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (1227 ms)
+[2025-11-01 17:29:47,922] 99691 DEBUG EDITOR_LOGGER: Trying to create class org.woped.core.model.ArcModel
+[2025-11-01 17:29:51,376] 103145 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:29:51,379] 103148 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't1'
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't4'
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't3'
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,383] 103152 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't2'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't1'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't4'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't3'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't2'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't1'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't4'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't3'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't2'
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,384] 103153 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (1198 ms)
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p4'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p5'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p2'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p4'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p5'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p2'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p4'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p5'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p2'
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:29:51,385] 103154 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (854 ms)
+[2025-11-01 17:29:51,388] 103157 DEBUG EDITOR_LOGGER: Edit is dying!
+[2025-11-01 17:29:53,655] 105424 DEBUG EDITOR_LOGGER: Trying to create class org.woped.core.model.ArcModel
+[2025-11-01 17:30:14,181] 125950  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 17:30:14,181] 125950  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 17:30:16,205] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 17:30:16,225] 20  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 17:30:16,229] 24  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:30:16,230] 25  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 17:30:16,389] 184  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 17:30:16,392] 187  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:30:16,392] 187  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 17:30:16,405] 200  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:30:16,412] 207  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 17:30:16,429] 224  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:30:16,465] 260  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 17:30:16,819] 614  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 17:30:16,971] 766 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:30:16,977] 772 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:30:17,010] 805 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 17:30:17,142] 937 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 17:30:17,142] 937 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (6 ms)
+[2025-11-01 17:30:17,294] 1089 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 17:30:17,295] 1090 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 17:30:17,295] 1090 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 17:30:17,295] 1090 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 17:30:17,295] 1090 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 17:30:17,299] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 17:30:17,299] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 17:30:17,299] 1094 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 17:30:17,300] 1095 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 17:30:17,300] 1095 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 17:30:17,300] 1095 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 17:30:17,308] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 17:30:17,308] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 17:30:17,309] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 17:30:17,309] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 17:30:17,309] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 17:30:17,309] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 17:30:17,309] 1104 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 17:30:17,310] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 17:30:17,310] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 17:30:17,310] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 17:30:17,310] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 17:30:17,310] 1105 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 17:30:17,311] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 17:30:17,311] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 17:30:17,311] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 17:30:17,311] 1106 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 17:30:17,312] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 17:30:17,312] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 17:30:17,312] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 17:30:17,312] 1107 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 17:30:17,380] 1175 DEBUG EDITOR_LOGGER: Net updated. (6 ms)
+[2025-11-01 17:30:17,385] 1180 DEBUG EDITOR_LOGGER: Net updated. (4 ms)
+[2025-11-01 17:30:17,385] 1180 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (375 ms)
+[2025-11-01 17:30:17,386] 1181  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 17:30:17,386] 1181  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 17:30:26,861] 10656 DEBUG EDITOR_LOGGER: Net updated. (2 ms)
+[2025-11-01 17:30:26,871] 10666 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't1'
+[2025-11-01 17:30:26,872] 10667 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,873] 10668 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't4'
+[2025-11-01 17:30:26,873] 10668 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,873] 10668 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't3'
+[2025-11-01 17:30:26,873] 10668 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,873] 10668 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p4' to 't2'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't1'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't4'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't3'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p5' to 't2'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't1'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't4'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't3'
+[2025-11-01 17:30:26,874] 10669 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,875] 10670 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 'p2' to 't2'
+[2025-11-01 17:30:26,875] 10670 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,875] 10670 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (3252 ms)
+[2025-11-01 17:30:26,876] 10671 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p4'
+[2025-11-01 17:30:26,876] 10671 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p5'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't1' to 'p2'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p4'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p5'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't4' to 'p2'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p4'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p5'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't3' to 'p2'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p4'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p5'
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,877] 10672 DEBUG QUALANALYSIS_LOGGER: Calculating flow from 't2' to 'p2'
+[2025-11-01 17:30:26,878] 10673 DEBUG QUALANALYSIS_LOGGER: Resulting flow = 2
+[2025-11-01 17:30:26,878] 10673 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (1200 ms)
+[2025-11-01 17:30:26,884] 10679  INFO FILE_LOGGER: Local WoPeD analysis started.
+[2025-11-01 17:32:08,515] 112310  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 17:32:08,515] 112310  INFO GUI_LOGGER: EXIT WoPeD
+[2025-11-01 17:36:40,465] 0  INFO GUI_LOGGER: INIT APPLICATION
+[2025-11-01 17:36:40,486] 21  INFO CORE_LOGGER: START INIT Application
+[2025-11-01 17:36:40,490] 25  INFO CONFIG_LOGGER: Setting default home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:36:40,491] 26  INFO CONFIG_LOGGER: Loading configuration from: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml.
+[2025-11-01 17:36:40,651] 186  INFO CONFIG_LOGGER: Setting Locale to en_GB
+[2025-11-01 17:36:40,653] 188  INFO CONFIG_LOGGER: Setting home directory: C:\Users\User\.WoPeD-3.9.0\nets\
+[2025-11-01 17:36:40,654] 189  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 09 Safe lock
+[2025-11-01 17:36:40,666] 201  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:36:40,672] 207  WARN CONFIG_LOGGER: Configuration file not found: C:\Users\User\.WoPeD-3.9.0\WoPeDmetrics.xml. Using built-in settings.
+[2025-11-01 17:36:40,690] 225  INFO CONFIG_LOGGER: Configuration successfully loaded.
+[2025-11-01 17:36:40,725] 260  INFO CORE_LOGGER: Look-And-Feel set to com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+[2025-11-01 17:36:41,075] 610  INFO GUI_LOGGER: END  INIT Application
+[2025-11-01 17:36:41,235] 770 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:36:41,241] 776 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphFrameController
+[2025-11-01 17:36:41,274] 809 DEBUG FILE_LOGGER: ##### START PNML Version (1.3.2) IMPORT #####
+[2025-11-01 17:36:41,401] 936 DEBUG QUALANALYSIS_LOGGER: PT Handle Pairs calculated. (0 ms)
+[2025-11-01 17:36:41,401] 936 DEBUG QUALANALYSIS_LOGGER: TP Handle Pairs calculated. (6 ms)
+[2025-11-01 17:36:41,551] 1086 DEBUG FILE_LOGGER:  ... Place (ID:p1) imported
+[2025-11-01 17:36:41,551] 1086 DEBUG FILE_LOGGER:  ... Place (ID:p2) imported
+[2025-11-01 17:36:41,552] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p3) imported
+[2025-11-01 17:36:41,552] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p4) imported
+[2025-11-01 17:36:41,552] 1087 DEBUG FILE_LOGGER:  ... Place (ID:p5) imported
+[2025-11-01 17:36:41,556] 1091 DEBUG FILE_LOGGER:  ... Transition (ID:t4) imported 
+[2025-11-01 17:36:41,557] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t5) imported 
+[2025-11-01 17:36:41,557] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t6) imported 
+[2025-11-01 17:36:41,557] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t1) imported 
+[2025-11-01 17:36:41,557] 1092 DEBUG FILE_LOGGER:  ... Transition (ID:t2) imported 
+[2025-11-01 17:36:41,558] 1093 DEBUG FILE_LOGGER:  ... Transition (ID:t3) imported 
+[2025-11-01 17:36:41,564] 1099 DEBUG FILE_LOGGER:  ... Arc created: (ID:a11) p5 -> t4 
+[2025-11-01 17:36:41,564] 1099 DEBUG FILE_LOGGER:  ... Arc created: (ID:a10) t4 -> p5 
+[2025-11-01 17:36:41,564] 1099 DEBUG FILE_LOGGER:  ... Arc created: (ID:a13) t5 -> p5 
+[2025-11-01 17:36:41,565] 1100 DEBUG FILE_LOGGER:  ... Arc created: (ID:a12) p4 -> t5 
+[2025-11-01 17:36:41,565] 1100 DEBUG FILE_LOGGER:  ... Arc created: (ID:a15) t6 -> p4 
+[2025-11-01 17:36:41,565] 1100 DEBUG FILE_LOGGER:  ... Arc created: (ID:a14) p5 -> t6 
+[2025-11-01 17:36:41,565] 1100 DEBUG FILE_LOGGER:  ... Arc created: (ID:a17) t3 -> p3 
+[2025-11-01 17:36:41,566] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a16) p2 -> t3 
+[2025-11-01 17:36:41,566] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a19) t3 -> p4 
+[2025-11-01 17:36:41,566] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a18) t4 -> p2 
+[2025-11-01 17:36:41,566] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a1) p1 -> t1 
+[2025-11-01 17:36:41,566] 1101 DEBUG FILE_LOGGER:  ... Arc created: (ID:a2) t1 -> p2 
+[2025-11-01 17:36:41,567] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a3) p2 -> t2 
+[2025-11-01 17:36:41,567] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a4) t2 -> p1 
+[2025-11-01 17:36:41,567] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a5) p4 -> t1 
+[2025-11-01 17:36:41,567] 1102 DEBUG FILE_LOGGER:  ... Arc created: (ID:a6) t1 -> p4 
+[2025-11-01 17:36:41,568] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a7) p5 -> t2 
+[2025-11-01 17:36:41,568] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a8) t2 -> p5 
+[2025-11-01 17:36:41,568] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a9) p3 -> t4 
+[2025-11-01 17:36:41,568] 1103 DEBUG FILE_LOGGER:  ... Arc created: (ID:a20) p4 -> t3 
+[2025-11-01 17:36:41,638] 1173 DEBUG EDITOR_LOGGER: Net updated. (5 ms)
+[2025-11-01 17:36:41,644] 1179 DEBUG EDITOR_LOGGER: Net updated. (5 ms)
+[2025-11-01 17:36:41,644] 1179 DEBUG FILE_LOGGER: ##### END PNML IMPORT Version (1.3.2) ##### (369 ms)
+[2025-11-01 17:36:41,645] 1180  INFO CONFIG_LOGGER: Setting current working directory: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan
+[2025-11-01 17:36:41,645] 1180  INFO FILE_LOGGER: Petrinet loaded from file: D:\BPA Series\SupplementsOnGithub\bpa\Short 07 Car radiator fan\fan.pnml
+[2025-11-01 17:36:47,137] 6672 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:36:47,143] 6678 DEBUG EDITOR_LOGGER: Net updated. (3 ms)
+[2025-11-01 17:36:47,143] 6678 DEBUG QUALANALYSIS_LOGGER: -> init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-11-01 17:36:47,166] 6701 DEBUG QUALANALYSIS_LOGGER: <- init() org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphVC
+[2025-11-01 17:36:47,181] 6716 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:36:47,181] 6716 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:36:47,189] 6724 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,665] 24200 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,665] 24200 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,676] 24211 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,676] 24211 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,684] 24219 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,684] 24219 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,690] 24225 DEBUG QUALANALYSIS_LOGGER: -> processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:04,690] 24225 DEBUG QUALANALYSIS_LOGGER: <- processViewEvent org.woped.qualanalysis.coverabilitygraph.gui.CoverabilityGraphEventProcessor
+[2025-11-01 17:37:07,412] 26947  INFO CONFIG_LOGGER: Configuration successfully saved to: C:\Users\User\.WoPeD-3.9.0\WoPeDconfig.xml
+[2025-11-01 17:37:07,412] 26947  INFO GUI_LOGGER: EXIT WoPeD
